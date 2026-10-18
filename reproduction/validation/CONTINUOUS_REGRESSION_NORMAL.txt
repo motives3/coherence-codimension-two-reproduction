@@ -1,0 +1,20 @@
+Captured from the first normal-mode run; not a repeated test execution.
+Command: python.exe -B -m unittest -v test_continuous_arithmetic
+
+test_bernstein_reconstructs_polynomial ... ok
+test_closed_cover_rejects_gap_and_overlap ... ok
+test_exact_interval_negative_denominator ... ok
+test_partial_polynomial_product_identity ... ok
+test_sharp_formulas_match_generic_projector ... ok
+test_signed_interval_corners ... ok
+test_square_root_directed_witnesses ... ok
+
+Ran 7 tests in 0.006s
+OK
+
+Test source SHA256:
+15c961082991f137b539f927ac97ca10e26707d46ae88b91f28c2ed5eabdca64
+Independent arithmetic source SHA256:
+6b2b2337f09d9cd76116018f5856b33f68897e4a13434d6c973c027c7a81a8da
+Optimized-mode execution is recorded separately in
+CONTINUOUS_REGRESSION_OPTIMIZED.txt (7 tests, PASS).

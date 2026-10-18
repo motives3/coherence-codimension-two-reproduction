@@ -1,0 +1,13 @@
+test_absolute_or_parent_input_rejected (__main__.RejectionTests.test_absolute_or_parent_input_rejected) ... ok
+test_corrupt_anchor_fraction_rejected (__main__.RejectionTests.test_corrupt_anchor_fraction_rejected) ... ok
+test_corrupt_bernstein_coefficient_rejected (__main__.RejectionTests.test_corrupt_bernstein_coefficient_rejected) ... ok
+test_cover_gap_and_missing_endpoint_rejected (__main__.RejectionTests.test_cover_gap_and_missing_endpoint_rejected) ... ok
+test_duplicate_json_key_rejected (__main__.RejectionTests.test_duplicate_json_key_rejected) ... ok
+test_forged_root_intersection_rejected (__main__.RejectionTests.test_forged_root_intersection_rejected) ... ok
+test_missing_closed_global_cell_rejected (__main__.RejectionTests.test_missing_closed_global_cell_rejected) ... ok
+test_readonly_guard_blocks_mutations (__main__.RejectionTests.test_readonly_guard_blocks_mutations) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.664s
+
+OK

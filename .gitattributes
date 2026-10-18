@@ -1,0 +1,3 @@
+# Preserve the exact bytes bound by certificate manifests.
+* -text
+*.zip binary

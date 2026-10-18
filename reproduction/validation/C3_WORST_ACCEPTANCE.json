@@ -1,0 +1,938 @@
+{
+  "status": "PASS",
+  "source_report_sha256": "5256d9e55e0b13e49d74f02f068958409e32ed726b65ef8eac32040ff071673f",
+  "verifier_sha256": {
+    "certificate/verify_certificates.py": "2bb8887a817195b47e269ba707d4e66264e4e7a205cdb3143d9edf91b063e8d1",
+    "validation/global_arithmetic.py": "1126fe2d3ad0f7939371103f90066c8387456ad75fe971d26eec931f5311380b",
+    "validation/continuous_arithmetic.py": "6b2b2337f09d9cd76116018f5856b33f68897e4a13434d6c973c027c7a81a8da",
+    "validation/local_arithmetic.py": "36900144f78a7763af76abb7a10c6219f459ff8f35eb9e798ade5ad1659b0f9d"
+  },
+  "record": {
+    "profile": "r2_3",
+    "N": 180,
+    "u_index": 17,
+    "w_index": 23,
+    "original_source": "research/codim2_below200_20261017/local/PROFILE_180.json",
+    "adopted_source": "research/codim2_residue2_20261018/curvature/STRESS_SAVED_NORMAL.json",
+    "candidate_inputs": {
+      "C": "3",
+      "maxcount": "3/2",
+      "polar_total": "2658122635274735214001928434489070341048454813443982000745550149534363885489864158352172736963816329182773975077147987137926276081725791620987042003289393069707220818544311738433899273/5329478308949339774123507467648707782284700570413926602008554092266840308108902952335931982799920475660721938620086788217733446621366126684090215449489065634041600000000000000000000000",
+      "polar_point": "133312288597379859536784570945647677445679403428543726772761864678752768313393636821451908505483931569916894486759092058057128295454380675180082536356701306509/202125399569246382304470804463221494700099024338548505915453435997489713304123044618575468131543369453888487944168096164424241893881448422400000000000000000000",
+      "eta_coefficient": "281329496765311/200000000000000",
+      "kappa_coefficient": "125959826049483/50000000000000",
+      "intrinsic_cK": "1065024285403/5000000000000",
+      "cross_floor": [
+        "561490660273/1000000000000",
+        "561490660273/1000000000000"
+      ]
+    },
+    "regional_inputs": {
+      "U": "33/190",
+      "W": "22/95",
+      "LU": "42980113/5000000",
+      "LP": "327324049/50000000",
+      "E": "27500000000000000000/105822470219451648691",
+      "s": [
+        "55999686715909/1000000000000000",
+        "55999686715919/1000000000000000"
+      ],
+      "total": [
+        "292340956696239/100000000000000",
+        "2923409566962469/1000000000000000"
+      ],
+      "point": [
+        "1180485346563277/500000000000000",
+        "295121336640827/125000000000000"
+      ],
+      "dc": "586604303828743/200000000000000",
+      "oldrot": "364152336999173/50000000000000",
+      "eps": [
+        "162803385156877/1000000000000000",
+        "162803385156883/1000000000000000"
+      ],
+      "rplus": [
+        "1001566171672267/1000000000000000",
+        "100156617167227/100000000000000"
+      ],
+      "rmin2": [
+        "498432601880877/500000000000000",
+        "996865203761757/1000000000000000"
+      ],
+      "rmin": [
+        "499215685791661/500000000000000",
+        "249607842895831/250000000000000"
+      ],
+      "angle": [
+        "543757609788697/200000000000000",
+        "271878804894349/100000000000000"
+      ],
+      "chi": [
+        "1059318458912259/1000000000000000",
+        "42372738356491/40000000000000"
+      ],
+      "angle_su2": [
+        "1488467519953/1000000000000000",
+        "744233759977/500000000000000"
+      ],
+      "angle_rot": "108614233747801/15625000000000",
+      "rotation": "108614233747801/15625000000000",
+      "T": [
+        "75850812834369/500000000000000",
+        "75850812834369/500000000000000"
+      ],
+      "qt": [
+        "3993809628993/250000000000000",
+        "15975238515973/1000000000000000"
+      ],
+      "tqc": "718885733218763/250000000000000",
+      "rho": "232568581716249/250000000000000",
+      "R": "528829380151239/500000000000000"
+    },
+    "full_stress_mean": {
+      "cm": "456302489083696949335345984370770993432381447989021545357770912017996196185979031320213425566794041685433643141126403504740230934653509336234564166666713052167336422227235799888867076259270222497/1993207720590746926700850632606557344697759299345131858924148992408405605022856373095793394896933244230315095442268415249799758888941283000000000000000000000000000000000000000000000000000000000000",
+      "gm": "154259778006130546124921713806770566628431489892817709874803079158532945055375718392687032405315258772324456277947220118616329705280644569179081861030216659489214464496429515376823/321127910539620338190692601919945349979083442672271243937779559888020903031460193443211158066728133792661876487921022456912183376551651150000000000000000000000000000000000000000000",
+      "mass": "29/30",
+      "metric_lower": "85782388348188331/90000000000000000",
+      "root_error": "41986608683161/5978932723971876",
+      "eta_v": "333885181829676052316877660751977441210299/22420997714894535000000000000000000000000000",
+      "Bv": "20654388958481354092263527524/1469609825639438530040436019575",
+      "phase_defect": "217618569155073103042110661153/15320225437569648000000000000000",
+      "phase_reference": "69405706233604740734742125862471681479782889629209912533/2385380135607070870733201646345000000000000000000000000000",
+      "projected_fraction": "1572500329718758962390806572276113008574203308400334390175601819984841954099365830948448068687885684600890598193809170640267317239959220929/244460908665356160013251105461297262431830520398301829185888742347089106762731089572006250000000000000000000000000000000000000000000000000000",
+      "reference_gap": "408626055809247499731286428797382256528988433568927864052294445834025379889843552820750450568686120726302321621880999242759824706912480268113317978572573267/366691362998034327444219860903884447666723616491711269953210286342877608288095631679096593495855965422507759686872268750000000000000000000000000000000000000",
+      "dp_v": "15083557112326062014457270091612243262545545347733810888501580302129868688773943669401/502701138531305960176986172866225000000000000000000000000000000000000000000000000000000",
+      "pair_perturbation": "181808387766671626187472904140645785855015362966441963959792484081930558005707839049737683247658257/950924840939546837179871596639388208607516553081327298150000000000000000000000000000000000000000000",
+      "parameter": "16184468455089106385637606511467991193720839587543265634266531083291819662507997675426653809041584873/27576820387246858278216276302542258049617980039358491646350000000000000000000000000000000000000000000",
+      "weight": "1366025403784439/29000000000000000"
+    },
+    "selected_cm": "456302489083696949335345984370770993432381447989021545357770912017996196185979031320213425566794041685433643141126403504740230934653509336234564166666713052167336422227235799888867076259270222497/1993207720590746926700850632606557344697759299345131858924148992408405605022856373095793394896933244230315095442268415249799758888941283000000000000000000000000000000000000000000000000000000000000",
+    "physical_cr": "210023739886647/1000000000000000",
+    "ambient_perturbation": [
+      "975973110715919/1000000000000000",
+      "195194622143221/200000000000000"
+    ],
+    "full_physical_normal": {
+      "B": "19646136355431/1000000000000000",
+      "B_squared": "22215841200226440807115717306594420000808823879183162191602629387210842080384920864172106618798386882066157236068292164083737089371142770278198841817928166038667220818544311738433899273/57558365736652869560533880650606044048674766160470407301692384196481875327576151885228065414239141137135796937096937312751521223510754168188174326854481908847649280000000000000000000000000",
+      "b_squared": "2323363623187512982833748593/1000000000000000000000000000000",
+      "n": "13891916241041/500000000000000",
+      "gm": "62084996765248520715617746095874069836100932389280320818523501749061918375915371355484101578849392526290456081329772657715516284917313130078897693310091606624768333291647011497037158262457750079743481689/478377374805958138989796356359317006162261252605354118331017789407416355068200439128500981138579064219969662247354082847492448715555073277468444387610050830558585880601987904216605538693558000000000000000",
+      "cm": "62084996765248520715617746095874069836100932389280320818523501749061918375915371355484101578849392526290456081329772657715516284917313130078897693310091606624768333291647011497037158262457750079743481689/988646574598982705258244768252663091649240505075098043277450659997291565902491080419462391422072084726503374399540944389683046567255671399827934694784918214857811406848537981172347990568842355229539698976",
+      "t": "48874227967/5000000000000",
+      "mean_normal_radius": "5048874227967/5000000000000",
+      "J": "2775879454652251841724031691590595907893039/3405877273185272535152177331442000000000000",
+      "L": "13915952398055931352593717184400110960700936722738421713/17320508075688770000000000000000000000000000000000000000",
+      "J_raw": "2775879454652251841724031691590595907893039/3405877273185272535152177331442000000000000",
+      "L_raw": "13915952398055931352593717184400110960700936722738421713/17320508075688770000000000000000000000000000000000000000",
+      "ambient": "2725973110716105/1933333333333328"
+    },
+    "selected_normal": {
+      "upper": "-335606484489296851378686610081135396990225622447544625165444528911725353380846662653001431745252028417881913361149005795753727101844931518645811407634230866237797225034636315563591313003168170904150050835594047234324056214795968560435681352508447438611880880396482104797865466840144366521882683759393554145928919/1635313860578199683875341959317729027883720774895611661262748765975429230632840756717876963025104688352927746840692053211757535123386070383865589860773367385691192843063807745192619514974569027264959046416351756123179384207283489954764479161920000000000000000000000000000000000000000000000000000000000000000000000",
+      "gap": "335606484489296851378686610081135396990225622447544625165444528911725353380846662653001431745252028417881913361149005795753727101844931518645811407634230866237797225034636315563591313003168170904150050835594047234324056214795968560435681352508447438611880880396482104797865466840144366521882683759393554145928919/1635313860578199683875341959317729027883720774895611661262748765975429230632840756717876963025104688352927746840692053211757535123386070383865589860773367385691192843063807745192619514974569027264959046416351756123179384207283489954764479161920000000000000000000000000000000000000000000000000000000000000000000000",
+      "branch": "interior",
+      "rho_squared": "344104609270404229449072960049/2592000000000000000000000000000000",
+      "mixed": "2775879454652251841724031691590595907893039/3405877273185272535152177331442000000000000",
+      "pure": "13915952398055931352593717184400110960700936722738421713/17320508075688770000000000000000000000000000000000000000"
+    },
+    "complete_unsigned": {
+      "types": {
+        "cross": {
+          "m": "422080135565141/500000000000000",
+          "floor": "561490660273/1000000000000",
+          "D": "111725952080157/125000000000000",
+          "zmax": "51917133918931/100000000000000",
+          "C": "87175649917203/200000000000000",
+          "B": "230316755613157/1000000000000000",
+          "L": "457719280228203/500000000000000"
+        },
+        "same": {
+          "m": "140174556401/10000000000000",
+          "floor": "982913540688351/1000000000000000",
+          "D": "48347278939959/500000000000000",
+          "zmax": "8021136692221/250000000000000",
+          "C": "180091650359/1000000000000000",
+          "B": "1032341987/200000000000000",
+          "L": "14460719951399/1000000000000000"
+        }
+      },
+      "gammas": {
+        "cross": "262835427125937267589925822493801482471216399183356739156957/431655295303214615496744799392387058744961717000000000000000",
+        "same": "1013995536227721/1000000000000000",
+        "geometric": "1027176719210534084085086549262233315208733597/1726621181212858461986979197569548234979846868",
+        "Jcross": "69082461752473880020283024274985615980315797308455013763900540809210840106788080407422200170014840469958368391081499849/209240947647354901536139979329308480367113111685286271612105606432053169918657055077430364321888576594000000000000000000",
+        "Jsame": "114242994165527050106529872649/218425231264078000000000000000",
+        "Jmax": "114242994165527050106529872649/218425231264078000000000000000"
+      },
+      "row_mixed": {
+        "Hisotropy": "3262857766982755209195609496474560251340059977506492636121/5614906602730000000000000000000000000000000000000000000000",
+        "Hpoint": "67549163818002518577790053892480655818116627/70186332534125000000000000000000000000000000",
+        "Hcross": "3262857766982755209195609496474560251340059977506492636121/5614906602730000000000000000000000000000000000000000000000",
+        "Lcross_row": "231564013892463745420876714232061102201183632017299374633030532710969416380286943851775091/431655295303214615496744799392387058744961717000000000000000000000000000000000000000000000",
+        "Lsame_row": "1605398835730809502998051199129633624897/218425231264078000000000000000000000000000",
+        "Lrow": "25636201097708191960337347918194194346506322126220006231375457110069859088928472082065209785105041740549/47142203851484267252767485893240088040860811410566813650963000000000000000000000000000000000000000000000",
+        "Lmixed": "25636201097708191960337347918194194346506322126220006231375457110069859088928472082065209785105041740549/47142203851484267252767485893240088040860811410566813650963000000000000000000000000000000000000000000000"
+      },
+      "row_transport_delta": [
+        "36143539515013/500000000000000",
+        "72287079030041/1000000000000000"
+      ],
+      "row_isotropy_H": [
+        "145289492914641/250000000000000",
+        "145289492914641/250000000000000"
+      ],
+      "row_pair_M": [
+        "79320838904101/62500000000000",
+        "1269133422465617/1000000000000000"
+      ],
+      "angular_cubic": [
+        "156826320894449/1000000000000000",
+        "19603290111807/125000000000000"
+      ],
+      "angular_mixed": [
+        "1883136901923/100000000000000",
+        "4707842254809/250000000000000"
+      ],
+      "angular_quartic": [
+        "1480063446321/100000000000000",
+        "14800634463219/1000000000000000"
+      ],
+      "angular_A": [
+        "190458324376889/1000000000000000",
+        "190458324376911/1000000000000000"
+      ],
+      "radial_B": [
+        "27422686697923/250000000000000",
+        "6855671674481/62500000000000"
+      ],
+      "loss": [
+        "205122784906247/1000000000000000",
+        "20512278490627/100000000000000"
+      ],
+      "T": [
+        "75850812834369/500000000000000",
+        "75850812834369/500000000000000"
+      ],
+      "qt": [
+        "3993809628993/250000000000000",
+        "15975238515973/1000000000000000"
+      ],
+      "radial_lower": "232568581716249/250000000000000",
+      "radial_upper": "528829380151239/500000000000000"
+    },
+    "exact_margin": "166351211672790088051530928161920762224902722139825159718566289689509857908035960739213929367137570715373464731218224967892900138695898416258926804357231906938324154155643345481536603139594995387073249272316899301347973038565498143548881201025723258642480396482104797865466840144366521882683759393554145928919/1635313860578199683875341959317729027883720774895611661262748765975429230632840756717876963025104688352927746840692053211757535123386070383865589860773367385691192843063807745192619514974569027264959046416351756123179384207283489954764479161920000000000000000000000000000000000000000000000000000000000000000000000",
+    "downward_margin": "4068973319/40000000000000",
+    "required_margin": "1/10000",
+    "regional_guard_checks": [
+      {
+        "check": "independent aggregate polar interface: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "independent point polar interface: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "positive certified polar coefficients",
+        "accepted": true
+      },
+      {
+        "check": "continuous cK: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "continuous transverse: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "continuous lambda_lower: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "positive cross endpoint floor",
+        "accepted": true
+      },
+      {
+        "check": "physical normal reference domain",
+        "accepted": true
+      },
+      {
+        "check": "mass mean complete positivity",
+        "accepted": true
+      },
+      {
+        "check": "candidate eta numerator: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate stress numerator: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate reconstructed mean gap: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "candidate reconstructed mean gap: reconstructed interval ['18304996619957/100000000000000', '183049966199571/1000000000000000'] != ['18304996619957/100000000000000', '183049966199571/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "candidate pointwise intrinsic residual: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "candidate pointwise intrinsic residual: reconstructed interval ['210023739886647/1000000000000000', '210023739886647/1000000000000000'] != ['210023739886647/1000000000000000', '210023739886647/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.Bg: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.Bg_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.bg_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.reference_gap: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.parameter: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.weight: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.gm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate mass coordinates.cm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "candidate local domain",
+        "accepted": true
+      },
+      {
+        "check": "stress coordinates original domain",
+        "accepted": true
+      },
+      {
+        "check": "stress coordinates transformed domain and complete positivity",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.cm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.gm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.mass: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.metric_lower: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.root_error: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.eta_v: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.Bv: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.phase_defect: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.phase_reference: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.projected_fraction: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.reference_gap: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.dp_v: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.pair_perturbation: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.parameter: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed stress mean.weight: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "actual closest gauge rotation domain",
+        "accepted": true
+      },
+      {
+        "check": "angular closest gauge domain",
+        "accepted": true
+      },
+      {
+        "check": "positive physical radial multipliers",
+        "accepted": true
+      },
+      {
+        "check": "physical radial interval",
+        "accepted": true
+      },
+      {
+        "check": "region total: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "region total: reconstructed interval ['292340956696239/100000000000000', '2923409566962469/1000000000000000'] != ['292340956696239/100000000000000', '2923409566962469/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "region point: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "region point: reconstructed interval ['1180485346563277/500000000000000', '295121336640827/125000000000000'] != ['1180485346563277/500000000000000', '295121336640827/125000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "region d_coefficient: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "region rotation: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "region epsilon: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "region epsilon: reconstructed interval ['162803385156877/1000000000000000', '162803385156883/1000000000000000'] != ['162803385156877/1000000000000000', '162803385156883/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "region candidate_radius: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "region candidate_radius: reconstructed interval ['1001566171672267/1000000000000000', '100156617167227/100000000000000'] != ['1001566171672267/1000000000000000', '100156617167227/100000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.B: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.B_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.b_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.n: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.gm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.cm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.t: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.mean_normal_radius: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.J: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.L: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.J_raw: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.L_raw: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical normal.ambient: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.Bg: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.Bg_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.bg_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.reference_gap: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.parameter: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.weight: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.gm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "physical mass mean.cm: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "ambient mean perturbation: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "ambient mean perturbation: reconstructed interval ['975973110715919/1000000000000000', '195194622143221/200000000000000'] != ['975973110715919/1000000000000000', '195194622143221/200000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "finite physical normal domain",
+        "accepted": true
+      },
+      {
+        "check": "finite normal.upper: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "finite normal.gap: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "finite normal.rho_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "finite normal.mixed: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "finite normal.pure: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "finite normal branch: reconstructed value",
+        "accepted": true
+      },
+      {
+        "check": "Euclidean cross floor",
+        "accepted": true
+      },
+      {
+        "check": "same and cross positive floors",
+        "accepted": true
+      },
+      {
+        "check": "unsigned typed order C",
+        "accepted": true
+      },
+      {
+        "check": "unsigned typed order B",
+        "accepted": true
+      },
+      {
+        "check": "unsigned typed order L",
+        "accepted": true
+      },
+      {
+        "check": "four-type positive mixing weights",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned loss: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned loss: reconstructed interval ['205122784906247/1000000000000000', '20512278490627/100000000000000'] != ['205122784906247/1000000000000000', '20512278490627/100000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_cubic: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_cubic: reconstructed interval ['156826320894449/1000000000000000', '19603290111807/125000000000000'] != ['156826320894449/1000000000000000', '19603290111807/125000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_mixed: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_mixed: reconstructed interval ['1883136901923/100000000000000', '4707842254809/250000000000000'] != ['1883136901923/100000000000000', '4707842254809/250000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_quartic: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_quartic: reconstructed interval ['1480063446321/100000000000000', '14800634463219/1000000000000000'] != ['1480063446321/100000000000000', '14800634463219/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_A: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned angular_A: reconstructed interval ['190458324376889/1000000000000000', '190458324376911/1000000000000000'] != ['190458324376889/1000000000000000', '190458324376911/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned radial_B: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned radial_B: reconstructed interval ['27422686697923/250000000000000', '6855671674481/62500000000000'] != ['27422686697923/250000000000000', '6855671674481/62500000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned row_transport_delta: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned row_transport_delta: reconstructed interval ['36143539515013/500000000000000', '72287079030041/1000000000000000'] != ['36143539515013/500000000000000', '72287079030041/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned row_isotropy_H: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned row_isotropy_H: reconstructed interval ['145289492914641/250000000000000', '145289492914641/250000000000000'] != ['145289492914641/250000000000000', '145289492914641/250000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned row_pair_M: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned row_pair_M: reconstructed interval ['79320838904101/62500000000000', '1269133422465617/1000000000000000'] != ['79320838904101/62500000000000', '1269133422465617/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned radial_lower: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete unsigned radial_upper: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.cross.m: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.cross.floor: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.cross.D: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.cross.zmax: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.cross.C: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.cross.B: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.cross.L: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.same.m: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.same.floor: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.same.D: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.same.zmax: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.same.C: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.same.B: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "unsigned types.same.L: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complex fiber gamma.cross: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complex fiber gamma.same: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complex fiber gamma.geometric: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complex fiber gamma.Jcross: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complex fiber gamma.Jsame: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complex fiber gamma.Jmax: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete row mixed.Hisotropy: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete row mixed.Hpoint: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete row mixed.Hcross: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete row mixed.Lcross_row: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete row mixed.Lsame_row: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete row mixed.Lrow: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "complete row mixed.Lmixed: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.tangent_point: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.tangent_point: reconstructed interval ['75850812834369/500000000000000', '75850812834369/500000000000000'] != ['75850812834369/500000000000000', '75850812834369/500000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.tangent_q: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.tangent_q: reconstructed interval ['3993809628993/250000000000000', '15975238515973/1000000000000000'] != ['3993809628993/250000000000000', '15975238515973/1000000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.tangent_coefficient: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.angle_B: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.angle_B: reconstructed interval ['543757609788697/200000000000000', '271878804894349/100000000000000'] != ['543757609788697/200000000000000', '271878804894349/100000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.chi: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.chi: reconstructed interval ['1059318458912259/1000000000000000', '42372738356491/40000000000000'] != ['1059318458912259/1000000000000000', '42372738356491/40000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.angle_rot: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.selected_rot: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.angle_su2: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "actual angular transport.angle_su2: reconstructed interval ['1488467519953/1000000000000000', '744233759977/500000000000000'] != ['1488467519953/1000000000000000', '744233759977/500000000000000']",
+        "accepted": true
+      },
+      {
+        "check": "complete original unsigned margin: interval shape",
+        "accepted": true
+      },
+      {
+        "check": "complete original unsigned margin: reconstructed interval ['-1024599864583/25000000000000', '-160093728841/3906250000000'] != ['-1024599864583/25000000000000', '-160093728841/3906250000000']",
+        "accepted": true
+      },
+      {
+        "check": "finite physical normal domain",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed adopted normal.upper: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed adopted normal.gap: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed adopted normal.rho_squared: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed adopted normal.mixed: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 reconstructed adopted normal.pure: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "C3 physical normal branch: reconstructed value",
+        "accepted": true
+      },
+      {
+        "check": "C3 complete exact margin: reconstructed rational",
+        "accepted": true
+      },
+      {
+        "check": "strict adopted r2_3 region (17, 23)",
+        "accepted": true
+      }
+    ]
+  },
+  "short_rational_ledger": {
+    "c_m": {
+      "direction": "\\ge",
+      "value": "57232179613/250000000000"
+    },
+    "c_r": {
+      "direction": "\\ge",
+      "value": "105011869943/500000000000"
+    },
+    "J": {
+      "direction": "\\le",
+      "value": "407513135677/500000000000"
+    },
+    "L": {
+      "direction": "\\le",
+      "value": "160687577261/200000000000"
+    },
+    "\\rho_n^2": {
+      "direction": "\\le",
+      "value": "16594551/125000000000"
+    },
+    "A_3^{\\,u}": {
+      "direction": "\\le",
+      "value": "31365264179/200000000000"
+    },
+    "A_{\\rm mixed}": {
+      "direction": "\\le",
+      "value": "941568451/50000000000"
+    },
+    "A_4^{\\,u}": {
+      "direction": "\\le",
+      "value": "462519827/31250000000"
+    },
+    "A^{\\,u}": {
+      "direction": "\\le",
+      "value": "190458324379/1000000000000"
+    },
+    "B^{\\,u}": {
+      "direction": "\\le",
+      "value": "13711343349/125000000000"
+    },
+    "g_{\\rm normal}": {
+      "direction": "\\ge",
+      "value": "41044901847/200000000000"
+    },
+    "{\\rm Loss}(A^{\\,u},B^{\\,u})": {
+      "direction": "\\le",
+      "value": "205122784909/1000000000000"
+    },
+    "g_{\\rm normal}-{\\rm Loss}": {
+      "direction": "\\ge",
+      "value": "50862163/500000000000"
+    }
+  },
+  "rounded_interior_guard": {
+    "left": "2755806566596518828917418255279/31250000000000000000000000000000000",
+    "right": "11167211489928938758404597530961/31250000000000000000000000000000000"
+  },
+  "short_ledger_margin": "50862163/500000000000",
+  "decimal_grid": 1000000000000,
+  "additional_check": "Shortened outward rational coefficients independently imply margin > 1/10000"
+}

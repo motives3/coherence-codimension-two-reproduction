@@ -1,0 +1,108 @@
+{
+  "format": "codim2-public-reproduction-manifest-v2",
+  "manuscript_version": "2.5",
+  "fixed_threshold": 180,
+  "scope": "Public reproduction-only distribution; no new mathematical run",
+  "files": {
+    "certificate/ARITHMETIC_README.txt": {
+      "size": 2782,
+      "sha256": "c0681802e44c310114664d5ee4916a0eb6ace43b5ea8a47306ccdc487d8ea5a8"
+    },
+    "certificate/INDEX.json": {
+      "size": 3274,
+      "sha256": "7002e8d009e3365525cbe5e707b94f6cdebab8ff2d6b20fad6d01ddd6d296379"
+    },
+    "certificate/supplement.zip": {
+      "size": 36699854,
+      "sha256": "93778fcb58e11f1967f683b17bfa26cdcd854c4579226c35830bfc327caa810f"
+    },
+    "certificate/verify_certificates.py": {
+      "size": 5930,
+      "sha256": "2bb8887a817195b47e269ba707d4e66264e4e7a205cdb3143d9edf91b063e8d1"
+    },
+    "check_package.py": {
+      "size": 6432,
+      "sha256": "de4af3e3aa52768a93e9c1d55841cbf8aaf8a2268d336194426d36c3462cc953"
+    },
+    "LICENSE.txt": {
+      "size": 840,
+      "sha256": "a3da617685fad79374c4fd9af348802a40e117d99c0f28aeb6880b70554abc89"
+    },
+    "LICENSES/CC-BY-4.0.txt": {
+      "size": 17023,
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    "LICENSES/MIT.txt": {
+      "size": 1092,
+      "sha256": "21c9630343c386c3c66135e9997c693d5dd84fe725eff5ffe0e45aeedeb9ff32"
+    },
+    "PRIVACY_TRANSFORM.json": {
+      "size": 7080,
+      "sha256": "658c4760fdb5138359c1d8f2bfbd9d0cad2badd8f163edfe0983330d5cf709da"
+    },
+    "README.txt": {
+      "size": 2024,
+      "sha256": "4d72f0cc9bd90d32af76a59049a08d8ed8fbde5d9f84ab942783063f0c5f73e9"
+    },
+    "RELEASE_STATUS.txt": {
+      "size": 791,
+      "sha256": "059f12f02abed501a870b41f8791c5836bee16e4d7fbaaba9553c290c8e3e49f"
+    },
+    "validation/ARITHMETIC_ACCEPTANCE.json": {
+      "size": 42756,
+      "sha256": "5256d9e55e0b13e49d74f02f068958409e32ed726b65ef8eac32040ff071673f"
+    },
+    "validation/C3_WORST_ACCEPTANCE.json": {
+      "size": 39546,
+      "sha256": "842ec938df8d4de680fce82aab859b043d8ffcd26915ee19638125290774642d"
+    },
+    "validation/continuous_arithmetic.py": {
+      "size": 27913,
+      "sha256": "6b2b2337f09d9cd76116018f5856b33f68897e4a13434d6c973c027c7a81a8da"
+    },
+    "validation/CONTINUOUS_REGRESSION_NORMAL.txt": {
+      "size": 778,
+      "sha256": "9772f9eacea7e6ace655c4f806bc7adcf234704ee64c8d127814979fd2990f47"
+    },
+    "validation/CONTINUOUS_REGRESSION_OPTIMIZED.txt": {
+      "size": 1018,
+      "sha256": "7f48dfe98cfcca07b8eebe66268eb737e8dcbe2c3c23bad2231a34caa262b838"
+    },
+    "validation/global_arithmetic.py": {
+      "size": 15393,
+      "sha256": "1126fe2d3ad0f7939371103f90066c8387456ad75fe971d26eec931f5311380b"
+    },
+    "validation/INTEGRATION_REGRESSIONS.txt": {
+      "size": 1007,
+      "sha256": "9ea98209041c371ad6a4ac6d30ad9e0ff947ca1da204c45f99172acea2546545"
+    },
+    "validation/local_arithmetic.py": {
+      "size": 32668,
+      "sha256": "36900144f78a7763af76abb7a10c6219f459ff8f35eb9e798ade5ad1659b0f9d"
+    },
+    "validation/LOCAL_REGRESSION_VALIDATION.json": {
+      "size": 756,
+      "sha256": "7220da9de1af4fba7118d9d781864706527657a8b1e1e2bbe79a1d63fce90a7d"
+    },
+    "validation/PRIOR_ACCEPTANCE_BINDING.json": {
+      "size": 5407,
+      "sha256": "f79f36091c44510d98a8d671d911e602cf8377d494116c8e4bfaba8392cab10e"
+    },
+    "validation/readonly_run.py": {
+      "size": 1304,
+      "sha256": "a93c6d73362c6947a42c8164e9f1f3e6cc3b22724db25a1798e532134c47a00f"
+    },
+    "validation/test_acceptance.py": {
+      "size": 3837,
+      "sha256": "333e79f99b5f13a1230ab7254a25f9ca98828e37c9d7f5974aeb199c1664aff0"
+    },
+    "validation/test_continuous_arithmetic.py": {
+      "size": 5073,
+      "sha256": "15c961082991f137b539f927ac97ca10e26707d46ae88b91f28c2ed5eabdca64"
+    },
+    "validation/tests_local.py": {
+      "size": 3390,
+      "sha256": "639585bdec972093f1653aac4641ee4b407f964dcbe1bc6f81385a91f3741837"
+    }
+  }
+}

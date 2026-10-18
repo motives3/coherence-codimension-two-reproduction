@@ -1,0 +1,200 @@
+{
+  "format": "codim2-metadata-redaction-v1",
+  "manuscript_version": "2.5",
+  "fixed_threshold": 180,
+  "changed_json_members": 3,
+  "changed_key_occurrences": 17,
+  "unchanged_json_members": 11,
+  "arithmetic_verifier_files_unchanged": 4,
+  "changes": {
+    "research/codim2_below200_20261017/local/PROFILE_180.json": {
+      "historical_sha256": "d8025721cd1a9c517ea82b4a3b49036e7f9246ef091baf340c6dc164ece3f054",
+      "public_sha256": "139ac353142267584da48e78050af6dfdbdcfea6bfd48614c031be4f3f0f1f3c",
+      "changed_key_occurrences": 8,
+      "replacements": [
+        {
+          "object_path": [
+            "profiles",
+            0,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-002",
+          "source_sha256_value": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc"
+        },
+        {
+          "object_path": [
+            "profiles",
+            0,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-001",
+          "source_sha256_value": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9"
+        },
+        {
+          "object_path": [
+            "profiles",
+            1,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-002",
+          "source_sha256_value": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc"
+        },
+        {
+          "object_path": [
+            "profiles",
+            1,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-001",
+          "source_sha256_value": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9"
+        },
+        {
+          "object_path": [
+            "profiles",
+            2,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-002",
+          "source_sha256_value": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc"
+        },
+        {
+          "object_path": [
+            "profiles",
+            2,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-001",
+          "source_sha256_value": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9"
+        },
+        {
+          "object_path": [
+            "profiles",
+            3,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-002",
+          "source_sha256_value": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc"
+        },
+        {
+          "object_path": [
+            "profiles",
+            3,
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-001",
+          "source_sha256_value": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9"
+        }
+      ],
+      "private_exact_inverse_byte_comparison": true,
+      "source_hash_values_preserved": true
+    },
+    "research/codim2_residue2_20261018/curvature/STRESS_SAVED_NORMAL.json": {
+      "historical_sha256": "61fb05ab6479b0cd455835ec6b415cc6a8e98b6a4a0f8079281a23f0ce886d05",
+      "public_sha256": "cc4d93a83b5cc090bab98b17a05e05d39a758eb5869be9f955101b97a08bdf36",
+      "changed_key_occurrences": 5,
+      "replacements": [
+        {
+          "object_path": [
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-001",
+          "source_sha256_value": "d8025721cd1a9c517ea82b4a3b49036e7f9246ef091baf340c6dc164ece3f054"
+        },
+        {
+          "object_path": [
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-005",
+          "source_sha256_value": "a0cede4ca7bff7a2a83b757ee99b6493ba5e785ae4566c1836b896196be8cdc1"
+        },
+        {
+          "object_path": [
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-004",
+          "source_sha256_value": "70149ba1bbdb300a90ab2b18c76858c5ad1173de3e0741a9c4d00f63e1d4377f"
+        },
+        {
+          "object_path": [
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-002",
+          "source_sha256_value": "13e51de532428e593564294d2c5c21898250bd827185f06b34561c4a5897ff0e"
+        },
+        {
+          "object_path": [
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-003",
+          "source_sha256_value": "6846ec78f0b08f36e10add0ab2a4e5fc4304a7c0c59f98abe6a47d4e91d76d6e"
+        }
+      ],
+      "private_exact_inverse_byte_comparison": true,
+      "source_hash_values_preserved": true
+    },
+    "research/codim2_residue2_20261018/local/FROZEN_FULL_182.json": {
+      "historical_sha256": "907063e3a153aac919e1d2b07f172ec32e04f2dbfe40ae826cda83c07847a048",
+      "public_sha256": "6f3ec6fc94d12d73abb433c7e7f139cdef320efba1b172f4ad58b2275311bef9",
+      "changed_key_occurrences": 4,
+      "replacements": [
+        {
+          "object_path": [
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-004",
+          "source_sha256_value": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc"
+        },
+        {
+          "object_path": [
+            "candidate",
+            "intrinsic",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-002",
+          "source_sha256_value": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9"
+        },
+        {
+          "object_path": [
+            "candidate",
+            "overlap_floors",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-003",
+          "source_sha256_value": "7fe116ed9854ab6ebfc6532922f3daf72cd24ba1343193b750da1f2a22d40540"
+        },
+        {
+          "object_path": [
+            "candidate",
+            "overlap_floors",
+            "source_sha256"
+          ],
+          "public_label": "redacted-source-001",
+          "source_sha256_value": "2b7a3809ed7ddac0985756f30bcd6f94a62b3f4113280163572da6b48ea80c01"
+        }
+      ],
+      "private_exact_inverse_byte_comparison": true,
+      "source_hash_values_preserved": true
+    }
+  },
+  "scope": "Only dictionary keys directly within source_sha256 metadata were replaced. All values and all other raw bytes were checked unchanged against the private baseline.",
+  "public_verifiability_limit": "Original path strings are deliberately not distributed. The original three full-file digests cannot be reconstructed from this public snapshot. The historical report remains historical; the public checker checks the new digest binding. A reader may independently run the unchanged full arithmetic verifier.",
+  "mathematical_verification_executed": false
+}

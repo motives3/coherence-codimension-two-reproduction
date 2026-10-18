@@ -1,0 +1,84 @@
+{
+  "format": "codim2-180-supplement-v1",
+  "created": "2026-10-18",
+  "archive": {
+    "name": "supplement.zip",
+    "size": 36699854,
+    "sha256": "93778fcb58e11f1967f683b17bfa26cdcd854c4579226c35830bfc327caa810f"
+  },
+  "member_count": 14,
+  "uncompressed_bytes": 360676329,
+  "selection_policy": "Fourteen accepted JSON witnesses; only 17 machine-path source_sha256 keys in three records replaced by neutral labels. See PRIVACY_TRANSFORM.json.",
+  "members": [
+    {
+      "path": "research/codim2_below200_20261017/candidate/OVERLAPS_NORMAL.json",
+      "size": 1024394,
+      "sha256": "2b7a3809ed7ddac0985756f30bcd6f94a62b3f4113280163572da6b48ea80c01"
+    },
+    {
+      "path": "research/codim2_below200_20261017/fine/SEED_NORMAL.json",
+      "size": 739238,
+      "sha256": "efef7f4a81d230b8d55cc3db0694ff0a5ec9cc510b942b7ab460b661598724c7"
+    },
+    {
+      "path": "research/codim2_below200_20261017/global/ENTRY_NORMAL.json",
+      "size": 255565,
+      "sha256": "f6ec33a86ed91c7bff64410268ed9cef6827ab65e568a1859fd7d2730aebdff5"
+    },
+    {
+      "path": "research/codim2_below200_20261017/global/REFINEMENT_441_865_NORMAL.json",
+      "size": 1504,
+      "sha256": "c463863b04968b40af2e2cf6ae732a91d29b45c32adb16bc80ead02386bdcd7b"
+    },
+    {
+      "path": "research/codim2_below200_20261017/local/PROFILE_180.json",
+      "size": 34813374,
+      "sha256": "139ac353142267584da48e78050af6dfdbdcfea6bfd48614c031be4f3f0f1f3c"
+    },
+    {
+      "path": "research/codim2_below200_20261017/residual/ROOT_INTRINSIC_NORMAL.json",
+      "size": 62062328,
+      "sha256": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9"
+    },
+    {
+      "path": "research/codim2_endpoint200_20261017/candidate/OVERLAPS_NORMAL.json",
+      "size": 1016355,
+      "sha256": "7fe116ed9854ab6ebfc6532922f3daf72cd24ba1343193b750da1f2a22d40540"
+    },
+    {
+      "path": "research/codim2_endpoint200_20261017/residual/ROOT_INTRINSIC_NORMAL.json",
+      "size": 199544181,
+      "sha256": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc"
+    },
+    {
+      "path": "research/codim2_residue2_20261018/curvature/STRESS_SAVED_NORMAL.json",
+      "size": 353112,
+      "sha256": "cc4d93a83b5cc090bab98b17a05e05d39a758eb5869be9f955101b97a08bdf36"
+    },
+    {
+      "path": "research/codim2_residue2_20261018/local/FROZEN_FULL_182.json",
+      "size": 26098637,
+      "sha256": "6f3ec6fc94d12d73abb433c7e7f139cdef320efba1b172f4ad58b2275311bef9"
+    },
+    {
+      "path": "research/codim2_residue2_20261018/local/REFINED_182_NORMAL.json",
+      "size": 25415524,
+      "sha256": "3838de767a7d28867ea0e1cb083e3a6e2fed6fae5cd629f8503d9b3f65128ab1"
+    },
+    {
+      "path": "research/codim2_residue2_20261018/mixed/EXACT_PROJECTED_R2_1.json",
+      "size": 7643474,
+      "sha256": "aaf20d80f4a577335ca54f7a9054e0c3fdeba8e8230c03878c3375de6713e3aa"
+    },
+    {
+      "path": "research/codim2_residue2_20261018/mixed/SHARP_FIBERS.json",
+      "size": 1133107,
+      "sha256": "3f8338ee8406d1dcf549e038b2bfb073ec5684289e6bc26f25ce1d5bd5c1b520"
+    },
+    {
+      "path": "research/codim2_residue2_20261018/mixed/SHARP_STATIONARY.json",
+      "size": 575536,
+      "sha256": "9a903dbbe5f73caf9a454445b9df94b46f19e95c0184d6141e364fd453a38577"
+    }
+  ]
+}

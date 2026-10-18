@@ -1,0 +1,52 @@
+{
+  "status": "METADATA_REDACTION_TRANSFER_NOT_A_NEW_MATHEMATICAL_RUN",
+  "fixed_threshold": 180,
+  "prior_report": "validation/ARITHMETIC_ACCEPTANCE.json",
+  "prior_report_sha256": "5256d9e55e0b13e49d74f02f068958409e32ed726b65ef8eac32040ff071673f",
+  "historical_input_sha256": {
+    "research/codim2_below200_20261017/candidate/OVERLAPS_NORMAL.json": "2b7a3809ed7ddac0985756f30bcd6f94a62b3f4113280163572da6b48ea80c01",
+    "research/codim2_below200_20261017/fine/SEED_NORMAL.json": "efef7f4a81d230b8d55cc3db0694ff0a5ec9cc510b942b7ab460b661598724c7",
+    "research/codim2_below200_20261017/global/ENTRY_NORMAL.json": "f6ec33a86ed91c7bff64410268ed9cef6827ab65e568a1859fd7d2730aebdff5",
+    "research/codim2_below200_20261017/global/REFINEMENT_441_865_NORMAL.json": "c463863b04968b40af2e2cf6ae732a91d29b45c32adb16bc80ead02386bdcd7b",
+    "research/codim2_below200_20261017/local/PROFILE_180.json": "d8025721cd1a9c517ea82b4a3b49036e7f9246ef091baf340c6dc164ece3f054",
+    "research/codim2_below200_20261017/residual/ROOT_INTRINSIC_NORMAL.json": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9",
+    "research/codim2_endpoint200_20261017/candidate/OVERLAPS_NORMAL.json": "7fe116ed9854ab6ebfc6532922f3daf72cd24ba1343193b750da1f2a22d40540",
+    "research/codim2_endpoint200_20261017/residual/ROOT_INTRINSIC_NORMAL.json": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc",
+    "research/codim2_residue2_20261018/curvature/STRESS_SAVED_NORMAL.json": "61fb05ab6479b0cd455835ec6b415cc6a8e98b6a4a0f8079281a23f0ce886d05",
+    "research/codim2_residue2_20261018/local/FROZEN_FULL_182.json": "907063e3a153aac919e1d2b07f172ec32e04f2dbfe40ae826cda83c07847a048",
+    "research/codim2_residue2_20261018/local/REFINED_182_NORMAL.json": "3838de767a7d28867ea0e1cb083e3a6e2fed6fae5cd629f8503d9b3f65128ab1",
+    "research/codim2_residue2_20261018/mixed/EXACT_PROJECTED_R2_1.json": "aaf20d80f4a577335ca54f7a9054e0c3fdeba8e8230c03878c3375de6713e3aa",
+    "research/codim2_residue2_20261018/mixed/SHARP_FIBERS.json": "3f8338ee8406d1dcf549e038b2bfb073ec5684289e6bc26f25ce1d5bd5c1b520",
+    "research/codim2_residue2_20261018/mixed/SHARP_STATIONARY.json": "9a903dbbe5f73caf9a454445b9df94b46f19e95c0184d6141e364fd453a38577"
+  },
+  "public_input_sha256": {
+    "research/codim2_below200_20261017/candidate/OVERLAPS_NORMAL.json": "2b7a3809ed7ddac0985756f30bcd6f94a62b3f4113280163572da6b48ea80c01",
+    "research/codim2_below200_20261017/fine/SEED_NORMAL.json": "efef7f4a81d230b8d55cc3db0694ff0a5ec9cc510b942b7ab460b661598724c7",
+    "research/codim2_below200_20261017/global/ENTRY_NORMAL.json": "f6ec33a86ed91c7bff64410268ed9cef6827ab65e568a1859fd7d2730aebdff5",
+    "research/codim2_below200_20261017/global/REFINEMENT_441_865_NORMAL.json": "c463863b04968b40af2e2cf6ae732a91d29b45c32adb16bc80ead02386bdcd7b",
+    "research/codim2_below200_20261017/local/PROFILE_180.json": "139ac353142267584da48e78050af6dfdbdcfea6bfd48614c031be4f3f0f1f3c",
+    "research/codim2_below200_20261017/residual/ROOT_INTRINSIC_NORMAL.json": "e52e1e839c37ed7e56d85045361d95d11204a54b544edbfee2dc41bc867532c9",
+    "research/codim2_endpoint200_20261017/candidate/OVERLAPS_NORMAL.json": "7fe116ed9854ab6ebfc6532922f3daf72cd24ba1343193b750da1f2a22d40540",
+    "research/codim2_endpoint200_20261017/residual/ROOT_INTRINSIC_NORMAL.json": "ef72eb71d72d46bca31b6b6ae18bac595569285cbc615fe60b1a7caf7a5456cc",
+    "research/codim2_residue2_20261018/curvature/STRESS_SAVED_NORMAL.json": "cc4d93a83b5cc090bab98b17a05e05d39a758eb5869be9f955101b97a08bdf36",
+    "research/codim2_residue2_20261018/local/FROZEN_FULL_182.json": "6f3ec6fc94d12d73abb433c7e7f139cdef320efba1b172f4ad58b2275311bef9",
+    "research/codim2_residue2_20261018/local/REFINED_182_NORMAL.json": "3838de767a7d28867ea0e1cb083e3a6e2fed6fae5cd629f8503d9b3f65128ab1",
+    "research/codim2_residue2_20261018/mixed/EXACT_PROJECTED_R2_1.json": "aaf20d80f4a577335ca54f7a9054e0c3fdeba8e8230c03878c3375de6713e3aa",
+    "research/codim2_residue2_20261018/mixed/SHARP_FIBERS.json": "3f8338ee8406d1dcf549e038b2bfb073ec5684289e6bc26f25ce1d5bd5c1b520",
+    "research/codim2_residue2_20261018/mixed/SHARP_STATIONARY.json": "9a903dbbe5f73caf9a454445b9df94b46f19e95c0184d6141e364fd453a38577"
+  },
+  "verifier_sha256": {
+    "certificate/verify_certificates.py": "2bb8887a817195b47e269ba707d4e66264e4e7a205cdb3143d9edf91b063e8d1",
+    "validation/global_arithmetic.py": "1126fe2d3ad0f7939371103f90066c8387456ad75fe971d26eec931f5311380b",
+    "validation/continuous_arithmetic.py": "6b2b2337f09d9cd76116018f5856b33f68897e4a13434d6c973c027c7a81a8da",
+    "validation/local_arithmetic.py": "36900144f78a7763af76abb7a10c6219f459ff8f35eb9e798ade5ad1659b0f9d"
+  },
+  "current_archive_sha256": "93778fcb58e11f1967f683b17bfa26cdcd854c4579226c35830bfc327caa810f",
+  "current_archive_members": 14,
+  "previous_check_count": 5266235,
+  "transformation_record": "PRIVACY_TRANSFORM.json",
+  "transformation_sha256": "658c4760fdb5138359c1d8f2bfbd9d0cad2badd8f163edfe0983330d5cf709da",
+  "prior_report_modified": false,
+  "new_mathematical_checks_executed": false,
+  "interpretation": "Eleven input records and four verifier modules are byte-identical to the historical acceptance. Three input records differ only in inert metadata labels. The local preparation checked exact inverse byte substitution. Public checks do not reconstruct the omitted private labels or claim a new arithmetic acceptance."
+}

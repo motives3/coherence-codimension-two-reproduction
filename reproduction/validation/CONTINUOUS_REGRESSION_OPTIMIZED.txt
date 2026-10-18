@@ -1,0 +1,12 @@
+test_bernstein_reconstructs_polynomial (test_continuous_arithmetic.ArithmeticTests.test_bernstein_reconstructs_polynomial) ... ok
+test_closed_cover_rejects_gap_and_overlap (test_continuous_arithmetic.ArithmeticTests.test_closed_cover_rejects_gap_and_overlap) ... ok
+test_exact_interval_negative_denominator (test_continuous_arithmetic.ArithmeticTests.test_exact_interval_negative_denominator) ... ok
+test_partial_polynomial_product_identity (test_continuous_arithmetic.ArithmeticTests.test_partial_polynomial_product_identity) ... ok
+test_sharp_formulas_match_generic_projector (test_continuous_arithmetic.ArithmeticTests.test_sharp_formulas_match_generic_projector) ... ok
+test_signed_interval_corners (test_continuous_arithmetic.ArithmeticTests.test_signed_interval_corners) ... ok
+test_square_root_directed_witnesses (test_continuous_arithmetic.ArithmeticTests.test_square_root_directed_witnesses) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.005s
+
+OK

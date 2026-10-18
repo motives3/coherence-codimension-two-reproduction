@@ -1,0 +1,14 @@
+STATUS: PUBLIC REPRODUCTION DISTRIBUTION
+RELATED MANUSCRIPT: Exact complex coherence in codimension two, v2.5
+SUFFICIENT THRESHOLD: 180 (not claimed minimal)
+REPOSITORY: https://github.com/motives3/coherence-codimension-two-reproduction
+
+Scope: sanitized certificate data, verifier code, regression sources and
+historical reports. The manuscript source and PDF are not included.
+Python code: MIT. Data and documentation: CC BY 4.0.
+
+The evidence originates in v2.1 and supports the v2.5 computational component.
+Seventeen machine-path metadata labels were replaced in three records;
+the original reports remain historical. See PRIVACY_TRANSFORM.json.
+No mathematical verification, regression run, search or optimization was
+repeated for this publication. No arXiv or Zenodo upload was made.

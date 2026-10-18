@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "Eight new synthetic arithmetic regressions; no historical data, evaluator, or endpoint computation",
+  "tests_each_mode": 8,
+  "runs": [
+    {
+      "mode": "normal",
+      "command": "python -B tests_local.py",
+      "returncode": 0,
+      "tests": 8,
+      "result": "OK"
+    },
+    {
+      "mode": "optimized",
+      "command": "python -B -O tests_local.py",
+      "returncode": 0,
+      "tests": 8,
+      "result": "OK"
+    }
+  ],
+  "historical_modules_imported": false,
+  "historical_records_read": false,
+  "source_sha256": {
+    "local_arithmetic.py": "36900144f78a7763af76abb7a10c6219f459ff8f35eb9e798ade5ad1659b0f9d",
+    "tests_local.py": "639585bdec972093f1653aac4641ee4b407f964dcbe1bc6f81385a91f3741837"
+  }
+}
