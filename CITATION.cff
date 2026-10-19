@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite these reproduction materials and record the commit used."
+type: software
+title: "Exact complex coherence in codimension two: reproduction materials"
+authors:
+  - family-names: Li
+    given-names: Xuan
+repository-code: "https://github.com/motives3/coherence-codimension-two-reproduction"
+url: "https://github.com/motives3/coherence-codimension-two-reproduction"
+abstract: >-
+  Exact certificate data and Python code for the computer-assisted estimates
+  in Exact complex coherence in codimension two, for the sufficient threshold
+  N >= 180. The manuscript supplies the analytic reductions, extension to all
+  N >= 180, and classification of equality cases.
+keywords:
+  - coherence
+  - complex projective codes
+  - exact arithmetic
+  - computer-assisted proofs

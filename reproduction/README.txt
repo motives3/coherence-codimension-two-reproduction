@@ -1,38 +1,29 @@
 EXACT COMPLEX COHERENCE IN CODIMENSION TWO
-Reproduction materials associated with manuscript v2.5; N >= 180.
+Certificate data and verification code for the sufficient threshold N >= 180.
 
 Public repository:
 https://github.com/motives3/coherence-codimension-two-reproduction
-The manuscript source and PDF are not distributed here.
-
 Python >= 3.10, standard library only. From this directory:
   python -B check_package.py
-checks packaging only. It does not execute mathematical verification.
+This checks file hashes, archive membership and local dependencies.
+It does not verify the mathematical inequalities.
 
-Independent full arithmetic reproduction, if requested by the reader:
+To verify all certificates:
   python -B certificate/verify_certificates.py
 or:
   python -B validation/readonly_run.py
-These commands perform substantial arithmetic. Read certificate/ARITHMETIC_README.txt.
-No full arithmetic run, regression run or search was performed for this release.
+Both commands perform arithmetic on the saved inputs. A successful full run
+exits with code 0 and reports status PASS and complete_arithmetic_acceptance
+true. Partial diagnostics report PASS_PARTIAL. Reports go to stdout and
+progress to stderr.
 
-The archive contains the same fourteen witness records consumed by the
-historical acceptance. Eleven are byte-identical. In three records, 17 keys
-within source_sha256 metadata have been replaced by neutral labels. No values
-or other bytes were changed; the four arithmetic verifier files are unchanged.
-These labels are never consumed by the mathematical stages. See
-PRIVACY_TRANSFORM.json and validation/PRIOR_ACCEPTANCE_BINDING.json.
+certificate/ARITHMETIC_README.txt explains the commands, adopted profiles,
+coverage and C = 3 record. PROVENANCE.md describes how the public inputs
+correspond to the saved historical reports.
 
-The unchanged historical ARITHMETIC_ACCEPTANCE.json records 5,266,235 checks
-on the earlier 1,007-member archive. It is not a run on this public distribution.
-The packaging checker verifies eleven old input hashes and three new hashes;
-it does not reconstruct the omitted private path strings. Independent readers
-can execute the full arithmetic verifier against this archive and INDEX.
+The analytic reductions, extension to all N >= 180, and equality argument
+are in the manuscript, which is not included here. The threshold is
+not claimed minimal.
 
-Some saved records contain FAIL labels for unused alternatives. The verifier
-selects the adopted subproofs explicitly. The analytic reductions, infinite
-range and equality argument remain in the manuscript, which is not included.
-
-All runtime paths are relative to these files. Historical relative source
-labels are provenance only and are not external runtime dependencies.
-Code: MIT. Data and documentation: CC BY 4.0. See LICENSE.txt and ../LICENSE.md.
+All runtime paths are relative to the scripts. Code: MIT. Data and
+documentation: CC BY 4.0. See LICENSE.txt and ../LICENSE.md.

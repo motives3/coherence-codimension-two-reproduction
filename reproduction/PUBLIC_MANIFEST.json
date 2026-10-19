@@ -2,11 +2,11 @@
   "format": "codim2-public-reproduction-manifest-v2",
   "manuscript_version": "2.5",
   "fixed_threshold": 180,
-  "scope": "Public reproduction-only distribution; no new mathematical run",
+  "scope": "Certificate data, arithmetic verification code and supporting documentation",
   "files": {
     "certificate/ARITHMETIC_README.txt": {
-      "size": 2782,
-      "sha256": "c0681802e44c310114664d5ee4916a0eb6ace43b5ea8a47306ccdc487d8ea5a8"
+      "size": 7116,
+      "sha256": "cb303663c6fe819c64f874f42dfcf2807c82c10946a8e7ed003f536ccdfff3ef"
     },
     "certificate/INDEX.json": {
       "size": 3274,
@@ -25,8 +25,8 @@
       "sha256": "de4af3e3aa52768a93e9c1d55841cbf8aaf8a2268d336194426d36c3462cc953"
     },
     "LICENSE.txt": {
-      "size": 840,
-      "sha256": "a3da617685fad79374c4fd9af348802a40e117d99c0f28aeb6880b70554abc89"
+      "size": 715,
+      "sha256": "fd81d9019b0aa2faff79345f88136c02aa4846becd98e0606d7503fb771e1794"
     },
     "LICENSES/CC-BY-4.0.txt": {
       "size": 17023,
@@ -40,13 +40,17 @@
       "size": 7080,
       "sha256": "658c4760fdb5138359c1d8f2bfbd9d0cad2badd8f163edfe0983330d5cf709da"
     },
+    "PROVENANCE.md": {
+      "size": 4232,
+      "sha256": "a9f94a685f1e536175889262afd61240fa0e4e2255f2336c8bc8f2c5cd6bbef0"
+    },
     "README.txt": {
-      "size": 2024,
-      "sha256": "4d72f0cc9bd90d32af76a59049a08d8ed8fbde5d9f84ab942783063f0c5f73e9"
+      "size": 1265,
+      "sha256": "2e2520a69007d13d3f4d734c4c7364a62cd59cc3cba861a7c49570600a363364"
     },
     "RELEASE_STATUS.txt": {
-      "size": 791,
-      "sha256": "059f12f02abed501a870b41f8791c5836bee16e4d7fbaaba9553c290c8e3e49f"
+      "size": 653,
+      "sha256": "bd1940b933a8d62ff2d5dcdd4eeaea87314033ed35295da66e506b456f6d9519"
     },
     "validation/ARITHMETIC_ACCEPTANCE.json": {
       "size": 42756,

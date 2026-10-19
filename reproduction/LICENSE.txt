@@ -7,8 +7,7 @@ see LICENSES/CC-BY-4.0.txt. License texts retain their own standard terms.
 
 Retain the title "Exact complex coherence in codimension two: reproduction
 materials", supplied notices, source link and license link, and indicate
-modifications as required. The evidence originates in v2.1 and is associated
-with manuscript v2.5. Repository identities are not manuscript authorship.
+modifications as required.
 This distribution does not include or license the manuscript itself.
 
 Source: https://github.com/motives3/coherence-codimension-two-reproduction

@@ -12,17 +12,21 @@
       "size": 232,
       "sha256": "2d56ee8b9d7e5f0c0c92c26c742ea8807c798754f5b5cdf8b75cd0e1bd9b82d1"
     },
+    "CITATION.cff": {
+      "size": 801,
+      "sha256": "985a0806b8356ffa524c6b7c4fa1e41ba83e7bd636a58db488601776a59e8d70"
+    },
     "LICENSE.md": {
-      "size": 1082,
-      "sha256": "9f15d3763a86d134ae015a9ea80e8209722d6c2263821f5e34de9dee3232e4e2"
+      "size": 1013,
+      "sha256": "22805e3437ade3dd612a6da4d98622ed747d2410d485b9dc3474a69babe35fff"
     },
     "README.md": {
-      "size": 3271,
-      "sha256": "331b3c8c0596d5f8e55ec70929a5bc7a0765560b3ec52ffb9e396c89a98e09b3"
+      "size": 4018,
+      "sha256": "b9ebefb2b9c22ec37641d3c5490a76d68e23ed75587a99e74f53e96d04751ebe"
     },
     "reproduction/certificate/ARITHMETIC_README.txt": {
-      "size": 2782,
-      "sha256": "c0681802e44c310114664d5ee4916a0eb6ace43b5ea8a47306ccdc487d8ea5a8"
+      "size": 7116,
+      "sha256": "cb303663c6fe819c64f874f42dfcf2807c82c10946a8e7ed003f536ccdfff3ef"
     },
     "reproduction/certificate/INDEX.json": {
       "size": 3274,
@@ -41,8 +45,8 @@
       "sha256": "de4af3e3aa52768a93e9c1d55841cbf8aaf8a2268d336194426d36c3462cc953"
     },
     "reproduction/LICENSE.txt": {
-      "size": 840,
-      "sha256": "a3da617685fad79374c4fd9af348802a40e117d99c0f28aeb6880b70554abc89"
+      "size": 715,
+      "sha256": "fd81d9019b0aa2faff79345f88136c02aa4846becd98e0606d7503fb771e1794"
     },
     "reproduction/LICENSES/CC-BY-4.0.txt": {
       "size": 17023,
@@ -56,17 +60,21 @@
       "size": 7080,
       "sha256": "658c4760fdb5138359c1d8f2bfbd9d0cad2badd8f163edfe0983330d5cf709da"
     },
+    "reproduction/PROVENANCE.md": {
+      "size": 4232,
+      "sha256": "a9f94a685f1e536175889262afd61240fa0e4e2255f2336c8bc8f2c5cd6bbef0"
+    },
     "reproduction/PUBLIC_MANIFEST.json": {
-      "size": 3942,
-      "sha256": "be369f2cdefe58ceca4d82dc435da1ab1ff416dfe5ce525c6fc53a2389b25e1d"
+      "size": 4088,
+      "sha256": "2c9f2ab3829b8071ea4a30c68d50c2c594c98bf88d745b8fb9b21a0787f2b2ba"
     },
     "reproduction/README.txt": {
-      "size": 2024,
-      "sha256": "4d72f0cc9bd90d32af76a59049a08d8ed8fbde5d9f84ab942783063f0c5f73e9"
+      "size": 1265,
+      "sha256": "2e2520a69007d13d3f4d734c4c7364a62cd59cc3cba861a7c49570600a363364"
     },
     "reproduction/RELEASE_STATUS.txt": {
-      "size": 791,
-      "sha256": "059f12f02abed501a870b41f8791c5836bee16e4d7fbaaba9553c290c8e3e49f"
+      "size": 653,
+      "sha256": "bd1940b933a8d62ff2d5dcdd4eeaea87314033ed35295da66e506b456f6d9519"
     },
     "reproduction/validation/ARITHMETIC_ACCEPTANCE.json": {
       "size": 42756,

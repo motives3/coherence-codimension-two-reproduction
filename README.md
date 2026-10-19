@@ -1,13 +1,15 @@
 # Exact complex coherence in codimension two: reproduction materials
 
-Exact certificate data and independent arithmetic verification code associated
-with manuscript **v2.5**, for the fixed sufficient threshold **N >= 180**.
-The threshold is not claimed minimal.
+This repository accompanies *Exact complex coherence in codimension two* by
+Xuan Li. It contains exact certificate data and Python code for verifying the
+computer-assisted estimates used in the proof for **N >= 180**.
 
-This repository distributes only the sanitized reproduction package. The
-manuscript source and PDF are not included. The analytic reductions,
-propagation to all N >= 180 and equality classification remain in the
-manuscript; the data and code here cover its computational component.
+The manuscript determines the minimum coherence of N unit vectors in
+C^(N-2), gives an explicit construction, and classifies the equality cases
+in this range. The code checks the finite arithmetic estimates. The analytic
+reductions, extension to all N >= 180, and equality argument are given in the
+manuscript. Its PDF and source are not included in this repository. The
+threshold 180 is sufficient; no claim of minimality is made.
 
 ## Contents
 
@@ -16,8 +18,9 @@ manuscript; the data and code here cover its computational component.
 | `reproduction/certificate/` | Fourteen exact JSON witnesses in `supplement.zip`, index and verifier entry point |
 | `reproduction/validation/` | Three arithmetic modules, regression sources and historical acceptance records |
 | `reproduction/check_package.py` | Fast packaging and dependency check |
-| `reproduction/PRIVACY_TRANSFORM.json` | Metadata-only changes and their limits |
-| `reproduction/validation/PRIOR_ACCEPTANCE_BINDING.json` | Historical and current input hashes |
+| [Arithmetic guide](reproduction/certificate/ARITHMETIC_README.txt) | Commands, expected output, adopted certificates and coverage |
+| [Provenance](reproduction/PROVENANCE.md) | Evidence history and correspondence between the saved reports and public inputs |
+| [CITATION.cff](CITATION.cff) | Citation metadata |
 | `REPOSITORY_MANIFEST.json` | File hashes for this distribution |
 
 ## Requirements and quick check
@@ -28,48 +31,57 @@ Python **3.10 or later**, standard library only. From the repository root:
 python -B reproduction/check_package.py
 ```
 
-This checks hashes, archive membership, the recorded metadata transfer and
-local module imports. It does not perform mathematical verification. Runtime
-dependencies are resolved relative to the scripts; no private checkout,
-manuscript directory or network service is needed.
+The quick check verifies file hashes, archive membership, the recorded input
+correspondence, and module availability. Success produces a JSON report with
+`"status": "PASS"` and `"mathematical_verification_executed": false`.
+It checks the package, not the mathematical inequalities.
 
-## Independent arithmetic verification
+All runtime dependencies are included or belong to the Python standard
+library. Script locations determine the input paths, so the commands need
+neither network access nor another checkout.
+
+## Verify the certificates
 
 ```sh
 python -B reproduction/certificate/verify_certificates.py
 ```
 
-The optional CPython read-only wrapper is:
+The verifier recomputes the bounds from the saved inputs without importing
+the code that generated the certificates. It runs the global, continuous and
+local stages in order. A successful full run exits with code 0 and reports
+`"status": "PASS"` and `"complete_arithmetic_acceptance": true`.
+
+The optional wrapper uses a CPython audit hook to reject file writes,
+subprocess creation and socket connections during verification:
 
 ```sh
 python -B reproduction/validation/readonly_run.py
 ```
 
-These commands perform substantial arithmetic on fixed witnesses. Read the
-[arithmetic guide](reproduction/certificate/ARITHMETIC_README.txt) before
-interpreting stage outputs. No mathematical verification, regression test,
-search or optimization was rerun to prepare this public distribution.
+Both commands perform substantial arithmetic on the fixed certificates;
+they do not search for new certificates. Reports go to standard output and
+progress messages to standard error. The [arithmetic guide](reproduction/certificate/ARITHMETIC_README.txt)
+explains partial runs, the four adopted profiles, the C = 3 boundary case,
+and the limits of the audit hook.
 
-## Evidence and metadata
+## Evidence and citation
 
-The unchanged historical full report records 5,266,235 checks on an earlier
-1,007-member archive. This distribution contains its fourteen required JSON
-witnesses and the same four arithmetic verifier files.
+The certificates cover 7,320 budget cells: 2,039 are excluded by count
+bounds, and 5,281 are covered by 228 local regions. Each accepted local
+region has a certified margin greater than 1/10000.
 
-Eleven witnesses are byte-identical to the historical inputs. In the other
-three, 17 machine-path keys within inert `source_sha256` metadata were
-replaced by neutral labels. All other bytes and source digest values were
-checked unchanged. The archive, index and packaging manifests have new hashes.
-The historical acceptance is not presented as a run on this distribution.
-The public packaging check does not reconstruct the omitted private labels;
-the full arithmetic verifier remains available for independent use.
+The saved acceptance reports predate the public packaging step. Their
+relationship to the fourteen public inputs is described in
+[Provenance](reproduction/PROVENANCE.md), including the metadata changes and
+the interpretation of diagnostic failure labels.
+
+Use [CITATION.cff](CITATION.cff) to cite the reproduction materials and record
+the commit used. The manuscript cites the preserved
+[b7a51dbc324b snapshot](https://github.com/motives3/coherence-codimension-two-reproduction/tree/b7a51dbc324ba260a92c2fafd3642e686cefe91a).
 
 ## License and attribution
 
 - Python code and Git configuration files: **MIT**.
 - Witness data, reports and distribution documentation: **CC BY 4.0**.
 
-See [LICENSE.md](LICENSE.md) and the included license texts. Attribute this
-distribution by its project title and repository URL; repository contributor
-identities do not determine manuscript authorship. No arXiv identifier or
-Zenodo DOI has been assigned to this distribution.
+See [LICENSE.md](LICENSE.md) for the file scopes and attribution requirements.
