@@ -79,6 +79,15 @@ Use [CITATION.cff](CITATION.cff) to cite the reproduction materials and record
 the commit used. The manuscript cites the preserved
 [b7a51dbc324b snapshot](https://github.com/motives3/coherence-codimension-two-reproduction/tree/b7a51dbc324ba260a92c2fafd3642e686cefe91a).
 
+## Use of generative AI
+
+OpenAI's Codex and ChatGPT were used during this project to assist with
+literature searches, mathematical exploration, the development and checking
+of proof arguments, implementation of certificate-generation and verification
+code, and drafting and revision of the manuscript. The author assumes
+responsibility for all content, including the mathematical claims,
+references, code, and final text.
+
 ## License and attribution
 
 - Python code and Git configuration files: **MIT**.
