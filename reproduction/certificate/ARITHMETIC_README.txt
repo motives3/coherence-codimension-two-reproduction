@@ -133,10 +133,6 @@ cache writes. Reports and progress still use stdout and stderr.
 
 DATA PROVENANCE
 
-The four arithmetic verifier files are unchanged from the historical
-verification run. Three public input records have redacted metadata path
-labels; their mathematical data are unchanged. The saved acceptance and
-regression reports describe their original runs. ../PROVENANCE.md,
-PRIVACY_TRANSFORM.json at the reproduction root, and
-../validation/PRIOR_ACCEPTANCE_BINDING.json explain the correspondence
-between these reports and the public inputs, including its limitations.
+See ../PROVENANCE.md for the correspondence between the historical reports
+and public inputs, including the metadata redactions and the limits of the
+recorded comparisons.

@@ -1,7 +1,7 @@
 # Certificate provenance
 
 The public archive contains fourteen JSON witnesses used by the arithmetic
-verifier for the sufficient threshold N >= 180. The saved acceptance reports
+verifier in the proof for N >= 180. The saved acceptance reports
 record computations performed before this public archive was assembled.
 This document explains how those reports correspond to the distributed inputs.
 

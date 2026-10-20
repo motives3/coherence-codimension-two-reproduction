@@ -4,8 +4,8 @@
   "scope": "Certificate data, arithmetic verification code and supporting documentation",
   "files": {
     "certificate/ARITHMETIC_README.txt": {
-      "size": 6917,
-      "sha256": "136297d30dc6ceb23b76bb790e4d6d2da0a0ee93b6ad85c4c8e7eac2a82fd25c"
+      "size": 6612,
+      "sha256": "dcc0c071026aca0156696fe3ff996af4f9370716de4b526f42808143e0637061"
     },
     "certificate/INDEX.json": {
       "size": 3274,
@@ -40,8 +40,8 @@
       "sha256": "658c4760fdb5138359c1d8f2bfbd9d0cad2badd8f163edfe0983330d5cf709da"
     },
     "PROVENANCE.md": {
-      "size": 4136,
-      "sha256": "dfc3b519820cd90899b4e45a2e2e9266ba63ec79caacac3f18485f8298c47b18"
+      "size": 4124,
+      "sha256": "b71d58cb4189b772389e23eabecc5d9aedcd7c082ab2ab572a7ede48008564b7"
     },
     "README.txt": {
       "size": 1592,

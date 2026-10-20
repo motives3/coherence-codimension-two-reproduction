@@ -8,8 +8,8 @@ Xuan Li · Preprint
 The paper determines the minimum coherence
 $\mu_{\mathbb{C}}(N-2,N)$ of $N$ unit vectors in
 $\mathbb{C}^{N-2}$ for every integer $N \ge 180$. It gives an explicit
-construction and classifies all equality cases, including for the
-corresponding general matrix problem.
+construction and classifies all equality cases in both the coherence
+problem and the corresponding general matrix problem.
 
 ## Compile the paper
 
@@ -72,7 +72,7 @@ and the metadata in [CITATION.cff](../CITATION.cff).
 The Acknowledgments state the use of OpenAI Codex, including GPT-6 Astra
 with the Ultra reasoning setting, in mathematical exploration and argument
 development, computational work, and manuscript drafting and revision.
-They retain the author's responsibility for all content. The
+The author takes responsibility for all content. The
 [repository disclosure](../README.md#use-of-generative-ai) gives the same
 account.
 
