@@ -81,12 +81,27 @@ the commit used. The manuscript cites the preserved
 
 ## Use of generative AI
 
-OpenAI's Codex and ChatGPT were used during this project to assist with
-literature searches, mathematical exploration, the development and checking
-of proof arguments, implementation of certificate-generation and verification
-code, and drafting and revision of the manuscript. The author assumes
-responsibility for all content, including the mathematical claims,
-references, code, and final text.
+OpenAI's Codex was used extensively in the research and preparation of the
+manuscript, including use of GPT-6 Astra with the Ultra reasoning setting.
+Its use included literature searches and comparisons with earlier results
+(Section 2); exploration and development of the four-block construction
+and its algebraic formulas (Sections 3 and 6); and formulation, refinement,
+and critical examination of arguments concerning the matrix reduction,
+global localization, local comparison, and equality cases (Sections 4, 7,
+and 8). Section numbers refer to the accompanying manuscript.
+
+Codex was also used in developing the computational work associated with
+Section 9 and this reproduction package. This included implementing and
+revising code for numerical exploration, certificate generation,
+rational-arithmetic verification, and regression tests.
+
+AI-generated drafts of mathematical arguments and explanatory prose were
+used and revised during the preparation of the manuscript. Codex was also
+used to organize the presentation, revise notation and cross-references,
+and edit the English.
+
+The author assumes responsibility for all content, including the
+mathematical claims, references, code, and final text.
 
 ## License and attribution
 
