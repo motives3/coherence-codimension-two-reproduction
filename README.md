@@ -12,11 +12,12 @@ families and for the corresponding matrix problem.
 
 For integers $1 \le n < N$, minimum coherence is defined by
 
-$$
+```math
 \mu_{\mathbb{C}}(n,N)
-=\min_{\substack{v_1,\ldots,v_N\in\mathbb{C}^n\\\|v_i\|=1}}
-\max_{i\ne j}|v_i^*v_j|.
-$$
+=\min_{\substack{v_1,\ldots,v_N\in\mathbb{C}^n\\
+\lVert v_i\rVert_2=1\ (1\le i\le N)}}
+\max_{i\ne j}\lvert v_i^*v_j\rvert.
+```
 
 Here $v_i^*v_j$ is the Hermitian inner product, conjugate-linear in its first
 argument. The code verifies the finite arithmetic estimates in the proof;
