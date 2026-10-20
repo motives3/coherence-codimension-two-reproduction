@@ -1,11 +1,17 @@
 STATUS: PUBLIC REPRODUCTION DISTRIBUTION
 RELATED MANUSCRIPT: Exact complex coherence in codimension two
-SUFFICIENT THRESHOLD: 180 (not claimed minimal)
+THEOREM RANGE: N >= 180
 REPOSITORY: https://github.com/motives3/coherence-codimension-two-reproduction
 
 Scope: exact certificate data, verification code, regression sources and
-saved acceptance reports. The manuscript PDF and source are not included.
+saved acceptance reports. The manuscript PDF and source are in ../paper/
+and form a separate deposit.
 Python code: MIT. Data and documentation: CC BY 4.0.
+
+Software archive: https://doi.org/10.5281/zenodo.23477764
+Archived version: 1.0.0
+Archived commit: 7fa9cdc7472c726c0db2dad8efd92f5f5ccabe57
+The current GitHub documentation includes later editorial updates.
 
 Certificate guide: certificate/ARITHMETIC_README.txt
 Evidence history and input correspondence: PROVENANCE.md

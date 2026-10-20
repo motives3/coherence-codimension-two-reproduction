@@ -2,10 +2,9 @@ ARITHMETIC VERIFICATION GUIDE
 Exact complex coherence in codimension two
 
 This guide describes verification of the saved rational certificates used
-for the sufficient threshold N >= 180. The verifier reconstructs the
+in the proof for N >= 180. The verifier reconstructs the
 arithmetic from the saved inputs without running the programs that produced
-them. "Independent" refers to this separation from the producing programs;
-it does not mean that an external reviewer has certified the software.
+them.
 
 REQUIREMENTS AND COMMANDS
 
@@ -114,13 +113,12 @@ The saved report ../validation/C3_WORST_ACCEPTANCE.json contains the r2_3
 region with zero-based indices (u_index, w_index) = (17, 23). Its detailed
 record is copied from the historical full acceptance report and contains
 162 accepted checks. It also includes a shorter ledger of outward rational
-bounds for this region. These saved results were not regenerated when the
-public package was prepared.
+bounds for this region.
 
 The full verifier reconstructs all 55 r2_3 regional margins, checks that
 (17, 23) attains their minimum, and includes the resulting detailed record
-under C3_worst in its output. The separate saved C3 report is provided for
-inspection; it is not an input accepted on trust by the verifier.
+under C3_worst in its output. The saved C3 report is a reference for comparing
+the output; the verifier computes these checks from the certificate inputs.
 
 OPTIONAL READ-ONLY WRAPPER
 
@@ -135,10 +133,10 @@ cache writes. Reports and progress still use stdout and stderr.
 
 DATA PROVENANCE
 
-The four arithmetic verifier files and the mathematical certificate data
-are preserved from the accepted computation. The public preparation changed
-only inert path labels in three input records. The saved acceptance and
-regression reports describe their original runs. Details and the limits of
-the public hash correspondence are recorded in ../PROVENANCE.md,
+The four arithmetic verifier files are unchanged from the historical
+verification run. Three public input records have redacted metadata path
+labels; their mathematical data are unchanged. The saved acceptance and
+regression reports describe their original runs. ../PROVENANCE.md,
 PRIVACY_TRANSFORM.json at the reproduction root, and
-../validation/PRIOR_ACCEPTANCE_BINDING.json.
+../validation/PRIOR_ACCEPTANCE_BINDING.json explain the correspondence
+between these reports and the public inputs, including its limitations.

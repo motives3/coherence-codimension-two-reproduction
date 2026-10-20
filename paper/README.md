@@ -2,25 +2,23 @@
 
 Xuan Li · Preprint
 
-[Read the PDF](paper.pdf) · [Download the LaTeX source](source.zip)
+[Read the PDF](paper.pdf) · [Download the LaTeX source](source.zip) ·
+[Archived paper](https://doi.org/10.5281/zenodo.23495415)
 
-The paper determines the minimum coherence of N unit vectors in
-C^(N-2) for every integer N >= 180. It gives an explicit construction and
-classifies all equality cases, including for the corresponding general
-matrix problem. The sufficient threshold 180 is not claimed minimal.
+The paper determines the minimum coherence
+$\mu_{\mathbb{C}}(N-2,N)$ of $N$ unit vectors in
+$\mathbb{C}^{N-2}$ for every integer $N \ge 180$. It gives an explicit
+construction and classifies all equality cases, including for the
+corresponding general matrix problem.
 
-## Files
+## Compile the paper
 
-`main.tex` is the entry point. The five files in `sections/` and five files
-in `appendices/`, together with the main document and bibliography, are
-listed in [SHA256SUMS.txt](SHA256SUMS.txt). The source ZIP contains the
-same 13 TeX, BibTeX and BBL files available in this directory.
+The [source ZIP](source.zip) contains the 13 source files in this directory:
+`main.tex`, five sections, five appendices, `references.bib` and `main.bbl`.
+File hashes are listed in [SHA256SUMS.txt](SHA256SUMS.txt).
 
 `main.bbl` is included so the paper can be compiled without running BibTeX.
 `references.bib` is provided for readers who wish to regenerate it.
-The source uses standard LaTeX packages and relative input paths.
-
-## Compile
 
 Extract `source.zip` into a fresh directory. From that directory, run:
 
@@ -34,23 +32,25 @@ The output is `main.pdf`. The three passes populate the contents and
 cross-references. The supplied `paper.pdf` has 47 pages.
 Compilation requires a TeX installation with `geometry`, the AMS packages,
 `mathtools`, `booktabs`, `array`, `longtable`, `fontenc`, `lmodern`,
-`hyperref` and `microtype`. It does not require Python, the certificate
-archive, network access or another checkout.
+`hyperref` and `microtype`.
 
 ## Reproduction materials
 
-The [repository guide](../README.md) describes the exact certificates and
-their verification. Compiling this paper does not verify the arithmetic
-certificates or rerun any mathematical computation.
+The [repository guide](../README.md#verification) gives the commands for
+verifying the exact arithmetic certificates.
 
-The paper cites the preserved
+The paper cites the
 [b7a51dbc324b mathematical snapshot](https://github.com/motives3/coherence-codimension-two-reproduction/tree/b7a51dbc324ba260a92c2fafd3642e686cefe91a).
-The separate software archive uses the
+The [separate software archive](https://doi.org/10.5281/zenodo.23477764),
+version 1.0.0, corresponds to the
 [7fa9cdc7472c snapshot](https://github.com/motives3/coherence-codimension-two-reproduction/tree/7fa9cdc7472c726c0db2dad8efd92f5f5ccabe57),
-which adds the detailed AI disclosure without changing the certificates
-or verification code.
+which contains the same certificates and verifier with the detailed AI
+disclosure.
 
 ## Citation
+
+Use the paper DOI [10.5281/zenodo.23495415](https://doi.org/10.5281/zenodo.23495415)
+when citing the mathematical results:
 
 ```bibtex
 @unpublished{Li2026ExactComplexCoherence,
@@ -58,9 +58,14 @@ or verification code.
   title = {Exact complex coherence in codimension two},
   year = {2026},
   note = {Preprint},
-  url = {https://github.com/motives3/coherence-codimension-two-reproduction/blob/main/paper/paper.pdf}
+  doi = {10.5281/zenodo.23495415},
+  url = {https://doi.org/10.5281/zenodo.23495415}
 }
 ```
+
+For the reproduction materials, use the separate software DOI
+[10.5281/zenodo.23477764](https://doi.org/10.5281/zenodo.23477764)
+and the metadata in [CITATION.cff](../CITATION.cff).
 
 ## AI disclosure and rights
 

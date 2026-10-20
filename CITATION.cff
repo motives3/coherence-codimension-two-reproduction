@@ -1,17 +1,21 @@
 cff-version: 1.2.0
-message: "Please cite these reproduction materials and record the commit used."
+message: "Cite this record for the reproduction materials and the paper below for the mathematical results."
 type: software
 title: "Exact complex coherence in codimension two: reproduction materials"
 authors:
   - family-names: Li
     given-names: Xuan
 repository-code: "https://github.com/motives3/coherence-codimension-two-reproduction"
-url: "https://github.com/motives3/coherence-codimension-two-reproduction"
+url: "https://doi.org/10.5281/zenodo.23477764"
+doi: "10.5281/zenodo.23477764"
+version: "1.0.0"
+date-released: 2026-10-20
+commit: "7fa9cdc7472c726c0db2dad8efd92f5f5ccabe57"
 abstract: >-
-  Exact certificate data and Python code for the computer-assisted estimates
-  in Exact complex coherence in codimension two, for the sufficient threshold
-  N >= 180. The manuscript supplies the analytic reductions, extension to all
-  N >= 180, and classification of equality cases.
+  Exact certificates and Python code for the finite arithmetic estimates in
+  Exact complex coherence in codimension two. The paper determines the
+  minimum coherence of N unit vectors in complex dimension N-2 for N >= 180,
+  gives an explicit construction and classifies all equality cases.
 keywords:
   - coherence
   - complex projective codes
@@ -24,5 +28,8 @@ references:
       - family-names: Li
         given-names: Xuan
     year: 2026
-    url: "https://github.com/motives3/coherence-codimension-two-reproduction/blob/main/paper/paper.pdf"
-    notes: "Preprint. The manuscript PDF and LaTeX source are available in paper/."
+    month: 10
+    date-released: 2026-10-20
+    doi: "10.5281/zenodo.23495415"
+    url: "https://doi.org/10.5281/zenodo.23495415"
+    notes: "Preprint with PDF, LaTeX source ZIP and manuscript rights notice."

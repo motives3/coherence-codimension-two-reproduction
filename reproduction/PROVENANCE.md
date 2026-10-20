@@ -52,26 +52,23 @@ Paths beginning with `research/` are fixed identifiers inside the archive.
 They preserve the correspondence with the saved reports and are not external
 runtime dependencies.
 
-## Version correspondence
-
-The arithmetic evidence originated with manuscript v2.1 and was retained in
-the v2.5 submission baseline. Subsequent editorial preparation did not change
-the threshold, certificates or arithmetic verifier. These version labels
-describe the manuscript history, not separate mathematical acceptance runs.
+## Archived snapshots
 
 The manuscript cites the public snapshot
 [b7a51dbc324ba260a92c2fafd3642e686cefe91a](https://github.com/motives3/coherence-codimension-two-reproduction/tree/b7a51dbc324ba260a92c2fafd3642e686cefe91a).
-The documentation revision of 19 October 2026 preserves that commit and the
-original certificate archive, index, Python sources, saved reports and input
-binding records. It updates the reader documentation, citation metadata and
-distribution manifests. No mathematical verification, regression tests,
-searches or optimization were rerun for this documentation revision.
+The [software archive, version 1.0.0](https://doi.org/10.5281/zenodo.23477764),
+contains the 33 repository files at commit
+[7fa9cdc7472c726c0db2dad8efd92f5f5ccabe57](https://github.com/motives3/coherence-codimension-two-reproduction/tree/7fa9cdc7472c726c0db2dad8efd92f5f5ccabe57).
+The certificate archive, index, Python sources, saved reports and input
+binding records are unchanged between these snapshots and the current
+repository. Reader documentation and citation metadata have since been updated.
 
 ## File manifests
 
 [PUBLIC_MANIFEST.json](PUBLIC_MANIFEST.json) records the files in the
 `reproduction/` directory, excluding the manifest itself.
-[REPOSITORY_MANIFEST.json](../REPOSITORY_MANIFEST.json) additionally covers the
-root documentation, citation metadata and Git configuration files, excluding
-itself. These distribution hashes change when documentation changes. The
-certificate archive and its index retain their original hashes.
+[REPOSITORY_MANIFEST.json](../REPOSITORY_MANIFEST.json) covers the current
+repository, including the paper, root documentation, citation metadata and
+Git configuration files, excluding itself. Each manifest describes the files
+distributed alongside it; the archived release retains its original
+manifest. Documentation updates change the corresponding distribution hashes.

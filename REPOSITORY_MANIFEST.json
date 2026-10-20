@@ -1,6 +1,5 @@
 {
   "format": "codim2-public-paper-and-reproduction-repository-v1",
-  "manuscript_version": "2.5",
   "fixed_threshold": 180,
   "manuscript_files_included": true,
   "files": {
@@ -13,28 +12,28 @@
       "sha256": "b971190913bbe9510314fa77e770a9b0f8afac6022e9af4410b03d93ba4ac0ef"
     },
     "CITATION.cff": {
-      "size": 1158,
-      "sha256": "b98f49842d3b4ab921ba75ef8d10dd9b20303cae588ac0e76c43b39c58e8dd7e"
+      "size": 1315,
+      "sha256": "9b9d1eaedf3c6dad1d04536e8f93eae9f29ef5e0afe8972c8b8db69dfa16a70a"
     },
     "LICENSE.md": {
       "size": 1267,
       "sha256": "66b40b14dbe4dc2fe4000891278cc8506b394d36d31d0dbc0c1216d1065797eb"
     },
     "README.md": {
-      "size": 6029,
-      "sha256": "7a4d7ca8c818f57caec7f4673a772368f856a99dc18f01c64ffc7c805a539e65"
+      "size": 5188,
+      "sha256": "c4a02ba4222b704c78be6a30b497415b4f52ae62e371635dd89496fa3a05de36"
     },
     "paper/LICENSE.txt": {
       "size": 557,
       "sha256": "37d2020619c72d77601228d7b51257a75dc190f4b11d2d476afd8d54066283a9"
     },
     "paper/README.md": {
-      "size": 3159,
-      "sha256": "07b16b23fb130a7f090999822ecd86ebc41afc0f3335e87e716a6ad3391fc522"
+      "size": 3242,
+      "sha256": "b480d4f8812d9a86d2b63a544c229556fa5f88548143c8e8c8a50cc8a1ac19ed"
     },
     "paper/SHA256SUMS.txt": {
       "size": 1443,
-      "sha256": "8c26d1ad3d8442c669e84bf37b282b8955f0fd13a1fcc9998157e2b4fc07a487"
+      "sha256": "0b812659a5140276bbea787d39363ef050f7c7bad8e84feea4def734d371c806"
     },
     "paper/appendices/candidate.tex": {
       "size": 21297,
@@ -113,24 +112,24 @@
       "sha256": "658c4760fdb5138359c1d8f2bfbd9d0cad2badd8f163edfe0983330d5cf709da"
     },
     "reproduction/PROVENANCE.md": {
-      "size": 4232,
-      "sha256": "a9f94a685f1e536175889262afd61240fa0e4e2255f2336c8bc8f2c5cd6bbef0"
+      "size": 4136,
+      "sha256": "dfc3b519820cd90899b4e45a2e2e9266ba63ec79caacac3f18485f8298c47b18"
     },
     "reproduction/PUBLIC_MANIFEST.json": {
-      "size": 4088,
-      "sha256": "2c9f2ab3829b8071ea4a30c68d50c2c594c98bf88d745b8fb9b21a0787f2b2ba"
+      "size": 4157,
+      "sha256": "39de022fe973028d17d4e64ab585752a69b275368b88d634c09df50947c66d09"
     },
     "reproduction/README.txt": {
-      "size": 1265,
-      "sha256": "2e2520a69007d13d3f4d734c4c7364a62cd59cc3cba861a7c49570600a363364"
+      "size": 1592,
+      "sha256": "1074f35f9fb0c13e9e3e3d9bb5a3fce8adaf909790b836ee09af12e06921aeb0"
     },
     "reproduction/RELEASE_STATUS.txt": {
-      "size": 653,
-      "sha256": "bd1940b933a8d62ff2d5dcdd4eeaea87314033ed35295da66e506b456f6d9519"
+      "size": 865,
+      "sha256": "05aa8b06e4adfad6768ea2fb4ba0e7eba40732189c13281a547d12c29c8cf1ef"
     },
     "reproduction/certificate/ARITHMETIC_README.txt": {
-      "size": 7116,
-      "sha256": "cb303663c6fe819c64f874f42dfcf2807c82c10946a8e7ed003f536ccdfff3ef"
+      "size": 6917,
+      "sha256": "136297d30dc6ceb23b76bb790e4d6d2da0a0ee93b6ad85c4c8e7eac2a82fd25c"
     },
     "reproduction/certificate/INDEX.json": {
       "size": 3274,
@@ -205,5 +204,7 @@
       "sha256": "639585bdec972093f1653aac4641ee4b407f964dcbe1bc6f81385a91f3741837"
     }
   },
-  "manuscript_source_files_included": true
+  "manuscript_source_files_included": true,
+  "manuscript_doi": "10.5281/zenodo.23495415",
+  "software_archive_doi": "10.5281/zenodo.23477764"
 }

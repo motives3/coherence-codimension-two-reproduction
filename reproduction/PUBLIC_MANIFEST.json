@@ -1,12 +1,11 @@
 {
   "format": "codim2-public-reproduction-manifest-v2",
-  "manuscript_version": "2.5",
   "fixed_threshold": 180,
   "scope": "Certificate data, arithmetic verification code and supporting documentation",
   "files": {
     "certificate/ARITHMETIC_README.txt": {
-      "size": 7116,
-      "sha256": "cb303663c6fe819c64f874f42dfcf2807c82c10946a8e7ed003f536ccdfff3ef"
+      "size": 6917,
+      "sha256": "136297d30dc6ceb23b76bb790e4d6d2da0a0ee93b6ad85c4c8e7eac2a82fd25c"
     },
     "certificate/INDEX.json": {
       "size": 3274,
@@ -41,16 +40,16 @@
       "sha256": "658c4760fdb5138359c1d8f2bfbd9d0cad2badd8f163edfe0983330d5cf709da"
     },
     "PROVENANCE.md": {
-      "size": 4232,
-      "sha256": "a9f94a685f1e536175889262afd61240fa0e4e2255f2336c8bc8f2c5cd6bbef0"
+      "size": 4136,
+      "sha256": "dfc3b519820cd90899b4e45a2e2e9266ba63ec79caacac3f18485f8298c47b18"
     },
     "README.txt": {
-      "size": 1265,
-      "sha256": "2e2520a69007d13d3f4d734c4c7364a62cd59cc3cba861a7c49570600a363364"
+      "size": 1592,
+      "sha256": "1074f35f9fb0c13e9e3e3d9bb5a3fce8adaf909790b836ee09af12e06921aeb0"
     },
     "RELEASE_STATUS.txt": {
-      "size": 653,
-      "sha256": "bd1940b933a8d62ff2d5dcdd4eeaea87314033ed35295da66e506b456f6d9519"
+      "size": 865,
+      "sha256": "05aa8b06e4adfad6768ea2fb4ba0e7eba40732189c13281a547d12c29c8cf1ef"
     },
     "validation/ARITHMETIC_ACCEPTANCE.json": {
       "size": 42756,
@@ -108,5 +107,7 @@
       "size": 3390,
       "sha256": "639585bdec972093f1653aac4641ee4b407f964dcbe1bc6f81385a91f3741837"
     }
-  }
+  },
+  "manuscript_doi": "10.5281/zenodo.23495415",
+  "software_archive_doi": "10.5281/zenodo.23477764"
 }
