@@ -1,0 +1,12 @@
+Copyright (c) 2026 Xuan Li. All rights reserved.
+
+The manuscript PDF, LaTeX source, bibliography, main.bbl and source archive
+are publicly available for reading and examination. Rights remain with the
+manuscript author; no general redistribution or adaptation license is
+granted here.
+
+The MIT and CC BY 4.0 licenses assigned to the reproduction materials and
+repository documentation do not apply to the manuscript files.
+
+This notice does not override third-party rights or notices, or rights
+arising under applicable law or the hosting platform's terms.

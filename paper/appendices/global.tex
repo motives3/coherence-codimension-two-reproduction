@@ -1,0 +1,412 @@
+\section{Localization of every column at the endpoint 180}\label{app:global}
+This section proves the global and fine inputs to
+Proposition~\ref{prop:localization}. All partitions below contain every
+original column. The same partition is kept during the forward estimates.
+
+\subsection{Deficit identity and estimates before partitioning}
+Let $t_{ij}=(1+x_i\cdot x_j)/2$. The polynomial
+\[
+ f(t)=\alpha+\tfrac34(t-\tfrac12)-k(t^2-t+\tfrac16)
+\]
+satisfies $f(t)-\sqrt t=g(t)$ exactly. Put
+$T_1=\sum_{ij}r_ir_jt_{ij}$. Tightness gives
+$\sum_i r_i^2t_{ij}=N/2$, so
+\[
+ N^2/2-T_1=\tfrac12\sum_{ij}(r_i-r_j)^2t_{ij}\ge0.
+\]
+Also
+$\sum_{ij}r_ir_j(t_{ij}^2-t_{ij}+1/6)
+=\frac14\|\sum r_ix_ix_i^T-(L/3)I\|_F^2$.
+Summing the polynomial identity proves
+\begin{equation}\label{app:global:deficit}
+ \alpha N^2-\Gamma_I(Y)=u+v+w+\tfrac34(N^2/2-T_1).
+\end{equation}
+Every term on the right is nonnegative. In particular $L\le N$.
+
+Set $c=13/4$. On $N\ge180$, $u+v+w\le M\le11/19$ gives
+$L/N>9999/10000$, using $a>77/250$. Since
+$(77/250)(19999/10000)>8/13$,
+\begin{equation}\label{app:global:radial}
+ D_r:=\sum(r_i-1)^2=\frac{2u}{a(N+L)}\le\frac{cu}{N},
+ \quad s=\sqrt{cu/N}<\frac{103}{1000}.
+\end{equation}
+Thus every radius is positive. With $E=\sum_{ij}g(t_{ij})$,
+\begin{equation}\label{app:global:energy}
+ E\le\frac{w}{(1-s)^2}\le\frac{M}{1-cM/N}<\frac{293}{500}.
+\end{equation}
+The second bound retains $u+w\le M$: after setting $x=\sqrt{cu/N}$,
+$m=cM/N$, its numerator difference is
+$m(1-x)^2-(m-x^2)(1-m)=(x-m)^2$.
+
+Put $R_x=\sum x_i$, $M_0=\sum x_ix_i^T$, and
+$l_i=(1,\sqrt3x_i)^T/2\in\mathbb R^4$. Cauchy--Schwarz and
+$\sum r_i^2x_i=0$ give
+\[
+ \|M_0-NI/3\|_F\le2\sqrt{v/k}+\sqrt{2cu/3},\quad
+ \|M_0-NI/3\|_{\rm op}<23/10,
+\]
+\[
+ \|R_x\|^2\le(N/3+23/10)(2+s)^2D_r.
+\]
+For the operator estimate, a traceless symmetric $3\times3$ matrix
+has squared operator norm at most two thirds of its squared Frobenius
+norm, and
+$(2/3)(1000/87+13/6)M<(23/10)^2$. The exact lifted identity is
+\[
+ \left\|\sum l_il_i^T-NI_4/4\right\|_F^2
+ =\tfrac38\|R_x\|^2+\tfrac9{16}\|M_0-NI_3/3\|_F^2
+ \le T(u,v):=Au+Bv+J\sqrt{uv},
+\]
+where
+\begin{equation}\label{app:global:moment}
+ A=\frac{19739570097}{6400000000},\quad B=\frac{375}{58},
+ \quad J=\frac{1123}{200},\quad T(u,v)\le\frac{81}{10}(u+v).
+\end{equation}
+The last quadratic comparison has positive diagonal entries and determinant
+\[
+ \frac{293253687011}{928000000000}>0.
+\]
+If $z=u+v$, the traceless
+$4\times4$ spectral inequality therefore yields
+\begin{equation}\label{app:global:spectral}
+ \lambda_{\min}\Bigl(\sum l_il_i^T\Bigr)
+ \ge\Lambda_N(z):=N/4-\sqrt{243z/40}>0.
+\end{equation}
+Indeed an eigenvalue $t$ of a traceless $4\times4$ real symmetric matrix
+forces the other squared eigenvalues to sum to at least $t^2/3$.
+
+\subsection{Simultaneous anchors and coverage}
+Let $\mathcal L=[l_1\ \cdots\ l_N]$ and $F=\mathcal L\mathcal L^T$.
+Give each four-element subset $A$ probability
+$\det(\mathcal L_A)^2/\det F$. For a set $J$ of size one or two,
+\begin{equation}\label{app:global:inclusion}
+ \Pr(J\subset A)=\det(\mathcal L_J^TF^{-1}\mathcal L_J).
+\end{equation}
+To verify this identity, whiten $U=F^{-1/2}\mathcal L$, so $UU^T=I$.
+Cauchy--Binet expands
+$\det(U\diag(t_i)U^T)=\sum_{|A|=4}\det(U_A)^2\prod_{i\in A}t_i$.
+Taking the derivatives indexed by $J$ at $t_i=1$, and alternatively
+expanding $\det(I+U\diag(t_i-1)U^T)$, gives
+\eqref{app:global:inclusion}.
+
+Write $q(t)=(3t-1)/2$, so $l_i^Tl_j=q(t_{ij})$.
+Loewner order in the one- and two-point determinants gives
+\[
+ \Pr(i\in A)\le\Lambda_N(z)^{-1},\qquad
+ \Pr(i,j\in A)\le[1-q(t_{ij})^2]\Lambda_N(z)^{-2}.
+\]
+The scalar bounds
+$q(t)^2\le24g(t)$ for $t<2/3$ and
+$1-q(t)^2\le96g(t)$ for $t\ge2/3$ follow from the canceled ratios
+below, their derivatives and their values at $2/3$.
+Explicitly, $g(t)/q(t)^2$ is at least its value at $2/3$, which exceeds
+$1/24$, on the lower interval. On the upper interval
+$g(t)/(1-t)>1/32$ and
+$1-q(t)^2=(3/4)(1-t)(1+3t)\le3(1-t)$. Endpoints with zero factors
+are handled directly or by continuity.
+If $E_A$ is the sum of selected angular row energies, $H$ counts
+selected unordered pairs with $t\ge2/3$, and
+$X=2\sum_{\{i,j\}\subset A,t_{ij}<2/3}q(t_{ij})^2$, then
+\[
+ \mathbb E E_A\le E/\Lambda_N(z),\quad
+ \mathbb E X\le24E/\Lambda_N(z)^2,\quad
+ \mathbb E H\le48E/\Lambda_N(z)^2.
+\]
+Let $K_A=441/100$, $\eta_A=8/25$. For $E>0$, the expected potential
+$E_A/(K_AE/N)+X/\eta_A^2+H$ is at most
+\begin{equation}\label{app:global:potential}
+ \frac{N}{K_A\Lambda_N(z)}+
+ \left(24/\eta_A^2+48\right)
+ \frac{(M-z)/(1-\sqrt{cz/N})^2}{\Lambda_N(z)^2}<1.
+\end{equation}
+The strict inequality is certified on $256$ closed intervals covering
+$0\le z\le M$ at $N=180$, as specified in
+Section~\ref{app:certificates}. For each interval $[l,h]$, replace
+$\Lambda$ by $45-\sqrt{243h/40}$ and the energy by
+\[
+ \min\{M/(1-cM/180),(M-l)/(1-\sqrt{ch/180})^2\}.
+\]
+Every denominator is positive. This is a closed interval proof, not a
+sampled maximization. Thus one actual four-subset has $H=0$, $x=\sqrt X<\eta_A$
+and $E_A<(K_AE/N)(1-x^2/\eta_A^2)$.
+
+The selected lifted Gram has smallest eigenvalue at least
+$1-\sqrt3x/2$. The exact identity
+\[
+ \frac2{1+\sqrt{1-h}}(1-y)-(1-y^2/h)
+       =\frac{(y-1+\sqrt{1-h})^2}{h}\ge0
+\]
+gives the coverage and disjointness ratios
+\[
+ R_{\rm cov}=\frac2{1+\sqrt{1-3\eta_A^2/4}},\qquad
+ R_{\rm dis}=\frac2{1+\sqrt{1-\eta_A^2/2}}.
+\]
+For $h=\sqrt t$ and $b=1/\sqrt3$,
+\[
+ \frac{g(t)}{q(t)^2}=\frac{4(1-h)(3/4+kh)}{9(h+b)^2},\qquad
+ \frac{g(t)}{1-t}=\frac{(h-b)^2(3/4+kh)}{1+h}.
+\]
+The first ratio decreases, with derivative $-4\sqrt3/[9(h+b)^3]$;
+the second increases for $h\ge b$. The exact endpoint checks are
+\[
+ R_{\rm cov}\frac{K_A(293/500)}{180}
+   <\frac{g(173/200)}{q(173/200)^2},\qquad
+ R_{\rm dis}\frac{K_A(293/500)}{180}<\frac1{50}.
+\]
+If a data column were outside every $173/200$ cap, its unit lifted vector
+would give $\sum_a q(t_{iA_a})^2\ge1-\sqrt3x/2$; its incident energies
+would then contradict the first check. Two $83/100$ memberships of an
+actual data column would imply an anchor squared distance at most
+$(400/3)E_A$, using $g(t)/(1-t)>3/50$ there, whereas the selected-pair
+bound gives at least $(8/3)(1-x/\sqrt2)$. The second check excludes it.
+These assertions concern the data columns; the continuous caps need
+not be disjoint. Since $173/200>83/100$, they give one partition into
+four nonempty groups.
+
+Let $\bar x_a$ be the means and
+$S=\sum_a\sum_{i\in a}\|x_i-\bar x_a\|^2$. A valid lower membership
+ratio at $173/200$ is
+\[
+ m_0=\frac{667855014484621414278044848317828318861}
+ {9650268809435000000000000000000000000000}.
+\]
+Since means minimize squared distance,
+$S\le4E_A/m_0<4K_AE/(m_0N)<255E/N$. We may weaken this to
+$S\le264E/N$ for the subsequent common bootstrap.
+If $E=0$, all $t_{ij}$ belong to $\{1/3,1\}$.
+The positive lifted frame bound supplies four spanning data columns;
+their lifted vectors are orthonormal. Every other unit lifted vector
+has inner products in $\{0,1\}$ with that basis, and is one of them.
+This gives the same partition and $S=0$ without division by $E$.
+
+\subsection{Counts before fine localization}
+Let $\Sigma_a$ be the within-group covariance, $S_a=\tr\Sigma_a$,
+$\delta_a=m_a-N/4$, and let the square matrix $A_0$ have columns
+$\sqrt{m_a}(1,\sqrt3\bar x_a)^T/2$. If
+$F_0=\sum l_il_i^T-NI/4$, $H_0=\diag(0,\sum\Sigma_a)$ and
+$t_0=(N-3S/4)/4$, then
+\[
+ A_0A_0^T-t_0I=F_0-\tfrac34(H_0-SI/4),\quad
+ \diag(A_0^TA_0-t_0I)=\delta-\tfrac34(S_a-S/4)_a.
+\]
+The two Gram matrices have identical spectra. Their Frobenius norms,
+diagonal contraction, and the centered PSD estimates imply
+\begin{equation}\label{app:global:count}
+ \sqrt C\le\sqrt{T(u,v)}+\frac{3\sqrt3}{4}S
+                     \le\sqrt{T(u,v)}+\frac{13}{10}S.
+\end{equation}
+Each centered norm is at most $\sqrt3S/2$; both variance terms are
+necessary. With $S\le264E/N$ and the shared budget, $256$ closed
+$z$-interval checks give $C<5$ for $M=11/19$ and $C<19/4$ for $M=1/2$.
+This precedes, and therefore does not rely on, any fine estimate.
+
+For residue two the $\delta_a$ are half-integers with zero sum. The
+strict square bound allows only $|\delta_a|\le3/2$, with at most one
+entry of that magnitude, giving the two listed profiles. For odd $N$,
+after sign reversal let $4\delta_a\equiv-1\pmod4$. Their squared sum
+is below $76$. Magnitudes at least $9$ are excluded; an entry $7$
+requires other entries summing to $-7$, whose minimum squares are
+$25+1+1$, giving total $76$. Thus only $-5,-1,3$ remain. Their zero
+sum permits either no $-5$, giving $(-1,-1,-1,3)$, or one $-5$,
+giving $(-5,-1,3,3)$. Two $-5$ require two entries $3$ summing only
+to $6$, so cannot have zero sum. This proves the complete count list.
+
+\subsection{Shared-budget forward refinement}
+Assume $S\le c_sE/N$ has already been proved on this partition. For a
+closed region $u\le U,w\le W,u+v+w\le M$, let $\bar E$ be a valid
+energy cap and set
+\[
+ p=1/4-m_c/N,\quad p_+=1/4+m_c/N,\quad
+ S_*=c_s\bar E/N,\quad q=\sqrt{1-S_*/(pN)},\quad
+ T_*=2S_* /(1+q),
+\]
+where $m_c=\max|\delta_a|$. All square roots and divisions require
+their displayed positive domains. A sharp cap $\bar E$ follows by
+maximizing $\min(W,M-u)/(1-\sqrt{cu/N})^2$ over $0\le u\le U$.
+On the branch $w=M-u$ the sole interior maximum is
+$u=(c/N)M^2$, of value $M/(1-cM/N)$; otherwise use the boundary.
+
+Write
+$Q=\sum_{a\ne b}m_am_b(\bar x_a\cdot\bar x_b+1/3)^2$.
+The off-diagonal part of the preceding square mean-Gram calculation
+gives $\sqrt Q\le(4/3)\sqrt T+S$. Write
+$c_\times=\max_{a(i)\ne a(j)}(x_i\cdot x_j+1/3)$. Normalizing the
+means gives the following three bounds, kept under a single budget supremum:
+\begin{align}\label{app:global:finecaps}
+ c_\times&\le\frac{4\sqrt T}{3Np}+b_s\sqrt E+d_sE,\\
+ G&\le\frac{4\sqrt T}{3Np}+d_sE,\qquad
+ \frac{\sqrt Q}{pN}\le\frac{4\sqrt T}{3Np}+d_mE,\nonumber\\
+ b_s&=\sqrt{\frac{4c_s}{N(1+q)}},\quad
+ d_m=\frac{c_s}{N^2p},\quad d_s=d_m\left(1+\frac{\sqrt6}{1+q}\right).
+ \nonumber
+\end{align}
+Here $G$ bounds the Frobenius Gram error of the four normalized means.
+The normalization costs follow from
+$\sum_i\|x_i-\bar x_a/\|\bar x_a\|\|^2\le2S/(1+q)$.
+
+On a closed bin $z\in[z_l,z_h]$, use
+$u\le\min(U,z_h)$ and $w\le\min(W,M-z_l)$ to bound the energy and
+the \emph{whole} expressions \eqref{app:global:finecaps}.
+The raw moment $Au+Bv+J\sqrt{uv}$ can be maximized on $u+v=z_h$
+by its concave one-variable expression. Its unconstrained upper bound
+is $z_h(A+B+\sqrt{(A-B)^2+J^2})/2$; if $U_0=\min(U,z_h)$ obeys
+\[
+ 2U_0\le z_h,\quad J^2(z_h-2U_0)^2
+       \ge4(B-A)^2U_0(z_h-U_0),
+\]
+the constrained maximum is the value at $U_0$. This exact squared
+derivative test avoids an uncertain radical branch.
+
+There is also a spherical improvement to the cross bound. If the unit
+mean dot product is at most $\gamma=-1/3+G$ and the two squared chord
+errors sum to $T_s<2$, concavity of $\arccos(1-t/2)$ gives an angle
+error at most $4\arcsin\sqrt{T_s/8}$. Put
+\[
+ C_s=1-T_s+T_s^2/8,\quad
+ S_s=\sqrt{2T_s(1-T_s/8)}(1-T_s/4).
+\]
+When $\gamma<C_s$, the pair dot product is at most
+$\gamma C_s+\sqrt{1-\gamma^2}S_s$; otherwise use $1$.
+Here $T_s=2c_sE/[N(1+q)]$. This retains all within-group residuals.
+On each closed budget bin, enclose both the linear bound for $c_\times$
+in \eqref{app:global:finecaps} and the spherical bound just obtained,
+adding $1/3$ to the latter dot-product bound. If the angular conditions
+fail, use the trivial spherical bound $4/3$. Take the smaller of the
+two upper enclosures on each bin, with outward rational rounding,
+then the maximum over all bins covering the region. This gives a
+regional upper bound. It may be reduced by taking its minimum with
+other independently valid upper bounds on the same region. Denote the
+resulting bound by $\bar c_\times$, so $c_\times\le\bar c_\times$
+throughout the region.
+
+Set $h_W=\sqrt{1-S_*/2}$ and
+$h_C=\sqrt{(2/3+\bar c_\times)/2}$. The canceled scalar kernels are
+\[
+ K_W=\frac{(h_W-1/\sqrt3)^2(3/4+kh_W)}{4(1+h_W)},\quad
+ K_C=\frac{(1-h_C)(3/4+kh_C)}{4(h_C+1/\sqrt3)^2}.
+\]
+Use lower enclosures of these kernels, $h_W>1/\sqrt3$, $h_C<1$, and
+\begin{equation}\label{app:global:covariance}
+ \mu_c=2\left[\frac13-\frac{23/10+S_*}{N}
+                   -\frac{p_+T_*}{2(1+q)}\right],\quad
+ \beta=2pK_W+\mu_cK_C>0.
+\end{equation}
+Then
+\begin{equation}\label{app:global:jointcov}
+ E\ge K_CQ+\beta NS.
+\end{equation}
+For detail, the cross-pair squared-dot sum is exactly
+\[
+ Q+2\sum_a\tr\left[\left(\sum_{b\ne a}m_b\bar x_b\bar x_b^T\right)
+ \Sigma_a\right]+\sum_{a\ne b}\tr(\Sigma_a\Sigma_b).
+\]
+The last term is nonnegative. The full covariance is at least
+$(N/3-23/10-S)I$. The variance of
+$x_i\cdot(\bar x_a/\|\bar x_a\|)\in[1-T_*/2,1]$ gives its removed
+same-group term at most $T_*S_a/[2(1+q)]$.
+Indeed if its mean is $r_a=\|\bar x_a\|$, the scalar variance is at
+most $(T_*/2)(1-r_a)$ and
+$m_a(1-r_a)=S_a/(1+r_a)\le S_a/(1+q)$.
+These facts yield $\mu_cNS$ for the cross part. The within-group
+identity $\sum_{i,j\in a}\|x_i-x_j\|^2=2m_aS_a$ supplies
+$2pK_WNS$, proving \eqref{app:global:jointcov}.
+
+Starting from $264$, the recorded closed-domain inequalities prove
+\begin{equation}\label{app:global:chain}
+ 264\longrightarrow240\longrightarrow183\longrightarrow107
+ \longrightarrow58\longrightarrow40\longrightarrow34
+ \longrightarrow32\longrightarrow31.
+\end{equation}
+Every arrow checks $\beta>1/c_{\rm next}$, hence is a forward implication,
+not an assumed fixed point. The uniform chain uses $m_c=3/2$ and $128$
+closed budget bins per stage. Subsequent regional refinement starts
+from $31$, uses the already established profile's $m_c$ consistently,
+and uses $64$ closed bins. No new partition is selected.
+
+\subsection{Fine polar and spinor interface}
+At the final regional coefficient let
+$h_m=\sqrt{(2/3+\sqrt Q/(pN))/2}$, using its certified upper cap,
+and put $K_m=K_C(h_m)$. If
+$\gamma\le1/(4h_C^3)-2k$ is positive, then
+$g(t)-\gamma t^2/2$ is convex on $[0,h_C^2]$. Indeed
+$g^{\prime\prime}(t)=1/(4t^{3/2})-2k\ge\gamma$ for $t>0$,
+and continuity extends convexity to $0$. Equivalently, $g$ is
+$\gamma$-strongly convex on this interval. Jensen's inequality gives
+\[
+ E\ge K_mQ+[2pK_W+\mu_c\gamma/8]NS.
+\]
+Take a convex combination with \eqref{app:global:jointcov}, obtaining
+$E\ge c_QQ+c_SNS$. If the positivity guard fails, use the first
+inequality alone. The factor $1/8$ is the product of the strong-convexity
+factor $1/2$ and the change of variable $t=(1+x\cdot y)/2$ squared.
+
+Use the single polar alignment of the normalized means, with $P_G$ from
+\eqref{app:candidate:polar} and $G<1/12$. The mean/residual decomposition
+and Young's inequality with $\tau=201/200$ give
+\[
+ \sum_i\|x_i-v_{a(i)}\|^2\le A_SS+A_QQ/N,
+\]
+\[
+ A_Q=p_+P_G\tau/p^2,\qquad
+ A_S=\frac2{1+q}+
+ \frac{6p_+P_G(1+1/(\tau-1))S_*}{p^2N(1+q)^2}.
+\]
+Therefore $L_B=\max(A_Q/c_Q,A_S/c_S)$ proves a total Bloch error
+at most $L_BE/N$. This uses one joint covariance inequality, rather
+than independently maximizing $Q$ and $S$.
+
+Choose a phase floor $f$ from $127/128,63/64,31/32$ only if all three
+strict guards hold:
+\begin{equation}\label{app:global:phaseguards}
+ L_B\bar E/N<4(1-f^2),\quad T_*<4(1-f^2),\quad
+ P_GG^2<4(1-f^2).
+\end{equation}
+They concern, respectively, actual-to-polar, actual-to-normalized-mean
+and normalized-mean-to-polar spinors. With $D_f=1/[2(1+f)]$, the
+exact identity \eqref{app:candidate:spinor} and the quotient triangle
+inequality give
+\begin{align}\label{app:global:LU-LP}
+ L_U&=D_fL_B,\\
+ L_P&=\left[
+ \sqrt{\frac{2D_f}{(1+q)\beta}+\frac{D_fP_G}{p^2NK_C}}
+ +\frac{\sqrt{D_fP_G}\sqrt6\sqrt{\bar E/N^3}}
+ {p(1+q)\beta}\right]^2.\nonumber
+\end{align}
+For the point estimate, the actual-to-mean contribution is bounded by
+$2S/(1+q)$; the mean-to-polar contribution uses
+$G\le\sqrt Q/(pN)+\sqrt6S/[pN(1+q)]$.
+Maximizing their joint square-root terms under
+$K_CQ+\beta NS\le E$ gives exactly the first square root in
+\eqref{app:global:LU-LP}; the remaining normalization term gives the
+second. Thus no separate maximum of $S$ and $Q$ is used in the first term.
+
+In one common preliminary alignment and choice of column phases,
+\begin{align}\label{app:global:physical-inputs}
+ N\|Y-F\|_F^2&\le A_R:=cU+L_UW\frac{1+s_U}{(1-s_U)^2},\\
+ N\max_i\|y_i-f_{a(i)}\|^2&\le P_R:=cU+L_PW\frac{1+s_U}{(1-s_U)^2},
+ \qquad s_U=\sqrt{cU/N}.\nonumber
+\end{align}
+Indeed $d_{\rm ph}(r_iu_i,f)^2=(r_i-1)^2+r_id_{\rm ph}(u_i,f)^2$.
+The sharper angular inputs are
+$\sum d_{\rm ph}(u_i,f)^2\le L_U\bar E/N$ and
+$\max d_{\rm ph}(u_i,f)^2\le L_P\bar E/N$.
+The actual closest-gauge transport, required for the local Hessian,
+is proved in Section~\ref{app:local}; a convenient preliminary
+alignment is not substituted for that gauge.
+
+\subsection{Continuous range and zero budgets}
+Every accepted region is closed and all its constants cover its whole
+interior and boundary. For larger $N$, at fixed deficits the energy
+cap decreases, $N/\Lambda_N(z)$ decreases, and $\Lambda_N(z)$ increases.
+All anchor and count inequalities therefore propagate. In the fine
+chain, freeze the endpoint count floors, coefficient choices, closed
+bins and phase floors. The energy and scatter decrease, mean lengths
+improve, and every positive $N^{-1}$ or $N^{-1/2}$ error decreases.
+The spherical cap is monotone geometrically because decreasing the
+allowed mean dot product or chord error shrinks the feasible angle
+range. Its algebraic maximizing branch need not remain fixed.
+Propagate the finite chain in order, then its regional refinement and
+polar interface. If $E=0$, \eqref{app:global:jointcov} gives $S=Q=0$;
+all zero-error cases are direct. There is no division by $u,v,w$ or $E$
+in the fine or local interface. These facts justify freezing the saved
+180 localization coefficients for the later 182 local comparison.

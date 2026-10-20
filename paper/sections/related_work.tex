@@ -1,0 +1,85 @@
+\section{Relation to earlier work}\label{sec:related}
+
+Bukh and Cox~\cite[Theorems~2(b) and~3(b)]{BC} proved a bound for general
+matrices. For a complex matrix $A$ of order
+$N$ with diagonal one and rank at most $N-k$, it gives
+\begin{equation}\label{eq:bc-literature}
+ \max_{i\ne j}|A_{ij}|\geq\frac{1}{\alpha_kN-1},
+ \qquad
+ \alpha_k=\frac{1+(k-1)\sqrt{k+1}}{k^2}.
+\end{equation}
+Although their extremal quantity is defined using exact rank, the proof
+of their Theorem~10 already permits rank at most $N-k$. Equality in
+\eqref{eq:bc-literature} requires a maximal equiangular tight frame in
+$\mathbb C^k$ and $k^2\mid N$; uniform replication supplies the matching
+construction. In codimension two this is the tetrahedral configuration
+of four complex lines. Consequently, the exact value
+$((1+\sqrt3)N/4-1)^{-1}$ when $4\mid N$ is an established result.
+
+Their corrigendum~\cite{BCErratum} specifies the complex equality case:
+equal mass is assigned to each entire
+unit-phase orbit, rather than to a pair of antipodal representatives.
+This correction preserves the numerical bound and its divisibility
+condition. We use the corrected projective formulation throughout.
+
+Magsino, Mixon and Parshall~\cite[Lemma~1 and Theorem~4]{MMP} give a
+Delsarte-style proof through an auxiliary polynomial and tight-frame
+duality. Glazyrin~\cite[Theorem~7]{Glazyrin} develops a general matrix
+duality for conjugate energies. His replicated-code construction and
+equality analysis~\cite[Theorem~10 and the subsequent discussion]{Glazyrin}
+also show that an extremizing general matrix is a Gram matrix, with
+uniqueness inherited from the maximal projective simplex. In particular,
+the divisible codimension-two case already has this stronger equality
+description. We use this duality, the auxiliary-polynomial estimate,
+phase alignment at equality, and the tetrahedral model in the proof below.
+
+Two closely related optimization problems help explain the dual
+functional. Cahill and Casazza~\cite[Proposition~2.1 and Theorems~2.2,
+2.4]{CahillCasazza} study total coherence of Parseval frames, its
+invariance under Naimark complementation, and restrictions on maximizing
+frames. For columns $u_i$ of a matrix $U\in\mathbb C^{2\times N}$ with
+$UU^*=I_2$, write
+\[
+ \operatorname{TC}(U)=\sum_{i\ne j}|u_i^*u_j|.
+\]
+The quasimaximal relative projection constant of Foucart and
+Skrzypek~\cite[Section~2]{FoucartSkrzypek} is, in this notation,
+\[
+ q_{\mathbb C}(2,N)
+ =\frac{\max_{UU^*=I_2}\operatorname{TC}(U)+2}{N}.
+\]
+Their maximal relative projection constant additionally optimizes
+independent nonnegative weights $t_i$, with $\sum_i t_i^2=1$, in
+$\sum_{i,j}t_it_j|u_i^*u_j|$. These distinctions matter when transferring
+an exact value or an equality statement to the coherence problem.
+
+Kobos~\cite[Theorem~4.2]{Kobos} proves a stability theorem: a sequence
+approaching the maximal ETF bound admits, after
+passing to a subsequence, clustering around maximal ETF directions in
+a weighted mean-square sense; an exceptional set may have vanishing
+total weight. His analysis also treats phases and residuals. To obtain
+the finite conclusion here, we need bounds that place every column in
+a controlled neighborhood at each cardinality under consideration.
+The subsequent local comparison must eliminate all within-cluster
+residuals. These are the quantitative steps developed in this paper.
+
+Der\k{e}gowska and Lewandowska~\cite[Theorem~3.6]{DLWelch} determine
+relative projection constants at replicated maximal-ETF cardinalities.
+Kumar, Mohar, Mojallal and Pragada~\cite[Theorem~1.3]{KMMP} establish
+eventual stabilization of maximal relative projection constants in the
+real setting. The codimension-two theorem of Der\k{e}gowska and
+Lewandowska~\cite[Theorem~2.4]{DLCodim} instead controls a real
+Banach--Mazur distance through a small projection constant. These
+results concern different objectives from the finite complex
+off-diagonal minimax problem in Theorem~\ref{thm:main}.
+
+Theorem~\ref{thm:main} extends the exact value and complete equality
+classification to the nondivisible cardinalities in the range
+$N\geq180$, within the full class of complex unit-diagonal matrices of
+rank at most $N-2$. It identifies the balanced integer multiplicities,
+the corresponding deformation of the four-line configuration, and all
+extremizers. Quantitative local rigidity and computer-assisted existence
+arguments also occur in projective coding theory, for example
+in~\cite{CKM}. Here the local comparison is combined with control of
+every kernel column to obtain a global minimax theorem uniformly over
+the stated cardinalities.

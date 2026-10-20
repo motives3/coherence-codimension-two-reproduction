@@ -1,0 +1,1535 @@
+\section{Local comparison}
+\label{app:local}
+
+This section proves the local implication used after
+Sections~\ref{app:candidate} and \ref{app:global}.
+All four profiles use the intrinsic residual and physical normal estimates.
+For the odd profiles the complete unsigned comparison suffices.
+For $C=3$ we use the stress-coordinate mean estimate with the complete
+unsigned remainder. For $C=1$ we use the refined row coefficients and
+the minimum of the complete signed alternatives and the complete unsigned
+bound.
+All derivatives are real derivatives on complex vector spaces, and
+$\langle H,J\rangle=\Rea\tr(H^*J)$. Matrix norms without subscripts are
+operator norms. Frame distances are measured in the Frobenius metric on
+the original variables.
+
+\subsection{Inputs, gauge, and the normal decomposition}
+\label{app:local:inputs}
+
+Let $a(i)\in\{1,2,3,4\}$ be the partition supplied by global localization,
+let $m_a=|\{i:a(i)=a\}|$, and put $p_a=m_a/N$.
+The candidate $Z=(z_{a(i)})_i$ and its positive stress $K$ satisfy
+\begin{equation}\label{app:local:stationary-data}
+ ZZ^*=\frac N2 I_2,\quad K>0,\quad\tr K=2,\quad
+ S_{ij}=\frac{z_i^*Kz_j}{|z_i^*Kz_j|},\quad ZS=N\lambda Z.
+\end{equation}
+Every stress overlap is nonzero. Put $\alpha=(1+\sqrt3)/4$.
+In one common alignment with unit tetrahedral spinors $f_a$, the candidate
+estimates take the form
+\begin{gather}
+ e=\max_a|p_a-\tfrac14|,\qquad
+ \sigma^2=\sum_a(p_a-\tfrac14)^2=C/N^2,\qquad
+ \|K-I\|\le\kappa,\qquad 0\le\alpha-\lambda\le\tau,
+ \label{app:local:errors}\\
+ \max_a\|z_a-f_a\|\le\eta,\qquad
+ \sum_a p_a\|z_a-f_a\|^2\le B\sigma^2,\qquad
+ \eta=\sqrt{C_{\mathrm{pt}}C}/N.                                  \label{app:local:polar-input}
+\end{gather}
+Here $B,C_{\mathrm{pt}}$ are the simultaneous polar bounds of
+Section~\ref{app:candidate}; the separate point and aggregate estimates
+must use the same alignment. The four surviving profiles are
+\[
+\begin{array}{c|cccc}
+ C&3/4&11/4&1&3\\ \hline
+ m_*=\max_a|m_a-N/4|&3/4&5/4&1/2&3/2\\
+ L_*=\sum_a|m_a-N/4|&3/2&3&2&3
+\end{array}
+\]
+with both signed profiles and all permutations included.
+Throughout the certified range, $e\le1/120$ and $\eta,\kappa<1/32$.
+Write $p_-=1/4-e$, $p_+=1/4+e$, and $\omega_p=1-4e>0$.
+
+The competitor is any normalized left kernel $Y$ with
+$YY^*=NI_2/2$ and $YA=0$. There is no assumption that its columns have
+equal lengths or take only four values. On a closed budget region,
+global localization supplies nonnegative numbers $A_R,P_R,L_U,L_P,\bar E$
+such that, in its preliminary alignment,
+\begin{gather}
+ \|Y-F\|_F^2\le A_R/N,\qquad
+ \max_i d_{\rm ph}(y_i,f_{a(i)})^2\le P_R/N,
+ \label{app:local:physical-input}\\
+ \sum_i d_{\rm ph}(u_i,f_{a(i)})^2\le L_U\bar E/N,\qquad
+ \max_i d_{\rm ph}(u_i,f_{a(i)})^2\le L_P\bar E/N,       \label{app:local:unit-input}
+\end{gather}
+where $u_i=y_i/\|y_i\|$ and $d_{\rm ph}$ minimizes over a scalar phase.
+The first norm is evaluated in the preliminary phase choices.
+The physical lengths lie in $[1-s,1+s]$, with $s<1$.
+These bounds hold throughout the region.
+
+For fixed $K$ define
+\[
+ \Gamma_K(Y)=\sum_{i,j}|y_i^*Ky_j|,\qquad
+ \mathcal L(Y)=\Gamma_K(Y)-N\lambda\tr(KYY^*),\qquad
+ Q(H,J)=\tfrac12D^2\mathcal L(Z)[H,J].
+\]
+When one argument is displayed, $Q(H)$ means $Q(H,H)$.
+
+\begin{lemma}[Closest gauge]\label{app:local:gauge}
+Choose a minimizer of $\|UYD-Z\|_F$ over $U\in U(2)$ and diagonal
+unitary $D$, and relabel that representative as $Y$. Set
+$\Delta=Y-Z$, $d=\|\Delta\|_F$, and
+\[
+ C_n=\Delta\Delta^*/N,\qquad R_n=C_nZ,\qquad \Xi=\Delta+R_n .
+\]
+Then
+\begin{gather}
+ D\mathcal L(Z)=0,\qquad \Gamma_K(Z)=N^2\lambda,\qquad
+ \Delta Z^*=Z\Delta^*=-\tfrac12\Delta\Delta^*,            \label{app:local:gauge-id}\\
+ \Xi Z^*=0,\quad \Ima(z_i^*\Xi_i)=0,\quad
+ \langle\Xi,R_n\rangle=0,\nonumber\\
+ d^2=\|\Xi\|_F^2+\|R_n\|_F^2,\quad
+ \|R_n\|_F/d\le d/\sqrt{2N}\quad(d>0).                 \label{app:local:normal-id}
+\end{gather}
+\end{lemma}
+\begin{proof}
+The orbit is compact. Differentiating its squared distance at a minimum
+gives $\langle\Delta,AY\rangle=0$ for every skew-Hermitian $A$ and
+$\langle\Delta,iY\Phi\rangle=0$ for every real diagonal $\Phi$.
+The terms with $Y$ replaced by $\Delta$ vanish, so $\Delta Z^*$ is
+Hermitian and $\Ima(z_i^*\Delta_i)=0$. Equal covariances give
+$\Delta Z^*+Z\Delta^*=-\Delta\Delta^*$.
+Multiplying the definition of $\Xi$ by $Z^*$ gives its horizontal
+constraint. Since $C_n$ is Hermitian, its individual phase equations
+also hold. Horizontal arrays are orthogonal to $C_nZ$, and
+\[
+ \|R_n\|_F^2=\frac{\tr((\Delta\Delta^*)^2)}{2N}
+ \le\frac{d^4}{2N}.
+\]
+Finally $\nabla\Gamma_K(Z)=2KZS=2N\lambda KZ$ proves stationarity, and
+$\Gamma_K(Z)=\tr(KZSZ^*)=N^2\lambda$.
+\end{proof}
+
+The simultaneous change of matrix is $A\mapsto D^*AD$:
+$(UYD)(D^*AD)=UYA D=0$. Thus diagonal entries, rank and off-diagonal
+moduli are preserved. We choose the representative first and then fix
+its stress $K$; $\Gamma_K$ need not be invariant under common unitaries
+when $K$ is fixed.
+For equal covariances,
+$\Gamma_K(Y)-\Gamma_K(Z)=\mathcal L(Y)-\mathcal L(Z)$.
+
+Split $\Xi=H+U$ into cluster means and zero-sum within-cluster residuals.
+This is an orthogonal splitting in the Frobenius metric.
+Both $H$ and $U$ satisfy the horizontal and individual phase equations.
+Every Hessian coefficient at $Z$ depends only on its two cluster types;
+summing one residual factor gives zero. Consequently
+\begin{equation}\label{app:local:split}
+ Q(H,U)=Q(U,R_n)=0 .
+\end{equation}
+
+\subsection{The reference tensor and an endpoint perturbation bound}
+\label{app:local:reference}
+
+For a cluster-constant array, put
+$\|H\|_\nu^2=\frac14\sum_a\|H_a\|^2$. More generally give each member
+of cluster $a$ weight $\nu_i=1/(4m_a)$.
+The normalized reference potential is
+\[
+ \ell_0(Y)=\sum_{i,j}\nu_i\nu_j|y_i^*y_j|
+                  -\alpha\sum_i\nu_i\|y_i\|^2,\qquad
+ B_0=D^2\ell_0(F),\quad q_0=B_0/2 .
+\]
+It has zero gradient at $F$: its phase matrix is
+$\sqrt3 f_i^*f_j+(1-\sqrt3)\mathbf1_{a(i)=a(j)}$.
+All infinitesimal common-unitary and individual-phase directions lie
+in the full kernel of $B_0$, including their pairing with ambient vectors.
+
+\begin{lemma}[Complete reference mean tensor]\label{app:local:reference-spectrum}
+On
+\[
+ \mathcal H_0=\{H:\tfrac14\sum_aH_af_a^*=0,\
+                         \Ima(f_a^*H_a)=0\},
+\]
+the full mean Hessian has eigenvalues $-2/\sqrt3$ with multiplicity three
+and $-\sqrt3$ with multiplicity two. On traceless Hermitian normal
+arrays $MF$, it equals $(2/\sqrt3)I$; the scalar normal is null.
+The horizontal-to-normal operator norm is $\sqrt{2/3}$, and the full
+ambient mean operator norm is at most $7/4$.
+\end{lemma}
+\begin{proof}
+Let $v_a$ be tetrahedral Bloch vectors:
+$\sum_av_a=0$, $\sum_av_av_a^T=4I_3/3$.
+Every phase-horizontal mean has the unique representation
+\[
+ H_a=a_af_a+\tfrac12(u_a\cdot\sigma)f_a,\qquad
+ a_a\in\mathbb R,\quad u_a\perp v_a,\qquad
+ \|H_a\|^2=a_a^2+\|u_a\|^2/4.
+\]
+Here $\sigma$ denotes the Pauli matrices. Put
+$A_1=\sum_aa_av_a$, $U_1=\sum_au_a$ and
+$D_{ab}=u_a\cdot v_b+v_a\cdot u_b$.
+Differentiating
+$r_ar_b\sqrt{(1+x_a\cdot x_b)/2}$ at
+$r_a=1$, $x_a=v_a$ gives
+\begin{align}
+ B_0(H,H)={}&-\frac1{2\sqrt3}\sum_aa_a^2
+ +\frac{(\sum_aa_a)^2}{8\sqrt3}
+ +\frac{\sqrt3}{16}A_1\cdot U_1
+ +\frac{\sqrt3}{32}\|U_1\|^2
+ -\frac{3\sqrt3}{256}\sum_{a\ne b}D_{ab}^2 .
+ \label{app:local:reference-form}
+\end{align}
+For verification, along a spherical curve with initial velocity $u_a$,
+the cross-pair square-root factor has derivatives
+$D_{ab}/(4h)$ and
+\[
+ \frac{u_a\cdot u_b+(\|u_a\|^2+\|u_b\|^2)/6}{2h}
+             -\frac{D_{ab}^2}{16h^3},\qquad h=1/\sqrt3.
+\]
+Summing ordered pairs with weight $1/16$ gives
+\eqref{app:local:reference-form}; accelerations do not matter at a
+stationary point.
+
+The matrix constraint is equivalent to
+$\sum a_a=0$, $U_1=-2A_1$, and $\sum u_a\times v_a=0$.
+Set $b=3A_1/4$. The component
+$a_a=b\cdot v_a$, $u_a=-(b-a_av_a)$ has squared $\nu$ norm
+$\|b\|^2/2$ and Hessian $-\sqrt3\|b\|^2/3$.
+Its orthogonal complement has $a_a=0$ and $U_1=0$.
+Writing $V=(v_a)$ and $U=(u_a)$, the latter is $U=TV$ with $T$ symmetric,
+and $D=2V^TTV$ gives $\|D\|_F^2=(16/3)\|U\|_F^2$.
+In coordinates $v_a=(\pm1,\pm1,\pm1)/\sqrt3$ with an even number of
+minus signs, $v_a^TTv_a=0$ makes $T$ diagonal and traceless.
+This gives the two shape eigenvalues $-\sqrt3$.
+
+For $H_n=(b\cdot\sigma)F$, substitution and polarization give
+\[
+ \|H_n\|_\nu^2=\|b\|^2,\quad
+ B_0(H_n,H_n)=2\|b\|^2/\sqrt3,\quad
+ B_0(H,H_n)=-\sqrt3\,b\cdot A_1/4 .
+\]
+The horizontal constraints imply
+$\|H\|_\nu^2\ge9\|A_1\|^2/32$, with equality on the first sector.
+Thus the mixed norm is $\sqrt{2/3}$. Its coupled blocks have eigenvalues
+$\pm\sqrt2$, the shape eigenvalues have modulus $\sqrt3$, and all
+remaining gauge/scalar modes are zero. Hence the ambient norm is
+$\sqrt3<7/4$.
+\end{proof}
+
+\begin{lemma}[Squared reference projection]\label{app:local:projection}
+Suppose a mean array $G$ satisfies
+\[
+ \left\|\tfrac14\sum_aG_af_a^*\right\|_F\le b\|G\|_\nu,
+ \qquad |\Ima(f_a^*G_a)|\le\phi\|G_a\|.
+\]
+Its reference-horizontal and Hermitian-normal components satisfy
+\[
+ \|G_0\|_\nu^2\ge[1-\phi^2-3(b+\phi)^2]\|G\|_\nu^2,\qquad
+ \|G_n\|_\nu\le\sqrt2 b\|G\|_\nu .
+\]
+Consequently, if $\beta=\phi^2+3(b+\phi)^2<1$,
+\begin{equation}\label{app:local:reference-gap}
+ B_0(G,G)\le-g(b,\phi)\|G\|_\nu^2,\quad
+ g(b,\phi)=\frac2{\sqrt3}(1-\beta)
+                         -\frac4{\sqrt3}(b+b^2).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Remove the reference phase component, of norm at most $\phi\|G\|_\nu$.
+The remaining constraint matrix has norm at most $(b+\phi)\|G\|_\nu$.
+On phase-horizontal arrays the adjoint constraint is
+$M\mapsto P_{\rm ph}(Mf_a)$, and for $M=A+iB$ with $A,B$ Hermitian,
+$\tr B=0$,
+\[
+ \|P_{\rm ph}(MF)\|_\nu^2=\tfrac12\|A\|_F^2+\tfrac13\|B\|_F^2 .
+\]
+Thus its least nonzero singular value is $1/\sqrt3$.
+The two successive corrections are orthogonal, proving the squared
+horizontal estimate. If $C=\frac14\sum G_af_a^*$, the normal projection
+is $2\operatorname{Herm}(C)F$ and has norm squared
+$2\|\operatorname{Herm}(C)\|_F^2$. Reference gauge directions are
+orthogonal to this normal and annihilated by $B_0$.
+Lemma~\ref{app:local:reference-spectrum}, $\|G_0\|_\nu\le\|G\|_\nu$,
+and the normal estimate yield \eqref{app:local:reference-gap}.
+\end{proof}
+
+The following endpoint version of the modulus derivative estimate is
+useful because a certified overlap floor concerns actual overlaps,
+not the intervening line segment.
+\begin{lemma}[Endpoint Hessian bound]\label{app:local:endpoint-hessian}
+For nonzero $u,v\in\mathbb C\simeq\mathbb R^2$, and
+$0<h\le\min(|u|,|v|)$,
+\[
+ \|D|\cdot|(u)-D|\cdot|(v)\|\le |u-v|/h,\qquad
+ \|D^2|\cdot|(u)-D^2|\cdot|(v)\|
+                           \le\frac76\,|u-v|/h^2 .
+\]
+\end{lemma}
+\begin{proof}
+The case $u=v$ is immediate. Write $r=|u|\ge s=|v|$,
+$t=r/s$, $d=t-1$, $c=\cos\arg(u\bar v)$, and
+$D=|u-v|/s=\sqrt{d^2+2t(1-c)}$.
+The gradient difference has squared norm $(D^2-d^2)/t\le D^2$.
+The norm of the Hessian difference, multiplied by $s$, is exactly
+\[
+ \frac{d+\sqrt{d^2+4t(1-c^2)}}{2t}.
+\]
+Put $L=7/6$ and $y=d/D$. Since
+$1-c^2\le(D^2-d^2)/t$,
+\[
+ tL^2D^2-dLD-(1-c^2)
+ \ge\frac{D^2}{t}\left[(y-tL/2)^2+\frac34t^2L^2-1\right]>0.
+\]
+Also $2tLD\ge d$. Squaring in the correct direction proves the displayed
+Hessian norm is at most $LD$. Rescaling and $s\ge h$ prove the claim.
+No lower bound on intermediate segment moduli was assumed.
+\end{proof}
+
+For later use define, for a certified cross stress floor $0<h_c\le15/26$,
+\begin{align}
+ d_p&=2\eta+\eta^2+\kappa(1+\eta)^2,\quad
+ u_p=\eta+\kappa(1+\eta), \notag\\
+ T_p&=\frac{7d_p}{6h_c^2}
+       +\frac{u_p(2+u_p)}{h_c}+\frac{d_p}{2h_c}+\frac\kappa2 .
+ \label{app:local:pair-error}
+\end{align}
+Then the absolute \emph{full} cross-pair Hessian error is at most
+$T_p(\|h_a\|+\|h_b\|)^2$. Indeed the overlap, first-variation and
+second-variation errors are bounded respectively by $d_p$, $u_pv$,
+and $\kappa v^2/2$, where $v=\|h_a\|+\|h_b\|$; the corresponding reference
+variations have bounds $v$ and $v^2/2$.
+Apply Lemma~\ref{app:local:endpoint-hessian} to the reference
+first-variation arguments, then change those arguments, the gradient,
+and the second variation. This gives precisely the four terms in
+\eqref{app:local:pair-error}. Same-type \emph{mean} pairs have exact
+Hessian $2h_a^*Kh_a$, and hence error at most $2\kappa\|h_a\|^2$.
+
+\subsection{Mean curvature in physical, mass, and stress coordinates}
+\label{app:local:mean}
+
+An ambient physical mean perturbation bound needed for the normal terms is
+\begin{align}
+ W_\times&=\max_{a\ne b}|16p_ap_b-1|,\qquad W_d=8e+16e^2,\notag\\
+ E_{\mathrm{Hess}}&=(1+4e)^2(3T_p+\kappa/2)
+       +(27/4)W_\times+W_d/2 \notag\\
+ &\quad+2\{(1+4e)[(7/10+\tau)\kappa+\tau]+(14/5)e\}.
+ \label{app:local:ambient-P}
+\end{align}
+It satisfies
+\begin{equation}\label{app:local:ambient-perturbation}
+ |N^{-2}Q(H,J)-q_0(H,J)|
+                  \le(E_{\mathrm{Hess}}/2)\|H\|_\nu\|J\|_\nu
+\end{equation}
+on all cluster-constant arrays, without a horizontal hypothesis.
+To verify this, use
+$\sum_{a\ne b}(l_a+l_b)^2/16\le3\|H\|_\nu^2$.
+The reference cross Hessian is bounded by $(9/4)(l_a+l_b)^2$;
+the same-type one is exactly $2l_a^2$. This gives the cross and diagonal
+weight errors separately. The multiplier error follows from
+$\|\lambda K-\alpha I\|\le(7/10+\tau)\kappa+\tau$ and
+$|4p_a-1|\le4e$. Polarization of the resulting absolute self-adjoint
+operator bound gives \eqref{app:local:ambient-perturbation}.
+For the four profiles, respectively, valid cross-weight envelopes are
+\[
+ W_\times\le 2/N+3/N^2,\quad 6/N+15/N^2,\quad
+                 4/N+4/N^2,\quad 4/N+12/N^2 .
+\]
+They follow directly from
+$16p_ap_b-1=4(\delta_a+\delta_b)/N+16\delta_a\delta_b/N^2$.
+
+\begin{lemma}[Mass coordinates]\label{app:local:mass-mean}
+Let $\epsilon_+\ge\max_a(p_a-1/4)$ cover both signs of the count profile,
+and define
+\[
+ b_g=\sqrt{B\sigma^2/\omega_p},\quad
+ g_g=g(b_g,\eta)-(1+2/\omega_p)T_p-\kappa/2
+                   -2(\alpha\kappa+\tau)/\omega_p-8\alpha\epsilon_+/\omega_p .
+\]
+If the reference projection fraction is positive and $g_g>0$, then
+\begin{equation}\label{app:local:mass-gap}
+ Q(H)\le-Nc_g\|H\|_F^2,\qquad c_g=\omega_p g_g/2
+\end{equation}
+for every actual horizontal mean.
+\end{lemma}
+\begin{proof}
+Set $G_a=4p_aH_a$. Then $\frac14\sum G_az_a^*=0$ and
+$\Ima(z_a^*G_a)=0$. The reference constraint error is at most
+$b_g\|G\|_\nu$, and its phase error is at most $\eta$.
+Lemma~\ref{app:local:projection} gives $g(b_g,\eta)$.
+The exact norm relation is
+$\|H\|_F^2/N=\frac14\sum\|G_a\|^2/(4p_a)\le\|G\|_\nu^2/\omega_p$.
+
+For completeness, the mass cancellation can be checked at the
+half-Hessian level. Put
+$\theta^0_{ab}=f_a^*f_b/|f_a^*f_b|$ and
+$A_{ab}(g)=[\Ima(\overline{\theta^0_{ab}}g^*f_b)]^2/|f_a^*f_b|$.
+If $q_p^F$ denotes the reference half-Hessian with masses $p$, then
+\[
+ q_p^F(H)-q_{1/4}^F(G)
+ =\sum_a\frac{\sum_b(p_b-p_a)A_{ab}(G_a)
+                         +4\alpha(p_a-\tfrac14)\|G_a\|^2}{4(4p_a)} .
+\]
+Mixed first-variation and second-variation terms cancel because
+$p_ap_b/[(4p_a)(4p_b)]=1/16$.
+In coordinates $f_a=(1,0)$, $g=(x+iy,u+iv)$,
+$\sum_bA_{ab}(g)=(1+\sqrt3)y^2+\sqrt3(u^2+v^2)
+\le4\alpha\|g\|^2$.
+The displayed difference is therefore at most
+$4\alpha\epsilon_+\|G\|_\nu^2/\omega_p$.
+
+Moreover
+\[
+ \sum_{a\ne b}p_ap_b(\|H_a\|+\|H_b\|)^2
+                       \le(1+2/\omega_p)\|G\|_\nu^2 .
+\]
+Expanding the two squared-column terms gives at most
+$(4/\omega_p-1)\sum\|G_a\|^2/8$, and the product terms at most
+$3\sum\|G_a\|^2/8$.
+The same-type full-Hessian parameter error is $\kappa\|G\|_\nu^2/2$,
+and the covariance error is $2(\alpha\kappa+\tau)\|G\|_\nu^2/\omega_p$.
+These estimates give $g_g$. Its strict positivity is checked before
+converting the negative norm estimate.
+\end{proof}
+
+\begin{lemma}[Stress and mass coordinates]\label{app:local:stress-mean}
+Put
+\begin{gather*}
+ d_K=\frac{\kappa}{1+\sqrt{1-\kappa}},\qquad
+ \eta_v=\sqrt{1+\kappa}\eta+d_K,\qquad
+ b_v=\frac{\sqrt{B\sigma^2}+d_K}{\sqrt{\omega_p}},\\
+ \phi_v=\eta_v+\frac{\kappa(1+\eta)}{\sqrt{1-\kappa}},\qquad
+ d_v=2\eta_v+\eta_v^2,\\
+ T_v=\frac{7d_v}{6h_c^2}
+               +\frac{\eta_v(2+\eta_v)}{h_c}+\frac{d_v}{2h_c},\\
+ g_v=g(b_v,\phi_v)-(1+2/\omega_p)T_v-2\tau/\omega_p-8\alpha\epsilon_+/\omega_p .
+\end{gather*}
+Assume $\eta_v<1/32$, $\phi_v^2+3(b_v+\phi_v)^2<1$ and $g_v>0$.
+Then
+\begin{equation}\label{app:local:stress-gap}
+ Q(H)\le-Nc_v\|H\|_F^2,\qquad c_v=\omega_p(1-\kappa)g_v/2 .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Set $T=K^{1/2}$, $v_a=Tz_a$, and $G_a=4p_aTH_a$.
+The entire Lagrangian in $TY$ has pair stress $I$ and multiplier
+$\lambda I$. The transformed covariance is $K/2$, not $I/2$;
+no tightness of $v$ is used.
+Exactly $\frac14\sum G_av_a^*=0$, but its phase equation has the defect
+\[
+ |\Ima(v_a^*G_a)|
+ =4p_a|\Ima(z_a^*(K-I)H_a)|
+ \le\frac{\kappa(1+\eta)}{\sqrt{1-\kappa}}\|G_a\|.
+\]
+Spectral calculus gives $\|T-I\|\le d_K$, proving the point bound
+$\|v_a-f_a\|\le\eta_v$. For the aggregate use
+$v-f=(z-f)+(T-I)z$ and the \emph{original} identity
+$\sum p_a\|z_a\|^2=1$:
+\[
+ \left(\sum p_a\|v_a-f_a\|^2\right)^{1/2}
+                         \le\sqrt{B\sigma^2}+d_K .
+\]
+Thus Lemma~\ref{app:local:projection} applies with $b_v,\phi_v$;
+in particular the transformed phase defect has not been erased.
+
+The cross-pair perturbation is now
+\eqref{app:local:pair-error} with point error $\eta_v$ and stress
+error zero, namely $T_v$. The overlap floor is unchanged, since
+$v_a^*v_b=z_a^*Kz_b$.
+Same-type parameter error is exactly zero, because both kernels have
+Hessian $2\|g_a\|^2$. Their mass error is still included in the preceding
+mass-coordinate identity. The covariance error is $2\tau/\omega_p$.
+This proves the Hessian bound with coefficient $g_v$.
+Finally
+\[
+ \|G\|_\nu^2=\sum_a4p_a^2H_a^*KH_a
+             \ge \omega_p(1-\kappa)\|H\|_F^2/N .
+\]
+Its substitution into a negative bound is valid after $g_v>0$.
+The transformation is invertible and introduces no equality mode.
+\end{proof}
+
+The accepted mean coefficient may be any certified lower bound for
+$\max(c_g,c_v)$, using only those alternatives whose guards hold.
+The stress transform is confined to this mean estimate. In particular
+neither $b_g$ nor $b_v$ replaces the physical normal projection below.
+
+\subsection{The intrinsic residual bound}
+\label{app:local:residual}
+
+We use the two-dimensional spectral reduction, since a trace-only
+bound would lose the anisotropy needed in the nonuniform profiles.
+Use the candidate construction of Section~\ref{app:candidate}, writing
+its auxiliary rank-two Gram matrix as $\mathcal B$ to distinguish it
+from the aggregate coefficient $B$ in \eqref{app:local:polar-input}.
+Define
+\begin{gather}
+ \ell_a=\frac{1-\lambda-p_a}{(1-\lambda)(\lambda-2p_a)},\quad
+ L=\diag(\ell_a),\quad \mathcal T=L-L\mathcal B L,\quad
+ \mathcal T_0=\tr\mathcal T, \notag\\
+ d_a=\ell_a[1-\ell_a(\lambda-p_a)],\quad
+ r_{Ka}^2=\frac{d_a}{p_a\mathcal T_0},\qquad
+ s_{ab}=\frac{\ell_a\ell_b}{\mathcal T_0}\quad(a\ne b),\quad
+ s_{aa}=r_{Ka}^2.                                    \label{app:local:intrinsic-scalars}
+\end{gather}
+All displayed denominators and $d_a$ are strictly positive.
+If the columns of $U$ form an orthonormal basis of
+$\operatorname{range}\mathcal T$, then
+$K=2U^*\mathcal T U/\mathcal T_0$ and
+$z_a=U^*e_a/\sqrt{2p_a}$. The exact identity
+$\mathcal T L^{-1}\mathcal T=\mathcal T$ implies, for $v_a=K^{1/2}z_a$,
+\begin{equation}\label{app:local:weighted-resolution}
+ \sum_a(p_a/\ell_a)v_av_a^*=I_2/\mathcal T_0 .
+\end{equation}
+Indeed $U^*L^{-1}U=(U^*\mathcal T U)^{-1}$.
+
+\begin{lemma}[Pointwise intrinsic form]\label{app:local:intrinsic}
+For a physical vector $h$ at type $a$ define
+\[
+ q_a(h)=\sum_b\frac{p_b}{s_{ba}}
+       [\Ima(\overline{\theta_{ba}}z_b^*Kh)]^2-\lambda h^*Kh,
+ \qquad \theta_{ba}=z_b^*Kz_a/s_{ba}.
+\]
+For the full within-cluster zero-sum residual $U$,
+$Q(U)/N=\sum_jq_{a(j)}(U_j)$.
+For $j\ne a$ put
+\[
+ u_j=p_j^2(r_{Kj}^2-s_{aj}^2/r_{Ka}^2),\qquad
+ D_a=\frac{2\sum_{j<k}u_ju_k-\sum_ju_j^2}{4},
+\]
+where the sums run over the three indices different from $a$, and set
+\begin{gather}
+ \mathcal D_a=D_a\sum_{\substack{j<k\\j,k\ne a}}
+                       \frac1{p_jp_ks_{aj}s_{ak}},\qquad
+ c_{Ka}=\lambda-\frac{\ell_a^{-1}
+                   +\sqrt{\ell_a^{-2}-4\mathcal D_a}}2 .
+ \label{app:local:intrinsic-eigen}
+\end{gather}
+If $c_K\le\min_a\{\lambda,c_{Ka}\}$ is strictly positive, then
+\begin{equation}\label{app:local:physical-residual}
+ q_a(h)\le-(1-\kappa)c_K\|h\|^2
+ \quad\text{whenever }\Ima(z_a^*h)=0 .
+\end{equation}
+\end{lemma}
+\begin{proof}
+In the ordered Hessian, mixed-argument and mixed first-variation terms
+of a zero-sum residual factor through its group sums and vanish.
+The two pure-first terms give $Q(U)/N=\sum_jq_{a(j)}(U_j)$,
+including same-cluster and diagonal pairs.
+
+Fix $e_0=v_a/r_{Ka}$ and a perpendicular unit vector $e_1$.
+Rotate $v_b$ into its pair phase, writing
+$(s_{ab}/r_{Ka})e_0+c_be_1$, with $c_a=0$.
+Stress stationarity gives
+$\sum_bp_bc_b=0$ and $\sum_bp_bs_{ab}=\lambda r_{Ka}^2$.
+If $K^{1/2}h=(x+iy)e_0+u e_1$, direct expansion therefore yields
+\[
+ q_a(h)=-\lambda x^2+
+         \sum_{b\ne a}\frac{p_b}{s_{ab}}
+                [\Ima(\bar u c_b)]^2-\lambda|u|^2 .
+\]
+All terms containing $y$ cancel exactly; the whole $iz_a$ direction
+is in the kernel, including its bilinear pairings.
+
+Let $M_a$ be the real two-dimensional positive quadratic form in the
+middle sum. Each real rank-one form $[\Ima(\bar u c_b)]^2$
+has trace $|c_b|^2$. Since $c_a=0$ and $s_{ab}=\ell_a\ell_b/\mathcal T_0$ for $b\ne a$,
+\begin{align*}
+ \tr M_a&=\sum_{b\ne a}\frac{p_b|c_b|^2}{s_{ab}}
+ =\frac{\mathcal T_0}{\ell_a}\sum_b\frac{p_b}{\ell_b}|c_b|^2,\\
+ \sum_b\frac{p_b}{\ell_b}|c_b|^2
+ &=e_1^*\left(\sum_b\frac{p_b}{\ell_b}v_bv_b^*\right)e_1
+ =\frac1{\mathcal T_0}.
+\end{align*}
+The last equality is \eqref{app:local:weighted-resolution}; pair-phase
+rotations do not change the projected moduli. Thus $\tr M_a=1/\ell_a$.
+The vectors $t_j=p_jc_j$ form a closed triangle. Their pairwise
+determinants have common square $D_a$, since
+$t_j\cdot t_k=(u_l-u_j-u_k)/2$.
+The two-dimensional Cauchy--Binet formula gives $\det M_a=\mathcal D_a$.
+This proves its \emph{complete} largest-eigenvalue formula
+\eqref{app:local:intrinsic-eigen}.
+
+For a physical phase-horizontal $h$, choose real $t$ so that
+$h'=h-it z_a$ satisfies $\Ima(z_a^*Kh')=0$.
+Then $q_a(h')=q_a(h)$, while
+$\|h'\|^2=\|h\|^2+t^2\|z_a\|^2\ge\|h\|^2$.
+The spectral bound and $K\ge(1-\kappa)I$ prove
+\eqref{app:local:physical-residual}.
+This is a pointwise statement, prior to imposing any zero group sum.
+The phase adjustment is real-linear within each group, so it would also
+preserve such sums if applied to an array.
+\end{proof}
+
+In the accepted comparisons we use a directed lower bound
+\begin{equation}\label{app:local:cr}
+ c_r=(1-\kappa)c_K>0
+\end{equation}
+from this intrinsic lemma. All residual lower bounds used in the
+certificates follow from this lemma.
+The scalar enclosures cover the \emph{whole} reciprocal-$N$ interval,
+not merely the local endpoint. They are produced by
+\eqref{app:local:intrinsic-scalars}--\eqref{app:local:intrinsic-eigen}
+with the root enclosure and contractor described next.
+
+Write $x=1/N$, $p_a=1/4+\delta_ax$, $h_0=\alpha-1/2$,
+$\lambda=\alpha-\zeta$, and $h=h_0-\zeta$.
+Polynomial division of the defining candidate equation gives exactly
+\begin{equation}\label{app:local:root-contractor}
+ \zeta=x^2
+ \frac{3+1/h-1/(4h^2)}{2+1/(4h_0h)}
+                 \sum_a\frac{\delta_a^2}{h-2\delta_ax}.
+\end{equation}
+For verification,
+$\sum_a(h-2\delta_ax)^{-1}
+=4/h+(4x^2/h^2)\sum_a\delta_a^2/(h-2\delta_ax)$;
+the uniform equation is $2h_0+1-1/(4h_0)=0$.
+On any closed $x$ interval start with
+$0\le\zeta\le(2/3)Cx_{\rm hi}^2$ and intersect this interval three times
+with the outward interval image of \eqref{app:local:root-contractor}.
+The true root remains inside each intersection; convergence is not
+assumed. Positivity of every denominator is checked before division.
+For the actual candidate the discriminant is nonnegative. Its enclosing
+interval may therefore be intersected with $[0,\infty)$; a negative lower
+endpoint is replaced by zero, while a negative upper endpoint fails the check.
+Taking the minimum over all intervals, signs and four vertex types gives
+$c_K$. All intervals meeting a requested endpoint are retained whole,
+including any interval crossing it.
+
+\subsection{The normal component and its finite budget}
+\label{app:local:normal}
+
+The candidate diagonal identity is
+$p_a\|z_a\|^2=1/4+(p_a-1/4)/b$ with
+$b=3(2\lambda-1)>109/100$. It implies
+\[
+ \tfrac14\sum_a\|f_a-4p_az_a\|^2
+ =\sum_ap_a\|z_a-f_a\|^2+4\sigma^2/b .
+\]
+Set
+\[
+ b_{\rm ph}=\sqrt{(B+400/109)\sigma^2}.
+\]
+For a physical horizontal mean $H$ this bounds its reference constraint
+matrix by $b_{\rm ph}\|H\|_\nu$; in particular its reference normal
+projection has norm at most $\sqrt2b_{\rm ph}\|H\|_\nu$.
+The following lemma uses these bounds in the original frame variables.
+
+\begin{lemma}[Positive normal coupling]\label{app:local:PSD-normal}
+Define
+\[
+ t=\min\{\sqrt2\eta,\sqrt{2B\sigma^2/\omega_p}\},\qquad
+ a=\min\{\omega_p^{-1/2},1+t\},
+\]
+and
+\begin{align}
+ J_*&=\frac{(1/2+b_{\rm ph})/\sqrt3+(7/8)t+(E_{\mathrm{Hess}}/2)a}{\sqrt{\omega_p}},
+ \notag\\
+ L_*'&=\frac1{2\sqrt3}+\frac74t+\frac78t^2+(E_{\mathrm{Hess}}/2)a^2,
+ \notag\\
+ H_{\rm amb}&=(7/4+E_{\mathrm{Hess}})/(2\omega_p),\qquad
+ J=\min(J_*,H_{\rm amb}),\quad L=\min(L_*',H_{\rm amb}).
+ \label{app:local:JL}
+\end{align}
+Then
+$|Q(H,R_n)|\le NJ\|H\|_F\|R_n\|_F$ and
+$Q(R_n)\le NL\|R_n\|_F^2$.
+\end{lemma}
+\begin{proof}
+Write $C_n=cI+D$ with $\tr D=0$ and set
+$r=\|R_n\|_F/\sqrt N$. Tightness gives
+$r^2=\tr(C_n^2)/2=\|C_nF\|_\nu^2$.
+Because $C_n\succeq0$ in dimension two,
+$\|DF\|_\nu^2=\tr(D^2)/2\le r^2/2$.
+This half-energy estimate would fail for an indefinite normal.
+Also $\|C_n\|\le\sqrt2r$, so for $E=C_n(Z-F)$,
+$\|E\|_\nu\le tr$, and $\|R_n\|_\nu\le ar$.
+Both the point and aggregate alternatives in $t$ refer to this same $E$.
+
+By the reference tensor and the physical normal projection,
+\[
+ |q_0(H,C_nF)|
+ \le\frac{1/2+b_{\rm ph}}{\sqrt3}\|H\|_\nu r .
+\]
+The error $q_0(H,E)$ is at most $(7/8)t\|H\|_\nu r$.
+Add \eqref{app:local:ambient-perturbation} and use
+$\|H\|_\nu\le\|H\|_F/\sqrt{N\omega_p}$ to obtain $J_*$.
+For the pure normal, the scalar part is null and the traceless part
+contributes at most $r^2/(2\sqrt3)$ to $q_0(C_nF)$.
+The two terms involving $E$ are bounded by
+$(7t/4+7t^2/8)r^2$, and the perturbation contributes
+$E_{\mathrm{Hess}} a^2r^2/2$. This gives $L_*'$.
+The ambient operator bound independently gives $H_{\rm amb}$ for each.
+\end{proof}
+
+Let $c_m>0$ be the accepted mean lower bound and $c_r>0$ the intrinsic
+residual lower bound. Put
+$h=\|H\|_F/d$, $r=\|U\|_F/d$, $z=\|R_n\|_F/d$.
+Although $\Delta=\Xi-R_n$, an absolute mixed upper bound gives
+\begin{equation}\label{app:local:normal-optimization}
+ \frac{Q(\Delta)}{Nd^2}
+ \le-c_mh^2-c_rr^2+2Jzh+Lz^2,\qquad
+ h^2+r^2+z^2=1,\quad 0\le z\le\rho_n .
+\end{equation}
+If $d\le d_c/\sqrt N$, take $\rho_n^2=d_c^2/(2N^2)\le1/2$.
+The exact supremum of the right-hand side is
+\begin{equation}\label{app:local:normal-max}
+ \begin{cases}
+ -c_r+(c_r+L+J^2/(c_m-c_r))\rho_n^2,
+ &c_m>c_r,\ J^2\rho_n^2\le(c_m-c_r)^2(1-\rho_n^2),\\
+ -c_m+(c_m+L)\rho_n^2+2J\sqrt{\rho_n^2(1-\rho_n^2)},
+ &\text{otherwise}.
+ \end{cases}
+\end{equation}
+To prove this, fix $z$ and maximize
+$-(c_m-c_r)h^2+2Jzh$ on $[0,\sqrt{1-z^2}]$.
+The interior value and the boundary value are nondecreasing in $z$
+for $z\le1/\sqrt2$, and agree at the transition.
+The boundary case includes $c_m\le c_r$, so no division by a nonpositive
+gap occurs. Denote the negative of \eqref{app:local:normal-max} by
+$g_{\rm normal}$. All branch choices are made with the conservative
+rational coefficients actually supplied to the certificate.
+
+\subsection{Angular transport and the shared radial--tangent budget}
+\label{app:local:angular}
+
+The columnwise tangent used in the Taylor remainder is different from
+the horizontal array $\Xi$ used in the Hessian. Define
+\[
+ D_r=\frac{(4/11)e}{1-4e},\qquad r_-=\sqrt{1-D_r},\quad
+ r_+=\sqrt{1+D_r},\qquad d_c=\sqrt{A_R}+\sqrt{BC}.
+\]
+The candidate radial identity in Section~\ref{app:candidate} gives
+$r_-\le\|z_a\|\le r_+$. Closest alignment and the triangle inequality
+give $d\le d_c/\sqrt N$.
+In the preliminary common alignment, the exact identity
+\[
+ \|rv-f\|^2=(r-1)^2+r\,d_{\rm ph}(v,f)^2
+\]
+for unit $v,f$ in closest phases gives candidate angular bounds
+$BC/(Nr_-)$ in sum and $C_{\mathrm{pt}}C/(N^2r_-)$ pointwise. Put
+\[
+ B_{\rm ang}=\sqrt{L_U\bar E}+\sqrt{BC/r_-},\qquad
+ \chi=\sqrt{\frac{(1+s)r_+}{(1-s)r_-}},\qquad
+ D_U=\frac23-\frac{L_*}{N}>0.
+\]
+For fixed common unitary, minimizing individual phases gives
+\[
+ \|y_i-z_i\|^2=(\|y_i\|-\|z_i\|)^2+
+ \|y_i\|\|z_i\|d_{\rm ph}(u_i,z_i/\|z_i\|)^2.
+\]
+Therefore the actual closest unitary minimizes the angular sum with
+the positive weights $\|y_i\|\|z_i\|$. Comparison to the preliminary
+alignment yields
+\begin{align}
+ \sum_i\|y_i\|\|z_i\|d_{\rm ph}(u_i,z_i/\|z_i\|)^2
+ &\le (1+s)r_+B_{\rm ang}^2/N,\label{app:local:weighted-angle}\\
+ \sum_i d_{\rm ph}(u_i,z_i/\|z_i\|)^2
+ &\le\chi^2B_{\rm ang}^2/N. \nonumber
+\end{align}
+No unweighted angular optimality is used.
+
+For completeness, the rotation estimate needed to transfer the pointwise
+bound follows from the tetrahedral second moment. Modulo scalar phase
+write $U=\cos\theta I+i\sin\theta(n\cdot\sigma)$ and put $t=|\sin\theta|$.
+If $v_a$ are the reference Bloch vectors, then
+$|f_a^*Uf_a|^2=1-t^2(1-(n\cdot v_a)^2)$ and
+$d_{\rm ph}(Uf_a,f_a)^2\ge t^2(1-(n\cdot v_a)^2)$.
+Since $\sum v_av_a^T=4I/3$,
+\[
+ \sum_i d_{\rm ph}(Uf_{a(i)},f_{a(i)})^2\ge ND_Ut^2.
+\]
+The phase-distance triangle inequality and
+\eqref{app:local:weighted-angle} bound its left side by
+$(1+\chi)^2B_{\rm ang}^2/N$. If
+\begin{equation}\label{app:local:rotation-guard}
+ \frac{(1+\chi)^2B_{\rm ang}^2}{N^2D_U}
+ <1-(255/256)^2,
+\end{equation}
+every $|f_a^*Uf_a|>255/256$, and
+\[
+ d_{\rm ph}(Uf_a,f_a)^2=
+ \frac{2(1-|f_a^*Uf_a|^2)}{1+|f_a^*Uf_a|}
+ \le\frac{512}{511}t^2.
+\]
+Thus one may use
+\[
+ \mathrm{Rot}_{\rm ang}=
+ \sqrt{\frac{512(1+\chi)^2B_{\rm ang}^2}{511D_U}}.
+\]
+An independent physical-distance triangle gives
+$\sum_i d_{\rm ph}(Uf_a,f_a)^2\le4d_c^2/N$ and hence
+$\mathrm{Rot}_{\rm phys}=\sqrt{(512/511)4d_c^2/D_U}$,
+provided $4d_c^2/(N^2D_U)<1-(255/256)^2$.
+Use the smaller of these two bounds only when each selected bound has
+its own stated guard; denote the result by $\mathrm{Rot}$.
+
+Write, in the actual individual phases,
+\begin{equation}\label{app:local:column-split}
+ y_i=(1+t_i)z_i+\xi_i=r_i z_i+\xi_i,\qquad
+ z_i^*\xi_i=0,\quad t_i\in\mathbb R.
+\end{equation}
+Let $X^2=\sum_i\|\xi_i\|^2$ and let $T$ bound $\max_i\|\xi_i\|$.
+The following simultaneous choices are valid:
+\begin{align}
+ q_t&=\frac1N\min\{d_c,(1+s)\sqrt{r_+/r_-}B_{\rm ang}\},
+ & X/\sqrt N&\le q_t,\label{app:local:tangent-bounds}\\
+ \epsilon&=\sqrt{P_R/N}+(\mathrm{Rot}_{\rm phys}+\sqrt{C_{\mathrm{pt}}C})/N,
+ & q_d&=d_c/N,\nonumber\\
+ T&=\min\left\{\epsilon,(1+s)\left[
+ \sqrt{L_P\bar E/N}+\frac{\mathrm{Rot}}N+
+ \frac{\sqrt{C_{\mathrm{pt}}C}}{N\sqrt{r_-}}\right]\right\}.&&\nonumber
+\end{align}
+Indeed $1-|u^*v|^2\le d_{\rm ph}(u,v)^2$ for unit vectors.
+Multiplying \eqref{app:local:weighted-angle} by $(1+s)/r_-$ gives
+$X^2\le(1+s)^2(r_+/r_-)B_{\rm ang}^2/N$.
+The pointwise estimate follows from the same triangle inequality with
+the rotation bound, while the physical triangle gives $\epsilon$.
+An angular displacement has therefore not been charged a first-order
+radial point error.
+
+The certificate checks $T<1-s$. Since $z_i^*y_i\ge0$ in closest phases,
+\begin{equation}\label{app:local:radial-interval}
+ 0<\rho=\frac{\sqrt{(1-s)^2-T^2}}{r_+}\le r_i
+ \le R=\frac{1+s}{r_-}.
+\end{equation}
+Orthogonality in \eqref{app:local:column-split} gives the exact identity
+\begin{equation}\label{app:local:shared-budget}
+ d^2=\sum_i t_i^2\|z_i\|^2+X^2,\qquad
+ T_r^2:=\sum_i t_i^2\le(d^2-X^2)/r_-^2.
+\end{equation}
+This budget is distinct from the global radial, moment and angular
+deficits. Equations \eqref{app:local:tangent-bounds} are the explicit
+transfer between them. For $d>0$ put $\vartheta=X/d\in[0,1]$.
+
+\subsection{The pair remainder and physical fiber bounds}
+\label{app:local:pair-remainder}
+
+For an ordered pair put $s_{ij}=|z_i^*Kz_j|$, and rotate its candidate
+overlap to the positive real axis. In this phase set
+\[
+ \alpha_{ij}=\overline S_{ij}z_i^*K\xi_j,\quad
+ \beta_{ij}=\overline S_{ij}\xi_i^*Kz_j,\quad
+ \gamma_{ij}=\overline S_{ij}\xi_i^*K\xi_j,
+ \qquad (a_{ij},b_{ij},c_{ij})=\Ima(\alpha_{ij},\beta_{ij},\gamma_{ij}).
+\]
+For this paragraph abbreviate $s=s_{ij}$, $p=r_ir_j$ and
+$L=r_i\alpha_{ij}+r_j\beta_{ij}$. The complete Taylor polynomial
+through total degree two in $(t,\xi)$ is
+\[
+ P_2=ps+\Rea(L+\gamma_{ij})+(a_{ij}+b_{ij})^2/(2s).
+\]
+With $R_s(h)=|s+h|-s-\Rea h-(\Ima h)^2/(2s)$, the exact remainder is
+\begin{align}
+ |ps+L+\gamma_{ij}|-P_2={}&
+ \frac{r_i-r_j}{2s}\left(\frac{a_{ij}^2}{r_j}-\frac{b_{ij}^2}{r_i}\right)
+ +\frac{(r_i a_{ij}+r_j b_{ij})c_{ij}}{ps}
+ +\frac{c_{ij}^2}{2ps}\nonumber\\
+ &+pR_s\left(\frac{\alpha_{ij}}{r_j}+
+              \frac{\beta_{ij}}{r_i}+\frac{\gamma_{ij}}p\right).
+ \label{app:local:exact-pair}
+\end{align}
+To verify it, expand the square of
+$(r_i a_{ij}+r_j b_{ij}+c_{ij})$ divided by $2ps$;
+the $a_{ij}b_{ij}$ term cancels exactly. In particular the pure radial
+dependence is exactly quadratic. All within-cluster and diagonal pairs
+remain in this identity.
+
+For types $\mathrm c$ (different clusters) and $\mathrm s$ (same cluster),
+choose positive floors $h_t$ and upper bounds $m_t,g_t$ such that
+\begin{equation}\label{app:local:type-bounds}
+ s_{ij}\ge h_t,\quad |\alpha_{ij}|\le m_t\|\xi_j\|,\quad
+ |\beta_{ij}|\le m_t\|\xi_i\|,\quad
+ |\gamma_{ij}|\le g_t\|\xi_i\|\|\xi_j\|.
+\end{equation}
+We use $h_{\mathrm c}=h_c$ for the certified cross floor.
+Besides the certified candidate overlap floor, valid generic choices are
+\begin{gather}
+ h_E=15/26-2\eta-\eta^2>0,\qquad
+ h_{\mathrm s}=(1-\kappa)r_-^2,\nonumber\\
+ m_{\mathrm c}=\sqrt{r_+^2-h_E^2/r_+^2}+\kappa r_+,\qquad
+ m_{\mathrm s}=\kappa r_+,\label{app:local:generic-fiber}\\
+ g_{\mathrm c}=\kappa+\min\{1,(1/\sqrt3+2\eta+\eta^2)/r_-^2\},\qquad
+ g_{\mathrm s}=1+\kappa.\nonumber
+\end{gather}
+The displayed choice of $h_{\mathrm s}$ may be replaced by another
+independently proved floor; in all cases require
+$0<h_{\mathrm s}\le\min_a s_{aa}$.
+The projected-linear bound follows from the Euclidean cross floor and
+the component of $K-I$. For the quadratic bound, define the antiunitary
+$J(v_1,v_2)=(-\overline v_2,\overline v_1)$. Each
+$\xi_i=c_iJ(z_i/\|z_i\|)$, so
+\[
+ |\xi_i^*\xi_j|=
+ \frac{|z_i^*z_j|}{\|z_i\|\|z_j\|}\|\xi_i\|\|\xi_j\|.
+\]
+Adding the $K-I$ contribution proves $g_{\mathrm c},g_{\mathrm s}$.
+In particular this is a physical complex-line calculation, valid for
+every within-cluster residual.
+
+\subsection{Row estimates coupled to intrinsic residual curvature}
+\label{app:local:rows}
+
+Write $e_i=\|\xi_i\|$. Retain the separate pointwise coefficient
+\[
+ M=\max\{m_{\mathrm c}^2/h_{\mathrm c},m_{\mathrm s}^2/h_{\mathrm s}\}.
+\]
+The following row bounds keep the complete imaginary parts in
+\eqref{app:local:exact-pair}:
+\[
+ \sum_i a_{ij}^2/s_{ij}\le NH e_j^2,\qquad
+ \sum_{a(i)\ne a(j)}a_{ij}^2/s_{ij}\le NH_{\mathrm c}e_j^2.
+\]
+To obtain an initial bound, put
+\begin{gather}
+ d_g=2\eta+\eta^2+\kappa r_+^2,\qquad
+ \delta=\eta+\kappa r_++\eta/\sqrt{r_-}
+       +\sqrt{2/3}\,d_g/\sqrt{h_{\mathrm c}/\sqrt3},\nonumber\\
+ H_{\rm iso}=\frac{(\sqrt{p_+}+\sqrt{1-p_-}\,\delta)^2}{h_{\mathrm c}},
+ \label{app:local:row-initial}\\
+ H=\min\{M,H_{\rm iso}+p_+m_{\mathrm s}^2/h_{\mathrm s}\},\qquad
+ H_{\mathrm c}=\min\{H_{\rm iso},(1-p_-)m_{\mathrm c}^2/h_{\mathrm c}\}.
+ \nonumber
+\end{gather}
+The subscript on $H_{\rm iso}$ denotes the reference isotropy estimate.
+For a reference center $f_b$, the three projected cross forms have
+amplitude $\sqrt{2/3}\|\xi\|$ and phases separated by $2\pi/3$.
+Their squared imaginary parts sum to $\|\xi\|^2$, so their weighted sum
+is at most $p_+\|\xi\|^2$. Transport $\xi=cJ(z_b/\|z_b\|)$ to
+$cJf_b$; its change is at most $\eta\|\xi\|/\sqrt{r_-}$.
+For complex nonzero $v,v_0$,
+\[
+ \left|\frac v{|v|}-\frac{v_0}{|v_0|}\right|^2
+ =\frac{|v-v_0|^2-(|v|-|v_0|)^2}{|v||v_0|}.
+\]
+The overlap phase changes by at most $d_g/\sqrt{h_{\mathrm c}/\sqrt3}$.
+These bounds give the displayed $\delta$ for the full phase-aligned
+linear form. The weighted Euclidean triangle inequality proves
+$H_{\rm iso}$; same-cluster rows and pointwise $M$ give the other terms.
+
+There is a second, sharper row bound directly from intrinsic curvature.
+Let $c_{\rm intr}$ be the physical pointwise coefficient established in
+the residual argument above, before imposing any zero-sum condition:
+\begin{equation}\label{app:local:pointwise-residual}
+ \sum_b p_b\frac{[\Ima(\overline S_{ba}z_b^*Kh)]^2}{|z_b^*Kz_a|}
+       -\lambda h^*Kh\le-c_{\rm intr}\|h\|^2,\qquad
+ \Ima(z_a^*h)=0.
+\end{equation}
+Every columnwise $\xi_j$ is eligible since $z_j^*\xi_j=0$. Therefore,
+for any certified upper $\lambda_+$,
+\begin{equation}\label{app:local:spectral-row}
+ H_{\rm spec}=\lambda_+(1+\kappa)-c_{\rm intr},\qquad
+ H\leftarrow\min(H,H_{\rm spec}),\quad
+ H_{\mathrm c}\leftarrow\min(H_{\mathrm c},H_{\rm spec}).
+\end{equation}
+The certificate checks $H_{\rm spec}\ge0$. Every summand in the row
+is nonnegative, which justifies the cross-only bound. The coefficient
+$M$ is not changed: a row bound does not imply a pointwise pair bound.
+Nor is a mean curvature coefficient substituted for $c_{\rm intr}$.
+Using \eqref{app:local:pointwise-residual} both here and in quadratic
+descent is valid because both are pointwise consequences of the same
+inequality; neither spends a separate portion of a deficit.
+
+Hermitian symmetry gives $b_{ij}=-a_{ji}$, $c_{ji}=-c_{ij}$.
+The full ordered radial term in \eqref{app:local:exact-pair} is consequently
+\[
+ \sum_{i,j}(t_i-t_j)a_{ij}^2/(r_js_{ij}).
+\]
+Put $W_i=\sum_j a_{ij}^2/s_{ij}$. Then $0\le W_i\le MX^2$,
+$\sum_iW_i\le NHX^2$, hence $\sum_iW_i^2\le NMHX^4$.
+Cauchy--Schwarz, followed by \eqref{app:local:shared-budget}, bounds this
+term divided by $Nd^2$ by
+\begin{equation}\label{app:local:radial-row}
+ B_{\rm rad}\vartheta\sqrt{1-\vartheta^2},\qquad
+ B_{\rm rad}=\frac{HT+\sqrt{MH}\,q_t}{\rho r_-}.
+\end{equation}
+Indeed the two sums with $|t_i|$ and $|t_j|$ are at most
+$\sqrt{NMH}\,T_rX^2$ and $NHT_rTX$, respectively, before division by
+$\rho$.
+
+The full ordered linear--quadratic term is
+$2\sum_{i,j}a_{ij}c_{ij}/(r_js_{ij})$. If
+$E_b=\sum_{a(j)=b}e_j^2$, its cross part, by weighted Cauchy--Schwarz,
+is at most
+\[
+ \frac{2g_{\mathrm c}}\rho\sqrt{NH_{\mathrm c}/h_{\mathrm c}}
+ \sum_b E_b\sqrt{X^2-E_b}
+ \le\frac{\sqrt3g_{\mathrm c}}\rho
+        \sqrt{NH_{\mathrm c}/h_{\mathrm c}}X^3.
+\]
+The last inequality follows from
+$\sum E_b^2\ge X^4/4$. The same-cluster part is at most
+$2\sqrt{Np_+}m_{\mathrm s}g_{\mathrm s}X^3/(\rho h_{\mathrm s})$.
+Set
+\begin{gather}
+ L_{\rm row}=\frac{\sqrt3}2g_{\mathrm c}\sqrt{H_{\mathrm c}/h_{\mathrm c}}
+        +\sqrt{p_+}m_{\mathrm s}g_{\mathrm s}/h_{\mathrm s},\qquad
+ J_{\max}=\max_t g_t^2/(2h_t),\nonumber\\
+ A_{\rm mixed}=2L_{\rm mixed}q_t/\rho+J_{\max}q_t^2/\rho^2,
+ \label{app:local:mixed-row}
+\end{gather}
+where $L_{\rm mixed}$ can be $L_{\rm row}$ or its minimum with the
+independent weighted type bound described next. The second term in
+$A_{\rm mixed}$ retains the full quadratic--quadratic term $c_{ij}^2$.
+The same-cluster term in $L_{\rm row}$ is also retained.
+
+\subsection{Complete scalar bounds and four-cluster summation}
+\label{app:local:scalar-tail}
+
+The elementary modulus identities below retain all orders of the
+remainder; no assertion that its argument has modulus less than its
+base is required. For $h\ne0$ and $s>0$ put
+\[
+ z=|h|/s,\qquad t=(1-|1+h/s|)/z,\qquad A_t=1-t^2.
+\]
+Reverse triangle gives $-1\le t\le1$. Squaring the defining identity
+gives
+\[
+ \frac{\Rea h}{s}=-zt-z^2A_t/2,\qquad
+ \frac{(\Ima h)^2}{s^2}=z^2A_t-z^3tA_t-z^4A_t^2/4.
+\]
+Consequently
+\begin{equation}\label{app:local:scalar-identity}
+ \frac{R_s(h)}s=z^3 f(t)+z^4 g(t),\qquad
+ f(t)=\frac{t(1-t^2)}2,\quad g(t)=\frac{(1-t^2)^2}8.
+\end{equation}
+Replacing $t$ by $|t|$ only increases the right side. On $[0,1]$ put
+$a_0=1/\sqrt3$. Then
+\[
+ f(a_0)-f(t)=\frac{(t-a_0)^2(t+2a_0)}2
+ \ge a_0(t-a_0)^2,\qquad
+ g(a_0)=1/18,\qquad |g'(t)|\le1/(3\sqrt3).
+\]
+The mean-value inequality followed by completing a square proves
+\begin{equation}\label{app:local:unsigned-scalar}
+ R_s(h)\le \frac{|h|^3}{3\sqrt3s^2}
+       +\left(\frac1{18}+\frac Z{36\sqrt3}\right)\frac{|h|^4}{s^3},
+ \qquad |h|/s\le Z.
+\end{equation}
+At $h=0$ the assertion is immediate.
+
+Define the fixed mass coefficient $\zeta=(3/2)\sqrt{p_+}<1$.
+For any nonnegative frozen pair of coefficients
+$F_{\mathrm c}\ge F_{\mathrm s}$ set
+\begin{equation}\label{app:local:mass-weights}
+ F_{\rm eff}=(1-p_-)F_{\mathrm c}+p_-F_{\mathrm s},\quad
+ F_{\rm mix}=\zeta F_{\mathrm c}+(1-\zeta)F_{\mathrm s},\quad
+ F_{\rm pair}=(3F_{\mathrm c}+F_{\mathrm s})/4 .
+\end{equation}
+Here and below, ordering is checked for the chosen majorants, not
+inferred from an ordering of the actual geometric quantities.
+The ordered cubic cross sum satisfies
+\[
+ \sum_{a(i)\ne a(j)}e_i^2e_j\le\zeta\sqrt N X^3,\qquad
+ \sum_{i,j}e_i^2e_j\le\sqrt N X^3.
+\]
+Indeed, if $x_a=\sqrt{\sum_{a(i)=a}e_i^2}/X$, then $\sum x_a^2=1$.
+The first sum is at most
+$\sqrt{Np_+}X^3(\sum x_a-\sum x_a^3)$.
+The inequalities $\sum x_a\le2$ and
+$\sum x_a^3\ge(\sum x_a)/4$ prove the claim. The latter follows from
+$4\sum x_a^3\ge(\sum x_a^2)(\sum x_a)$; expanding gives a sum of
+$(x_a-x_b)(x_a^2-x_b^2)\ge0$.
+Also $\sum_{a(i)\ne a(j)}e_i^2e_j^2\le3X^4/4$, since
+$\sum_aE_a^2\ge X^4/4$. Pure powers are weighted by the number of
+cross partners, at most $N(1-p_-)$.
+These proofs use arbitrary column energies and do not assume
+constant perturbations in a cluster.
+
+In particular the independent type bound used in
+\eqref{app:local:mixed-row} is $(L_t)_{\rm mix}$ with
+$L_t=m_tg_t/h_t$; take its minimum with $L_{\rm row}$ when
+$L_{\mathrm c}\ge L_{\mathrm s}$.
+For the scalar term of \eqref{app:local:exact-pair}, put
+\begin{equation}\label{app:local:unsigned-types}
+ v_t=\frac{g_tT}{2\rho},\quad D_t=m_t+v_t,\quad
+ Z_t=\frac{2D_tT}{\rho h_t},\quad
+ C_t=\frac{D_t^3}{3\sqrt3h_t^2},\quad
+ B_t=\frac{D_t^4}{h_t^3}\left(\frac1{18}+\frac{Z_t}{36\sqrt3}\right).
+\end{equation}
+The argument of $R_s$ has modulus at most
+$D_t(e_i/r_i+e_j/r_j)$, since
+$e_ie_j/(r_ir_j)\le T(e_i/r_i+e_j/r_j)/(2\rho)$.
+Keep $r_ir_j$ outside the scalar remainder until expanding the powers:
+\begin{align*}
+ r_ir_j(e_i/r_i+e_j/r_j)^3
+ &=\frac{r_j}{r_i^2}e_i^3+\frac{r_i}{r_j^2}e_j^3
+       +3e_i^2e_j/r_i+3e_ie_j^2/r_j,\\
+ r_ir_j(e_i/r_i+e_j/r_j)^4
+ &=\frac{r_j}{r_i^3}e_i^4+\frac{r_i}{r_j^3}e_j^4
+       +4e_i^3e_j/r_i^2+4e_ie_j^3/r_j^2
+       +6e_i^2e_j^2/(r_ir_j).
+\end{align*}
+Using \eqref{app:local:mass-weights} gives the full unsigned coefficients
+\begin{align}
+ A_3^{\,u}&=2RC_{\rm eff}T/\rho^2+6C_{\rm mix}q_t/\rho,\nonumber\\
+ A_4^{\,u}&=2RB_{\rm eff}T^2/\rho^3
+             +8B_{\rm mix}Tq_t/\rho^2+6B_{\rm pair}q_t^2/\rho^2,
+ \label{app:local:unsigned-loss}\\
+ A^{\,u}&=A_3^{\,u}+A_{\rm mixed}+A_4^{\,u},\qquad B^{\,u}=B_{\rm rad}.
+ \nonumber
+\end{align}
+The necessary $C$ and $B$ orderings are part of the certificate guards.
+
+\begin{lemma}[Shared-budget remainder]\label{app:local:loss}
+Suppose one complete scalar comparison supplies coefficients $A,B\ge0$
+such that the ordered remainder in \eqref{app:local:exact-pair}, divided
+by $Nd^2$, is at most
+$A\vartheta^2+B\vartheta\sqrt{1-\vartheta^2}$.
+Then it is at most
+\begin{equation}\label{app:local:loss-formula}
+ {\rm Loss}(A,B)=\frac{A+\sqrt{A^2+B^2}}2.
+\end{equation}
+In particular \eqref{app:local:unsigned-loss} supplies such a comparison.
+\end{lemma}
+\begin{proof}
+The maximum is the larger eigenvalue of
+$\left(\begin{smallmatrix}A&B/2\\B/2&0\end{smallmatrix}\right)$.
+Equations \eqref{app:local:radial-row},
+\eqref{app:local:mixed-row} and the preceding power expansions establish
+the unsigned assertion with the same $\vartheta$ in every term.
+\end{proof}
+
+\subsection{A signed remainder bound}
+\label{app:local:signed}
+
+Let $P_s(h)=-(\Rea h)(\Ima h)^2/(2s^2)$ be the scalar cubic.
+Substitution in \eqref{app:local:scalar-identity} yields the exact identity
+\begin{equation}\label{app:local:compact-identity}
+ \frac{R_s(h)-P_s(h)}s=z^4H_z(t),\qquad
+ H_z(t)=\frac{(1-t^2)(5t^2-1)}8
+       +\frac{3z}{8}t(1-t^2)^2+\frac{z^2}{16}(1-t^2)^3 .
+\end{equation}
+This identity includes every order in $h$. Replacing $t$ by $|t|$
+raises its right side, and $H_z(t)$ is nondecreasing in $z$ for
+$0\le t\le1$. More generally choose a fixed sign weight
+$\omega\in[0,1]$ and a rational $c_3\ge1/(3\sqrt3)$. For $Z>0$ let
+\[
+ W_{Z,\omega}(t)=
+ \frac{(1-\omega)(f(t)-c_3)}Z+(1-\omega)g(t)+\omega H_Z(t).
+\]
+If $Q_\omega(Z)\ge\max_{0\le t\le1}W_{Z,\omega}(t)$, then
+\begin{equation}\label{app:local:fractional-scalar}
+ R_s(h)\le\omega P_s(h)+(1-\omega)c_3|h|^3/s^2
+                       +Q_\omega(Z)|h|^4/s^3,\quad |h|/s\le Z.
+\end{equation}
+To verify it, subtract the first two terms, divide by $sz^4$, and use
+\eqref{app:local:compact-identity}. The result is
+$(1-\omega)(f(t)-c_3)/z+(1-\omega)g(t)+\omega H_z(t)$.
+Since $f(t)\le c_3$, replacing $0<z\le Z$ by $Z$ increases it.
+The zero case is direct. No condition $Z<1$ enters this proof.
+
+The continuum maximum is bounded by rational Bernstein coefficients.
+The ascending power coefficients of $H_Z$ are
+\[
+ \left(\frac{-2+Z^2}{16},\frac{3Z}{8},
+ \frac{12-3Z^2}{16},-\frac{3Z}{4},
+ \frac{-10+3Z^2}{16},\frac{3Z}{8},-\frac{Z^2}{16}\right).
+\]
+Add the displayed $f,g,c_3$ terms to obtain $W_{Z,\omega}$.
+On a closed interval $[a,b]\subset[0,1]$, substitute
+$t=a+(b-a)v$ and call the resulting power coefficients $c_j$.
+Its degree-six Bernstein coefficients are
+\[
+ \beta_i=\sum_{j=0}^i c_j\frac{\binom ij}{\binom6j},\qquad 0\le i\le6.
+\]
+The identity
+$W_{Z,\omega}(a+(b-a)v)=\sum_i\beta_i\binom6iv^i(1-v)^{6-i}$
+and the nonnegative partition of unity bound the whole interval by
+$\max_i\beta_i$. The certificate uses the $32$ closed equal intervals.
+It checks $Q_\omega(Z)\ge0$ before substituting the nonnegative power
+majorants in the ordered sums.
+
+We next explain the pure-row cubic input; its sharpened version is
+proved in the following subsection. For a fixed column $j$ choose a
+unit vector $v_j\perp z_j$ and set
+\[
+ \ell_{ij}=\overline S_{ij}z_i^*Kv_j,\qquad
+ q_{ij}=|\ell_{ij}|^2/s_{ij}^2 .
+\]
+Stationarity, with its full stress term, is
+\begin{equation}\label{app:local:cubic-stationarity}
+ \frac1N\sum_i\ell_{ij}=\lambda z_j^*Kv_j,\qquad
+ |\lambda z_j^*Kv_j|\le\lambda_+\min\{\kappa r_+,m_{\mathrm s}\}.
+\end{equation}
+Its right side is generally nonzero. The Fourier identity
+\[
+ P_s(\ell u)=
+ \Rea\{\ell^3u^3-|\ell|^2\ell|u|^2u\}/(8s^2)
+\]
+shows that a pure row bound follows from its first and third harmonics.
+Given $q_{\mathrm c}\in[q_-,q_+]$, $q_{\mathrm s}\in[0,q_{\mathrm s,+}]$
+and any fixed $c\ge0$, define
+\begin{align}
+ F_1(c)={}&c\lambda_+\min\{\kappa r_+,m_{\mathrm s}\}
+ +(1-p_-)\max\{|q_--c|,|q_+-c|\}m_{\mathrm c}\nonumber\\
+ &+p_+\max\{c,|q_{\mathrm s,+}-c|\}m_{\mathrm s},\nonumber\\
+ F_3={}&(1-p_-)m_{\mathrm c}^3/h_{\mathrm c}^2
+                  +p_+m_{\mathrm s}^3/h_{\mathrm s}^2,\qquad
+ P_{\rm row}=(F_1(c)+F_3)/8 .\label{app:local:generic-cubic-row}
+\end{align}
+Subtract $c$ times \eqref{app:local:cubic-stationarity} from the first
+harmonic and apply the triangle inequality; the third harmonic uses
+its full typed triangle bound. Thus
+\begin{equation}\label{app:local:pure-row}
+ N^{-1}\sum_iP_{s_{ij}}(\alpha_{ij})\le P_{\rm row}e_j^3.
+\end{equation}
+Valid generic ratio intervals are
+\begin{align*}
+ q_-&=\max\left\{0,\frac{(1-\kappa)^2r_-^2}{(1/\sqrt3+d_g)^2}
+                              -r_-^{-2}\right\},\\
+ q_+&=\min\left\{\frac{m_{\mathrm c}^2}{h_{\mathrm c}^2},
+       \frac{(1+\kappa)^2r_+^2}{h_{\mathrm c}^2}-r_+^{-2}\right\},
+ \qquad q_{\mathrm s,+}=m_{\mathrm s}^2/h_{\mathrm s}^2 .
+\end{align*}
+They follow from the exact physical projection identity proved below.
+The certificate can intersect these intervals with sharper valid
+intervals and choose $c=2$ or their endpoint midpoint. Its chosen $c$
+is fixed for the infinite-range argument.
+
+To retain all mixed cubics, the symmetric trilinear form of $P_s$ obeys
+$|\mathcal T_s(u,u,v)|\le|u|^2|v|/(3\sqrt3s^2)$.
+For $u=x+iy$, the numerator norm is
+$\sqrt{y^4+4x^2y^2}/6$, whose maximum at fixed $|u|$ gives this bound.
+Expansion of the cubic, or integration of its gradient, gives
+\[
+ P_s(u+v+w)\le P_s(u)+P_s(v)+
+ \frac{(|u|+|v|+|w|)^3-|u|^3-|v|^3}{3\sqrt3s^2}.
+\]
+All coefficients of the last polynomial are nonnegative.
+For each pair type retain $v_t,D_t,Z_t$ from
+\eqref{app:local:unsigned-types} and set
+\begin{align}
+ C_{{\rm base},t}&=c_3m_t^3/h_t^2,\nonumber\\
+ C_{{\rm extra},t}&=
+ c_3(3m_t^2v_t+3m_tv_t^2+v_t^3)/h_t^2
+                      +(1-\omega)C_{{\rm base},t},\nonumber\\
+ C_{{\rm full},t}&=c_3(m_t+v_t)^3/h_t^2,\qquad
+ B_{{\rm signed},t}=D_t^4Q_\omega(Z_t)/h_t^3.
+ \label{app:local:signed-types}
+\end{align}
+In particular $C_{\rm full}$ does not receive an additional
+$(1-\omega)C_{\rm base}$ term. Outward rounding may increase $D_t,Z_t$;
+the scalar certificate then uses that rounded radius.
+
+The physical radial factors require a separate estimate. The two pure
+ordered cubic terms combine to
+$2\sum_jr_j^{-2}\sum_ir_iP_{s_{ij}}(\alpha_{ij})$.
+One cannot pull a positive upper bound for $r_i$ out of this signed sum.
+Write $r_i=1+t_i$ and apply \eqref{app:local:pure-row} only to the part
+with coefficient one. With
+\[
+ C_{\rm rms}=\sqrt{(1-p_-)C_{{\rm base},{\mathrm c}}^2+
+                         p_-C_{{\rm base},{\mathrm s}}^2},
+ \qquad B_{\rm weight}=\frac{2\omega C_{\rm rms}Tq_d}{\rho^2r_-},
+\]
+Cauchy--Schwarz bounds the remaining part by
+$B_{\rm weight}\vartheta^2\sqrt{1-\vartheta^2}$ after division by $Nd^2$.
+Indeed $\sum_i|t_i|C_{{\rm base},t(i,j)}
+\le\sqrt N C_{\rm rms}T_r$ and $\sum_j e_j^3\le TX^2$.
+It is safe to replace $\vartheta^2$ by $\vartheta$ here.
+
+Using \eqref{app:local:mass-weights}, the complete signed alternative is
+\begin{align}
+ A_3^{\,s}&=\frac{2\omega P_{\rm row}T}{\rho^2}
+      +\frac{2R C_{{\rm extra},{\rm eff}}T}{\rho^2}
+      +\frac{6C_{{\rm full},{\rm mix}}q_t}{\rho},\nonumber\\
+ A_4^{\,s}&=\frac{2RB_{{\rm signed},{\rm eff}}T^2}{\rho^3}
+      +\frac{8B_{{\rm signed},{\rm mix}}Tq_t}{\rho^2}
+      +\frac{6B_{{\rm signed},{\rm pair}}q_t^2}{\rho^2},\nonumber\\
+ A^{\,s}&=A_3^{\,s}+A_{\rm mixed}+A_4^{\,s},\qquad
+ B^{\,s}=B_{\rm rad}+B_{\rm weight}.
+ \label{app:local:signed-loss}
+\end{align}
+The certificate checks cross/same ordering for $C_{\rm base}$,
+$C_{\rm extra}$, $C_{\rm full}$ and $B_{\rm signed}$, and nonnegative
+quartic coefficients. Lemma~\ref{app:local:loss} then applies.
+Taking the smaller of complete unsigned and complete signed bounds,
+including the four fixed choices $\omega=1/4,1/2,3/4,1$, is valid.
+Their cubic and scalar-tail pieces are not selected independently.
+
+\subsection{Exact two-pair fibers and row cancellation}
+\label{app:local:two-pair}
+
+Here the first index of a fiber denotes its tangent center. Retain
+$\mathcal T,d_a,\ell_a$ from \eqref{app:local:intrinsic-scalars}, and put
+\begin{gather}
+ t_{2a}=d_a^2+\sum_{b\ne a}\ell_a^2\ell_b^2p_ap_b,\qquad
+ W_a=\frac{2t_{2a}}{p_a(\tr\mathcal T)^2},\qquad
+ R_a=\frac{3\lambda-2+2p_a}{6p_a(2\lambda-1)}.
+ \label{app:local:physical-fiber-data}
+\end{gather}
+Then $W_a=\|Kz_a\|^2$ and $R_a=\|z_a\|^2$.
+Indeed $\mathcal T UU^*\mathcal T=\mathcal T^2$ since $UU^*$ projects
+onto its range; its diagonal gives the formula for $W_a$.
+The formula for $R_a$ is the candidate diagonal identity
+$p_aR_a=1/4+(p_a-1/4)/[3(2\lambda-1)]$.
+Complex dimension two implies that for every unit $v\perp z_a$,
+\begin{equation}\label{app:local:exact-physical-fiber}
+ m_{ab}^2:=|z_b^*Kv|^2=W_b-s_{ab}^2/R_a,\qquad
+ q_{ab}=m_{ab}^2/s_{ab}^2 .
+\end{equation}
+This follows by subtracting the projection of $Kz_b$ on
+$z_a/\|z_a\|$. In particular the modulus is independent of the choice
+of unit vector in this one-dimensional complex fiber, without removing
+its phase. For $a=b$ the overlap is $s_{aa}=d_a/(p_a\tr\mathcal T)$,
+not the cross formula $\ell_a\ell_b/\tr\mathcal T$.
+
+For the profile $C=1$ put
+\begin{equation}\label{app:local:two-pair-parameter}
+\begin{gathered}
+ x=1/N,\quad t=\sqrt{3-8x^2},\quad
+ a=\tfrac14-\tfrac x2,\quad b=\tfrac14+\tfrac x2,\\
+ (p_1,p_2,p_3,p_4)=(a,a,b,b),\quad \lambda=(1+t)/4.
+\end{gathered}
+\end{equation}
+Substitution in \eqref{alg:root-equation}, using $t^2+8x^2=3$,
+proves the last identity by the uniqueness of the root in $(2/3,\alpha]$.
+Reversing the signed count profile permutes the two pairs.
+There are six ordered types: $\mathrm{aa},\mathrm{ab},\mathrm{ba},
+\mathrm{bb},\mathrm{same}_a,\mathrm{same}_b$.
+Here $\mathrm{aa}$ means two different clusters of mass $a$ and must
+not be confused with $\mathrm{same}_a$.
+The following explicit formulas make their interval verification
+independent of a choice of spinor phases:
+\begin{align}
+ s_{\mathrm{aa}}&=\frac{t(2x+1)}{(2x-1)(8x^2-3)},&
+ s_{\mathrm{ab}}&=\frac{-t}{8x^2-3},&
+ s_{\mathrm{same}_a}&=
+       -\frac{2tx+8x^2-3}{(2x-1)(8x^2-3)}. \label{app:local:sharp-s}
+\end{align}
+Set $V=4tx+20x^2+8x-3$ and
+$J=-32tx^3-12tx^2+6tx+16x^4+56x^3-36x^2-24x+9$.
+Then
+\begin{align}
+ m_{\mathrm{aa}}^2&=
+ \frac{-2V}{(2x-1)(44x^2+12x-9)},\nonumber\\
+ m_{\mathrm{ab}}^2&=
+ \frac{2J}{(2x+1)(8x^2-3)(44x^2+12x-9)},\nonumber\\
+ m_{\mathrm{same}_a}^2&=
+ \frac{8x^2V}{(2x-1)(8x^2-3)(44x^2+12x-9)}, \label{app:local:sharp-m}\\
+ q_{\mathrm{aa}}&=
+ \frac{2(2x-1)(8x^2-3)V}{(2x+1)^2(44x^2+12x-9)},\nonumber\\
+ q_{\mathrm{ab}}&=
+ \frac{-2J}{(2x+1)(44x^2+12x-9)},\nonumber\\
+ q_{\mathrm{same}_a}&=
+ \frac{8x^2(-32tx^2+104x^3-36x^2-42x+9)}
+ {9(2x-1)(2x+1)(44x^2+12x-9)}. \label{app:local:sharp-q}
+\end{align}
+All formulas for center $b$ are obtained by replacing $x$ by $-x$
+and interchanging the labels $a,b$. These identities follow by
+substitution in \eqref{app:local:physical-fiber-data} and
+\eqref{app:local:exact-physical-fiber}, followed by multiplication by
+the denominators and reduction using $t^2=3-8x^2$.
+This supplies direct polynomial checks of each identity. The factor
+$x^2$ in both same-type formulas is retained before interval evaluation.
+
+For a center of mass $a$, denote the four complex forms in
+\eqref{app:local:cubic-stationarity} by $\ell_0$ in its own cluster,
+$\ell_1$ in the other $a$ cluster, and $\ell_2,\ell_3$ in the $b$
+clusters. Exact stationarity reads
+\[
+ a\ell_0+a\ell_1+b\ell_2+b\ell_3=\lambda\ell_0.
+\]
+The two $b$ ratios are the same real number $q_{\mathrm{ab}}$ even
+though their complex forms need not have the same phase. Thus the
+first harmonic has the exact reduction
+\begin{equation}\label{app:local:two-pair-harmonic}
+ \sum_jp_jq_j\ell_j
+ =a(q_{\mathrm{aa}}-q_{\mathrm{ab}})\ell_1+
+ [a q_{\mathrm{same}_a}
+                  +q_{\mathrm{ab}}(\lambda-a)]\ell_0.
+\end{equation}
+There is no assertion that the individual $b$ terms vanish.
+Since $\lambda>a$,
+\begin{align}
+ F_{1a}&=a|q_{\mathrm{aa}}-q_{\mathrm{ab}}|m_{\mathrm{aa}}
+    +[a q_{\mathrm{same}_a}+q_{\mathrm{ab}}(\lambda-a)]
+                                          m_{\mathrm{same}_a},\nonumber\\
+ F_{3a}&=a q_{\mathrm{same}_a}m_{\mathrm{same}_a}
+         +a q_{\mathrm{aa}}m_{\mathrm{aa}}
+         +2b q_{\mathrm{ab}}m_{\mathrm{ab}},\nonumber\\
+ P_{\rm row}^{\,\rm pair}
+   &=\max\{F_{1a}+F_{3a},F_{1b}+F_{3b}\}/8
+ \label{app:local:two-pair-row}
+\end{align}
+is a valid bound in \eqref{app:local:pure-row}.
+The third harmonic uses $|\ell_j|^3/s_j^2=q_jm_j$ exactly.
+The $b$ center uses the exchanged formulas. In particular the
+same-cluster stress term survives, and all physical residual vectors
+are eligible. One may take the minimum with
+\eqref{app:local:generic-cubic-row}.
+
+For clarity, the finite continuum certificate for these formulas uses
+the $512$ closed intervals
+$[j/(180\cdot512),(j+1)/(180\cdot512)]$, $0\le j<512$.
+On each interval $[u,v]$ use
+$\sqrt{3-8v^2}\le t\le\sqrt{3-8u^2}$ with directed rational square roots.
+Rational interval substitution in
+\eqref{app:local:sharp-s}--\eqref{app:local:sharp-q}, for all six types,
+checks that every denominator excludes zero. Geometric nonnegativity
+permits clipping a lower bound for $m^2,q$ to zero; a negative upper
+bound fails the check. Evaluate \eqref{app:local:two-pair-row} on each
+same interval, retaining both centers.
+The complete recorded bounds on $0\le x\le1/180$ include
+\begin{align}
+ m_{\mathrm c}^2&\le\frac{674866483913819}{10^{15}},&
+ m_{\mathrm s}^2&\le\frac{1730019549}{62500000000000},\nonumber\\
+ \frac{236851236625637}{125000000000000}
+ &\le q_{\mathrm c}\le\frac{2109213874049103}{10^{15}},&
+ q_{\mathrm s}&\le\frac{13969617457}{500000000000000},\nonumber\\
+ P_{\rm row}^{\,\rm pair}&\le\frac{160219816186209}{10^{15}}.
+ &&\label{app:local:sharp-uniform}
+\end{align}
+At the local endpoint $182$, every whole interval intersecting
+$[0,1/182]$ is retained, including a crossing boundary interval.
+The slightly sharper pure-row cap used there is
+$32029714476747/200000000000000$.
+This is an interval cover, not a maximum over sampled configurations.
+Only the pure-row term is replaced in \eqref{app:local:signed-loss};
+$B_{\rm weight}$ and every other remainder term are still present.
+
+\subsection{Propagation and equality}
+\label{app:local:closure}
+
+We now extend the local comparison from a certified endpoint to all
+later integers of the same profile. On each closed localization region,
+fix its $U,W,L_U,L_P,\bar E$ and the simultaneous candidate
+coefficients $B,C_{\mathrm{pt}}$ supplied by Sections~\ref{app:global} and
+\ref{app:candidate}. At an accepted endpoint $n$, put $e_n=m_*/n$ and
+$\sigma_n^2=C/n^2$. Let $\kappa_*$ be the outward rational upper enclosure
+of $n$ times the explicit stress bound in \eqref{app:candidate:kappa}:
+\[
+ \kappa_*\ge
+ 2\sqrt C\sqrt{1/3+4e_n/b_0+4\sigma_n^2/b_0^2}
+       +\frac{2ne_n^2}{1/15-e_n},\qquad b_0=109/100.
+\]
+This coefficient is distinct from the Bloch-Gram coefficient $k_0$ in
+Section~\ref{app:candidate}. We retain that accepted enclosure throughout
+propagation. At this endpoint, valid physical coefficients are
+\begin{equation}\label{app:local:frozen-physical}
+ s_n=\sqrt{13U/(4n)},\qquad
+ A_R=\frac{13U}4+L_UW\frac{1+s_n}{(1-s_n)^2},\qquad
+ P_R=\frac{13U}4+L_PW\frac{1+s_n}{(1-s_n)^2}.
+\end{equation}
+These follow from the radial/angular identity, with the relative
+angular bound $L_Uw/[N(1-s)^2]$ and its pointwise analogue. Their minimum
+with an independently certified bound in the original variables is
+also valid. The partition and the closed count cover remain fixed, so
+the count exclusions apply at every later local endpoint.
+
+At an accepted endpoint, all of the following are checked by outward
+rational inequalities: positive masses and overlap floors; the
+candidate point domains; every fine phase guard and the separate
+closest-gauge rotation guard; the mean-coordinate phase, projection,
+and positivity guards; the intrinsic residual lower bound; positive
+radial multipliers; both finite-normal branches; the nonnegative
+quartic and cross/same ordering guards; and the full remainder margin.
+The square root of a positive rational is enclosed by rational numbers
+whose squares straddle it, so these checks require no floating-point
+eigenvalue or optimizer. Section~\ref{app:certificates} specifies
+the interval records, arithmetic and source binding.
+
+\begin{lemma}[Frozen endpoint propagation]\label{app:local:propagation}
+Suppose all stated guards and a strict complete local margin hold on
+one closed region at endpoint $n$, with intrinsic and exact-fiber
+enclosures valid on $0\le1/N\le1/n$. Then the same margin lower bound
+holds on that region for every later admissible member of its profile.
+\end{lemma}
+\begin{proof}
+For $N\ge n$, retain the fixed profile deviations $\delta_a$ and use
+the actual masses $p_a=1/4+\delta_a/N$. The candidate is reconstructed
+at those masses; it is not obtained by scaling a finite-endpoint vector
+configuration. Its errors obey
+\[
+ e=m_*/N,\qquad \eta\le\sqrt{C_{\mathrm{pt}}C}/N,\qquad
+ \kappa\le\kappa_*/N,\qquad \tau\le(2/3)C/N^2 .
+\]
+For the fixed count profile, the stress estimate follows because $N$
+times the explicit bound in \eqref{app:candidate:kappa} is nondecreasing in $e=m_*/N$ and
+$\sigma^2=C/N^2$; its value for $N\ge n$ is therefore bounded by the
+accepted enclosure $\kappa_*$.
+Freeze every favorable lower coefficient and every unfavorable upper
+coefficient of the accepted endpoint. Here is the justification for
+each part of this operation.
+
+First, the global exclusions remain strict and the regional fine
+bounds remain valid by Section~\ref{app:global}. In
+\eqref{app:local:frozen-physical}, $s_n$ and $(1+s_n)/(1-s_n)^2$
+decrease as the endpoint increases. The candidate errors decrease,
+$r_-$ increases, and $r_+$ decreases. Thus all angular transport
+majorants, $T,q_t,q_d$ and $R$ have their endpoint upper bounds;
+$\rho$ has its endpoint lower bound. Both actual-rotation guards remain
+valid. No difference of decreasing functions is asserted to be
+monotone.
+
+Second, each nonnegative perturbation, phase-defect and projection
+majorant in the mass and stress mean estimates decreases when these
+candidate errors decrease. Their favorable metric factors increase.
+Hence the accepted physical mean lower bound remains valid. The
+intrinsic $c_K$ was certified on the entire reciprocal-$N$ domain,
+and multiplication by $1-\kappa$ preserves its endpoint lower bound.
+The original physical normal estimates similarly retain their fixed
+upper $J,L$. The normal radius $d_c/(\sqrt2N)$ shrinks. Therefore
+the supremum in \eqref{app:local:normal-optimization} cannot increase:
+its coefficient bounds are frozen and its domain only shrinks.
+This argument does not keep a particular active maximizing branch.
+
+Third, all generic projected and phase-row majorants have the displayed
+endpoint bounds. The exact two-pair inequalities cover the whole
+reciprocal domain, without needing monotonicity of an individual
+ratio. Freeze $\lambda_+$ and $c_K$ separately in the spectral row
+bound; then
+$\lambda_+(1+\kappa)-(1-\kappa)c_K$ has its endpoint upper bound.
+The cross-only row shares this bound, while the independent pair
+coefficient $M$ is retained.
+
+Finally freeze every scalar radius cap $Z_t$, sign weight $\omega$,
+Bernstein upper bound $Q_\omega(Z_t)$, harmonic center $c$, and the
+separate positive cross/same type coefficients. All later increments
+lie in the same certified disks. The nonnegative type polynomials and
+the signed physical-weight estimate give the endpoint upper
+coefficients in \eqref{app:local:signed-loss}; the unsigned bound
+propagates in the same way. The ordering checks concern these fixed
+majorants. No monotonicity of a rounded Bernstein output or of a
+selected numerical branch is needed.
+\end{proof}
+
+The rational certificates in Section~\ref{app:certificates:acceptance}
+cover all $7320$ budget cells by strict count exclusions and $228$
+accepted closed local regions. On every accepted region, the certified
+inequality \eqref{app:certificates:accepted-margin} gives
+$g_{\rm normal}-{\rm Loss}>1/10000$.
+The detailed coverage totals and rational margins are recorded there.
+
+\begin{proposition}[Uniform strict local comparison]
+\label{app:local:strict}
+For every nondivisible integer $N\ge180$ and every localized competitor
+with its actual closest candidate and gauge,
+\begin{equation}\label{app:local:strict-inequality}
+ \Gamma_K(Y)\le N^2\lambda-\frac{N}{10000}\|Y-Z\|_F^2 .
+\end{equation}
+\end{proposition}
+\begin{proof}
+If $d=0$, stationarity gives equality in
+\eqref{app:local:strict-inequality} directly. Otherwise, since
+$D\mathcal L(Z)=0$, the second-order Taylor polynomial of
+$\mathcal L(Z+\Delta)-\mathcal L(Z)$ is $Q(\Delta)$.
+The quadratic estimate is at most $-Ng_{\rm normal}d^2$, and the
+ordered Taylor remainder is at most $N\,{\rm Loss}\,d^2$.
+Every retained closed region has
+$g_{\rm normal}-{\rm Loss}>1/10000$ by the rational checks just stated.
+The preceding propagation argument proves the entire subsequent
+range. Odd integers begin at $181$; residue-two integers begin at
+$182$, so the local endpoint $182$ for $C=1$ leaves no integer gap.
+\end{proof}
+
+The comparison applies to every localized kernel, with no restriction
+on the number of distinct column directions.
+In the ordered global trace chain, equality in the optimal bound
+therefore forces $d=0$ by Proposition~\ref{app:local:strict}.
+Strict integer balancing then forces the balanced profile, and every
+nonzero candidate stress overlap fixes its corresponding matrix entry.
+This gives the unitary, individual-phase, permutation and conjugation
+classification in the main theorem. The divisible
+integers, including $180$, are handled by the exact divisible case of
+the global theorem. Hence $180$ is a sufficient threshold.

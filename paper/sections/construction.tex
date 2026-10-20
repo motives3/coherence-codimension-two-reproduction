@@ -1,0 +1,100 @@
+\section{The attaining vectors and their stress}\label{sec:construction}
+We give the construction for every \emph{admissible} profile
+$\boldsymbol p=(p_1,\ldots,p_4)$, meaning $0<p_a<1/3$ and $\sum p_a=1$.
+Let $\lambda=\lambda_{\boldsymbol p}$ be the root of
+\eqref{eq:main-root}, and put
+\begin{equation}\label{eq:construction-data}
+ d_a=\lambda-p_a,\qquad w_a=p_a/d_a,\qquad
+ X_{aa}=1,\quad X_{ab}=2w_aw_b-1\quad(a\ne b).
+\end{equation}
+The scalar equation has a unique root in $(2/3,\alpha]$, and $X$ is a
+real positive semidefinite matrix of rank three. The algebraic proofs,
+including strict integer balancing, are in Section~\ref{app:candidate}.
+Realize $X$ by four unit Bloch vectors $x_a\in\mathbb R^3$ and choose
+unit spinors $u_a\in\mathbb C^2$ with
+$|u_a^*u_b|^2=(1+x_a\cdot x_b)/2$.
+
+\begin{proposition}[Explicit vector factor]\label{prop:construction}
+Let $m_a=Np_a$ be positive integers. Form the $2\times4$ matrix
+$W=[\sqrt{d_1}u_1\ \cdots\ \sqrt{d_4}u_4]$ and put
+$B=W^*W$, $A_p=\lambda I_4-B$. Let $J$ be the $N\times4$ block
+isometry, with entry $1/\sqrt{m_a}$ in column $a$ on block $a$.
+If the columns of $R\in\mathbb C^{N\times(N-4)}$ form an orthonormal
+basis of $\operatorname{range}(J)^\perp$, then
+\begin{equation}\label{eq:explicit-vectors}
+ V_p=\frac{1}{\sqrt{N\lambda-1}}
+ \begin{pmatrix}\sqrt{N\lambda}\,R^*\\ \sqrt N\,WJ^*\end{pmatrix}
+ \in\mathbb C^{(N-2)\times N}
+\end{equation}
+has unit columns, rank $N-2$, and coherence $(N\lambda-1)^{-1}$.
+Its Gram matrix is
+\begin{equation}\label{eq:attaining-gram}
+ S_p=NJA_pJ^*,\qquad
+ G_p=V_p^*V_p=\frac{N\lambda I_N-S_p}{N\lambda-1}.
+\end{equation}
+For a fixed ordered profile, the Gram matrix $G_p$ is unique up to
+diagonal unitary conjugation and entrywise conjugation; permuting the
+profile permutes its blocks.
+\end{proposition}
+\begin{proof}
+The Bloch identity gives $B_{aa}=\lambda-p_a$ and
+$|B_{ab}|=\sqrt{p_ap_b}$ for $a\ne b$. The matrix $B$ is positive
+semidefinite of rank two. Thus $A_p$ has top eigenvalue $\lambda$
+with multiplicity exactly two. Every entry of $S_p$ has modulus one,
+and its diagonal entries equal one. Consequently $N\lambda I-S_p$
+is positive semidefinite with exactly two zero eigenvalues and constant
+diagonal $N\lambda-1$. Moreover
+\[
+ N\lambda I-S_p=N\lambda(I-JJ^*)+NJBJ^*.
+\]
+Using $RR^*=I-JJ^*$ proves \eqref{eq:explicit-vectors} and all the
+claimed rank and modulus assertions. Orthogonal realizations of the
+rank-three real Gram matrix $X$ differ by a rotation, or a rotation
+followed by a reflection. On spinors these give a common unitary, or a
+common unitary followed by conjugation; individual lift phases give
+diagonal unitary conjugation. The choice of $R$ changes only the common
+unitary factor of the vector realization.
+\end{proof}
+
+To compare the construction with arbitrary matrices, we associate a
+positive $2\times2$ matrix $K$ to its kernel. We call $K$ the candidate
+stress. The trace bound in Section~\ref{sec:proof} will convert an upper
+bound for its kernel functional $\Gamma_K$ into a coherence lower bound.
+Set
+\[
+ q_a=\frac{(1-\lambda-p_a)(\lambda-p_a)}
+ {2(1-\lambda)(\lambda-2p_a)},\quad
+ \ell_a=\frac{2q_a}{\lambda-p_a},\quad
+ L=\diag(\ell_a),\quad T=L-LBL.
+\]
+Choose $U\in\mathbb C^{4\times2}$ with $U^*U=I$ and $BU=0$.
+Writing $Y=[y_1\ \cdots\ y_N]\in\mathbb C^{2\times N}$, define
+\begin{equation}\label{eq:candidate-stress}
+ Z=\sqrt{N/2}\,U^*J^*,\qquad
+ K=\frac{2U^*TU}{\tr T},\qquad
+ \Gamma_K(Y)=\sum_{i,j}|y_i^*Ky_j|.
+\end{equation}
+The identities $q_a>0$, $\sum q_a=1$, $Xq=0$ imply $WLW^*=I$.
+Hence $T\succeq0$ has rank two and range $\ker B$, so $K\succ0$ and
+$\tr K=2$. Section~\ref{app:candidate} verifies that
+\begin{equation}\label{eq:stress-identities}
+ ZZ^*=\frac N2I,\quad ZS_p=N\lambda Z,\quad
+ \operatorname{phase}(Z^*KZ)=S_p,\quad
+ \Gamma_K(Z)=N^2\lambda.
+\end{equation}
+In particular, $ZG_p=0$, so $Z$ is the normalized left-kernel frame of
+the candidate Gram matrix, with columns constant on each block.
+All overlaps in the phase identity are nonzero, including those within
+a block. Holding $K$ fixed, $Z$ is stationary for
+$\Gamma_K(Y)-N\lambda\tr(KYY^*)$.
+
+Finally, strict convexity of $p\mapsto(\lambda-2p)^{-1}$ in the scalar
+equation shows that transferring one count from a larger block to a
+block smaller by at least two strictly increases $\lambda_p$.
+Thus
+\begin{equation}\label{eq:strict-balancing}
+ \lambda_p\le\lambda_{\rm bal},
+ \qquad\text{with equality exactly for balanced integer counts.}
+\end{equation}
+After localization, this comparison selects the balanced profile from
+the possible cluster counts.

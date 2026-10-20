@@ -1,5 +1,4 @@
-# Keep the public repository limited to reproduction materials.
-/paper/
+# Publish only the reviewed manuscript files and reproduction materials.
 /work/
 /output/
 /outputs/
@@ -7,6 +6,12 @@
 *.bib
 *.bbl
 *.pdf
+!/paper/main.tex
+!/paper/references.bib
+!/paper/main.bbl
+!/paper/sections/*.tex
+!/paper/appendices/*.tex
+!/paper/paper.pdf
 *.aux
 *.log
 *.fls

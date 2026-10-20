@@ -1,20 +1,24 @@
-# Exact complex coherence in codimension two: reproduction materials
+# Exact complex coherence in codimension two
 
 This repository accompanies *Exact complex coherence in codimension two* by
-Xuan Li. It contains exact certificate data and Python code for verifying the
-computer-assisted estimates used in the proof for **N >= 180**.
+Xuan Li. It provides the [paper PDF](paper/paper.pdf), its
+[LaTeX source and build instructions](paper/README.md), and exact certificate
+data and Python code for verifying the computer-assisted estimates used in
+the proof for **N >= 180**.
 
 The manuscript determines the minimum coherence of N unit vectors in
 C^(N-2), gives an explicit construction, and classifies the equality cases
 in this range. The code checks the finite arithmetic estimates. The analytic
 reductions, extension to all N >= 180, and equality argument are given in the
-manuscript. Its PDF and source are not included in this repository. The
-threshold 180 is sufficient; no claim of minimality is made.
+manuscript. The manuscript is provided as a preprint. The threshold 180 is
+sufficient; no claim of minimality is made.
 
 ## Contents
 
 | Path | Contents |
 | --- | --- |
+| [Paper](paper/paper.pdf) | Preprint PDF |
+| [LaTeX source](paper/) | Main document, sections, appendices and bibliography; [source ZIP](paper/source.zip) |
 | `reproduction/certificate/` | Fourteen exact JSON witnesses in `supplement.zip`, index and verifier entry point |
 | `reproduction/validation/` | Three arithmetic modules, regression sources and historical acceptance records |
 | `reproduction/check_package.py` | Fast packaging and dependency check |
@@ -75,9 +79,15 @@ relationship to the fourteen public inputs is described in
 [Provenance](reproduction/PROVENANCE.md), including the metadata changes and
 the interpretation of diagnostic failure labels.
 
-Use [CITATION.cff](CITATION.cff) to cite the reproduction materials and record
-the commit used. The manuscript cites the preserved
+Use the [paper citation](paper/README.md#citation) when citing the mathematical
+results. Use [CITATION.cff](CITATION.cff) to cite the reproduction materials
+and record the commit used. The manuscript cites the preserved
 [b7a51dbc324b snapshot](https://github.com/motives3/coherence-codimension-two-reproduction/tree/b7a51dbc324ba260a92c2fafd3642e686cefe91a).
+
+The separate software archive corresponds to the
+[7fa9cdc7472c snapshot](https://github.com/motives3/coherence-codimension-two-reproduction/tree/7fa9cdc7472c726c0db2dad8efd92f5f5ccabe57),
+which contains the reproduction materials and the detailed AI disclosure.
+The manuscript files were added afterward; that archive remains unchanged.
 
 ## Use of generative AI
 
@@ -107,5 +117,7 @@ mathematical claims, references, code, and final text.
 
 - Python code and Git configuration files: **MIT**.
 - Witness data, reports and distribution documentation: **CC BY 4.0**.
+- Manuscript PDF and LaTeX/BibTeX files: **rights retained by Xuan Li**;
+  see the [manuscript rights notice](paper/LICENSE.txt).
 
 See [LICENSE.md](LICENSE.md) for the file scopes and attribution requirements.

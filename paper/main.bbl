@@ -1,0 +1,75 @@
+\begin{thebibliography}{10}
+
+\bibitem{BC}
+Boris Bukh and Christopher Cox.
+\newblock Nearly orthogonal vectors and small antipodal spherical codes.
+\newblock {\em Israel Journal of Mathematics}, 238(1):359--388, 2020.
+\newblock Locators refer to arXiv:1803.02949v3, 29 August 2019.
+  \url{https://arxiv.org/abs/1803.02949v3}.
+
+\bibitem{BCErratum}
+Boris Bukh and Christopher Cox.
+\newblock Corrigendum for ``nearly orthogonal vectors and small antipodal
+  spherical codes'', 2026.
+\newblock 28 August 2026.
+  \url{https://www.borisbukh.org/nearly_orthogonal_erratum.pdf}.
+
+\bibitem{CahillCasazza}
+Jameson Cahill and Peter~G. Casazza.
+\newblock Optimal {Parseval} frames: total coherence and total volume.
+\newblock {\em Linear and Multilinear Algebra}, 71(13):2067--2092, 2023.
+\newblock Published online 4 July 2022. Locators refer to arXiv:1910.01733v1, 3
+  October 2019. \url{https://arxiv.org/abs/1910.01733v1}.
+
+\bibitem{CKM}
+Henry Cohn, Abhinav Kumar, and Gregory Minton.
+\newblock Optimal simplices and codes in projective spaces.
+\newblock {\em Geometry \& Topology}, 20(3):1289--1357, 2016.
+\newblock \url{https://msp.org/gt/2016/20-3/gt-v20-n3-p03-p.pdf}.
+
+\bibitem{DLWelch}
+Beata Der{\k{e}}gowska and Barbara Lewandowska.
+\newblock From {Sidelnikov--Welch} bounds to projection constants, 2026.
+\newblock arXiv:2609.29422v1, 24 September 2026.
+  \url{https://arxiv.org/abs/2609.29422v1}.
+
+\bibitem{DLCodim}
+Beata Der{\k{e}}gowska and Barbara Lewandowska.
+\newblock Projection constants and {Banach--Mazur} distance in codimension two,
+  2026.
+\newblock arXiv:2610.06141v1, 5 October 2026.
+  \url{https://arxiv.org/abs/2610.06141v1}.
+
+\bibitem{FoucartSkrzypek}
+Simon Foucart and Les{\l}aw Skrzypek.
+\newblock On maximal relative projection constants.
+\newblock {\em Journal of Mathematical Analysis and Applications},
+  447(1):309--328, 2017.
+\newblock Locators refer to the author manuscript.
+  \url{https://foucart.github.io/publi/MaxProjCst_rev.pdf}.
+
+\bibitem{Glazyrin}
+Alexey Glazyrin.
+\newblock Moments of isotropic measures and optimal projective codes, 2020.
+\newblock arXiv:1904.11159v2, 30 December 2020; first posted 25 April 2019.
+  \url{https://arxiv.org/abs/1904.11159v2}.
+
+\bibitem{Kobos}
+Tomasz Kobos.
+\newblock Spaces with the maximal projection constant revisited, 2026.
+\newblock arXiv:2505.24526v2, 14 September 2026; first posted 30 May 2025.
+  \url{https://arxiv.org/abs/2505.24526v2}.
+
+\bibitem{KMMP}
+Hitesh Kumar, Bojan Mohar, Seyed~Ahmad Mojallal, and Shivaramakrishna Pragada.
+\newblock Stability of maximal relative projection constants, 2026.
+\newblock arXiv:2609.03200v1, 2 September 2026.
+  \url{https://arxiv.org/abs/2609.03200v1}.
+
+\bibitem{MMP}
+Mark Magsino, Dustin~G. Mixon, and Hans Parshall.
+\newblock A {Delsarte}-style proof of the {Bukh--Cox} bound, 2019.
+\newblock SampTA 2019. Locators refer to arXiv:1902.00926v3, 1 May 2019.
+  \url{https://arxiv.org/abs/1902.00926v3}.
+
+\end{thebibliography}

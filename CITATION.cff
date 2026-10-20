@@ -17,3 +17,12 @@ keywords:
   - complex projective codes
   - exact arithmetic
   - computer-assisted proofs
+references:
+  - type: unpublished
+    title: "Exact complex coherence in codimension two"
+    authors:
+      - family-names: Li
+        given-names: Xuan
+    year: 2026
+    url: "https://github.com/motives3/coherence-codimension-two-reproduction/blob/main/paper/paper.pdf"
+    notes: "Preprint. The manuscript PDF and LaTeX source are available in paper/."

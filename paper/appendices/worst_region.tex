@@ -1,0 +1,33 @@
+% All decimals are exact rationals.
+\begin{center}
+\begin{tabular}{lcr}
+\toprule
+Quantity & Direction & Rational bound\\
+\midrule
+$c_m$ & $\ge$ & $0.228928718452$\\
+$c_r$ & $\ge$ & $0.210023739886$\\
+$J$ & $\le$ & $0.815026271354$\\
+$L$ & $\le$ & $0.803437886305$\\
+$\rho_n^2$ & $\le$ & $0.000132756408$\\
+$A_3^{\,u}$ & $\le$ & $0.156826320895$\\
+$A_{\rm mixed}$ & $\le$ & $0.018831369020$\\
+$A_4^{\,u}$ & $\le$ & $0.014800634464$\\
+$A^{\,u}$ & $\le$ & $0.190458324379$\\
+$B^{\,u}$ & $\le$ & $0.109690746792$\\
+$g_{\rm normal}$ & $\ge$ & $0.205224509235$\\
+${\rm Loss}(A^{\,u},B^{\,u})$ & $\le$ & $0.205122784909$\\
+$g_{\rm normal}-{\rm Loss}$ & $\ge$ & $0.000101724326$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every terminating decimal in this table denotes its exact rational value.
+For the displayed coefficients, exact cross multiplication gives
+\[
+ J^2\rho_n^2\le(c_m-c_r)^2(1-\rho_n^2),\qquad c_m-c_r>0,
+\]
+so the interior formula is applicable even after this additional outward rounding.
+The displayed $A^{\,u}$ is the sum of its three displayed upper bounds.
+The gap and loss rows are recomputed from the displayed coefficients, rather than
+copied from a saved final margin. Their difference is strictly greater than
+$1/10000$. The unrounded certificate margin is approximately $0.0001017243329754$.
+All $55$ regions were compared as exact rationals to identify this minimum.

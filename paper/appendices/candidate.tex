@@ -1,0 +1,500 @@
+\section{Algebra of the four-weight construction}\label{app:candidate}
+\label{alg:section}
+
+Throughout, $\langle u,v\rangle=u^*v$, and a collection of $N$ vectors is
+written as a matrix with $N$ columns. Put $\alpha=(1+\sqrt3)/4$.
+A profile is admissible if $0<p_a<1/3$ for $1\leq a\leq4$ and
+$\sum_a p_a=1$. Unsubscripted matrix norms are operator norms.
+We distinguish the kernel projector $\Pi$, the mass matrix
+$D_{\mathrm{mass}}$, the Bloch Gram difference $\Delta_{\mathrm B}$,
+and the scalar candidate point bound $C_{\mathrm{pt}}$.
+The local Hessian error bound in Section~\ref{app:local} is denoted
+$E_{\mathrm{Hess}}$.
+
+\begin{lemma}[The scalar parameter]\label{alg:root}
+For every admissible profile there is exactly one
+$\lambda_p\in(2/3,\alpha]$ satisfying
+\begin{equation}\label{alg:root-equation}
+ 2\lambda_p=\sum_a\frac{p_a(1-3p_a)}{\lambda_p-2p_a}.
+\end{equation}
+Moreover $\lambda_p<1-\max_a p_a$, and $\lambda_p=\alpha$ if and only if
+all four weights are $1/4$.
+\end{lemma}
+\begin{proof}
+For $\lambda\geq2/3$ all denominators below are positive. Define
+\begin{align}
+ \Phi_p(\lambda)
+ &=\lambda(3\lambda-2)\sum_a\frac1{\lambda-2p_a}
+                  -2(2\lambda-1)\label{alg:Phi}\\
+ &=4\left[2\lambda-\sum_a\frac{p_a(1-3p_a)}{\lambda-2p_a}\right].
+ \nonumber
+\end{align}
+Polynomial division and $\sum p_a=1$ give the second identity. Thus
+\[
+ \Phi_p(2/3)=-2/3,\qquad
+ \Phi_p'(\lambda)=4\left[2+
+ \sum_a\frac{p_a(1-3p_a)}{(\lambda-2p_a)^2}\right]>8.
+\]
+Strict convexity gives $\sum_a(\alpha-2p_a)^{-1}\geq4/(\alpha-1/2)$.
+Since $\alpha(3\alpha-2)>0$, substitution yields
+$\Phi_p(\alpha)\geq0$, with equality precisely at the uniform profile.
+Continuity and strict monotonicity prove existence and uniqueness.
+For the extra bound put $p=\max p_a$ and $L=1-p>2/3$. The other three
+weights sum to $L$, so their denominators $L-2p_a$ sum to $L$. Therefore
+\[
+ \sum_a\frac1{L-2p_a}\geq\frac1{3L-2}+\frac9L,\qquad
+ \Phi_p(L)\geq L(3L-2)\left[\frac1{3L-2}+\frac9L\right]
+                 -2(2L-1)=8(3L-2)>0.
+\]
+Strict monotonicity implies $\lambda_p<L$.
+\end{proof}
+
+
+Abbreviate $\lambda=\lambda_p$, and put
+\begin{equation}\label{alg:weights-X}
+ d_a=\lambda-p_a,\quad w_a=p_a/d_a,\quad
+ X_{aa}=1,\quad X_{ab}=2w_aw_b-1\quad(a\ne b).
+\end{equation}
+Here $X$ is an auxiliary four-point real Gram matrix, distinct from
+the Bloch points of an arbitrary competitor.
+
+\begin{lemma}[The auxiliary Gram matrix and its positive kernel]
+\label{alg:bloch}
+The matrix $X$ is positive semidefinite of rank three. Its kernel is
+spanned by the strictly positive vector
+\begin{equation}\label{alg:q}
+ q_a=\frac{(1-\lambda-p_a)(\lambda-p_a)}
+           {2(1-\lambda)(\lambda-2p_a)}.
+\end{equation}
+It has $\sum q_a=1$, and $q_a<1/2$ for every $a$.
+\end{lemma}
+\begin{proof}
+We have $0<w_a<1$. Set
+$D_X=2\operatorname{diag}(1-w_a^2)$, so
+$X=D_X+2ww^T-\mathbf1\mathbf1^T$. Write
+$A_s=\sum(1-w_a^2)^{-1}$, $B_s=\sum w_a/(1-w_a^2)$,
+and $R=\sum(\lambda-2p_a)^{-1}$. Expanding the $2\times2$ determinant
+for this rank-two update gives
+\[
+ \frac{\det X}{\det D_X}=(A_s-3)(1-A_s/2)+B_s^2/2.
+\]
+The identities
+\[
+ A_s-B_s=4-1/\lambda,\qquad A_s+B_s=2+\lambda R/2
+\]
+make $\det X=0$ equivalent to
+$(3\lambda-2)(2+\lambda R/2)=8\lambda-5$, which is
+$\Phi_p(\lambda)=0$. The matrix $D_X+2ww^T$ is positive definite.
+On $\mathbf1^\perp$ its quadratic form remains unchanged after
+subtracting $\mathbf1\mathbf1^T$. Thus $X$ has at least three strictly
+positive eigenvalues; its remaining eigenvalue is zero.
+
+Every factor in \eqref{alg:q} is positive by Lemma~\ref{alg:root}.
+The normalization and kernel identities can be checked without an
+eigenvalue computation. For arbitrary $\lambda$ in the displayed
+domain, put $\beta=(2\lambda-1)/(2(1-\lambda))$. Division in
+$\lambda-2p_a$ gives
+\begin{equation}\label{alg:q-residual}
+ \sum_aq_a-1=\sum_aw_aq_a-\beta
+       =-\frac{\Phi_p(\lambda)}{8(1-\lambda)}.
+\end{equation}
+Also $2(1-w_a^2)q_a=1-2\beta w_a$. Consequently
+$(Xq)_a=(1-2w_a)\Phi_p(\lambda)/(8(1-\lambda))$.
+At the root, $\sum q_a=1$ and $Xq=0$.
+Realize $X$ by unit vectors $x_a\in\mathbb R^3$. Then $\sum q_ax_a=0$,
+so $q_a=\|\sum_{b\ne a}q_bx_b\|\leq1-q_a$.
+Equality would force the three other points to coincide at $-x_a$,
+contradicting rank three. Hence $q_a<1/2$.
+\end{proof}
+
+We use the elementary Bloch representation
+$uu^*=(I+x\cdot\sigma)/2$ of a unit spinor $u\in\mathbb C^2$, where
+\[
+ \sigma_1=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+ \sigma_2=\begin{pmatrix}0&-i\\i&0\end{pmatrix},\quad
+ \sigma_3=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+Multiplication and traces of these matrices give
+\begin{equation}\label{alg:bloch-identity}
+ |u^*v|^2=(1+x\cdot y)/2.
+\end{equation}
+Conversely a spinor for $x\in S^2$ is
+\[
+ u(x)=\left(\sqrt{(1+x_3)/2},
+       \frac{x_1+i x_2}{\sqrt{2(1+x_3)}}\right)^T
+\]
+when $x_3\ne-1$, and $(0,1)^T$ at the south pole.
+
+\begin{proposition}[An explicit attaining configuration]\label{alg:construction}
+Let $m_a$ be positive integers with total $N$ and admissible
+$p_a=m_a/N$. There are $N$ unit vectors in $\mathbb C^{N-2}$ whose Gram
+matrix has rank exactly $N-2$ and constant off-diagonal absolute value
+\begin{equation}\label{alg:mu-profile}
+ \mu_p=\frac1{N\lambda_p-1}.
+\end{equation}
+To construct them, realize $X$ by real unit vectors $x_a$, choose
+corresponding unit spinors $u_a$, and let $W\in\mathbb C^{2\times4}$
+have columns $\sqrt{d_a}u_a$. Set
+\begin{equation}\label{alg:core}
+\begin{aligned}
+ B&=W^*W,\qquad A_p=\lambda I_4-B,\\
+ D_{\mathrm{mass}}&=\operatorname{diag}(\sqrt{p_a}),\qquad
+ C=D_{\mathrm{mass}}^{-1}A_pD_{\mathrm{mass}}^{-1}.
+\end{aligned}
+\end{equation}
+Let $J\in\mathbb R^{N\times4}$ be the isometric block lift, with
+$J_{ia}=1/\sqrt{m_a}$ for $i$ in block $a$, and zero otherwise. Then
+\begin{equation}\label{alg:signature-Gram}
+ S=NJA_pJ^*,\qquad G_p=\frac{N\lambda I_N-S}{N\lambda-1}
+\end{equation}
+is the required Gram matrix. In particular $S_{ij}=C_{ab}$ for
+$i\in a$, $j\in b$.
+\end{proposition}
+\begin{proof}
+The Bloch identity gives $B_{aa}=\lambda-p_a$ and
+$|B_{ab}|=\sqrt{d_ad_bw_aw_b}=\sqrt{p_ap_b}$ for $a\ne b$.
+The matrix $B$ is positive semidefinite of rank two. Indeed rank one
+would force all spinor lines, and hence all Bloch points, to coincide.
+Thus $A_p$ has top eigenvalue $\lambda$ of multiplicity exactly two,
+while $C_{aa}=1$ and $|C_{ab}|=1$. The spectrum of $S$ is the spectrum
+of $NA_p$ together with $N-4$ zeros. Hence $N\lambda I-S$ is positive
+semidefinite with exactly two zero eigenvalues. Its diagonal is
+$N\lambda-1$, and every off-diagonal entry has modulus one.
+
+An explicit vector factor is obtained as follows.
+Choose $R\in\mathbb C^{N\times(N-4)}$ with orthonormal columns
+spanning $\operatorname{range}(J)^\perp$. Then
+\begin{equation}\label{alg:vector-factor}
+ V_p=\frac1{\sqrt{N\lambda-1}}
+       \begin{pmatrix}\sqrt{N\lambda}\,R^*\\ \sqrt N\,WJ^*\end{pmatrix}
+       \in\mathbb C^{(N-2)\times N}
+\end{equation}
+satisfies $V_p^*V_p=G_p$, because
+$RR^*=I-JJ^*$ and
+$N\lambda I-S=N\lambda(I-JJ^*)+NJBJ^*$.
+For $N=4$ the first block of rows is empty.
+\end{proof}
+
+\begin{remark}[Choices and equivalences]\label{alg:construction-choices}
+The construction uses only the specified root, matrix square roots,
+and the displayed spinor lift. The first three Bloch vectors can be
+obtained by factoring their positive definite principal Gram matrix;
+the fourth is then determined by its inner products. Positivity of
+that principal matrix follows because the kernel of $X$ has no vector
+with a zero coordinate except zero. Any two realizations of $X$ differ
+by an orthogonal transformation. A proper rotation corresponds to a
+common unitary on the spinors, and an improper rotation to a common
+unitary followed by conjugation. One checks the rotation assertion
+using $\cos(\theta/2)I-i\sin(\theta/2)n\cdot\sigma$; complex conjugation
+reverses the second Bloch coordinate. Independent spinor phases give
+diagonal unitary conjugations of $B,C,S,G_p$. Thus for an ordered
+profile $G_p$ is unique up to diagonal unitary conjugation and possibly
+entrywise conjugation. Permuting the profile permutes the blocks.
+\end{remark}
+
+\begin{proposition}[A positive stress with strict phase alignment]
+\label{alg:stress}
+For the above construction let
+\begin{equation}\label{alg:stress-def}
+ \ell_a=\frac{2q_a}{d_a}
+ =\frac{1-\lambda-p_a}{(1-\lambda)(\lambda-2p_a)},\quad
+ L=\operatorname{diag}(\ell_a),\quad T=L-LBL.
+\end{equation}
+Then $T\succeq0$ has rank two and range $\ker B$.
+Choose $U\in\mathbb C^{4\times2}$ with $U^*U=I_2$ and $BU=0$, and set
+\begin{equation}\label{alg:Z-K}
+ z_a=\frac{U^*e_a}{\sqrt{2p_a}},\qquad
+ Z=\sqrt{N/2}\,U^*J^*,\qquad K=\frac{2U^*TU}{\operatorname{tr}T}.
+\end{equation}
+The matrix $Z$ repeats $z_a$ exactly $m_a$ times and obeys
+$ZZ^*=NI_2/2$ and $ZS=N\lambda Z$. Moreover $K\succ0$,
+$\operatorname{tr}K=2$, and all entries of $Z^*KZ$ are nonzero with
+entrywise phase $S$. Consequently
+\begin{equation}\label{alg:candidate-value}
+ \Gamma_K(Z):=\sum_{i,j}|z_i^*Kz_j|=N^2\lambda.
+\end{equation}
+With $K$ held fixed, $Z$ is a critical point of
+\begin{equation}\label{alg:Lagrangian}
+ \mathcal L(Y)=\Gamma_K(Y)-N\lambda\operatorname{tr}(KYY^*).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Since $\sum q_ax_a=0$ and $\sum q_a=1$, the Bloch identity gives
+$\sum q_au_au_a^*=I_2/2$, and hence $WLW^*=I_2$.
+If $E=WL^{1/2}$, then $EE^*=I_2$, so $E^*E$ is a rank-two orthogonal
+projector. Therefore
+\[
+ T=L^{1/2}(I-E^*E)L^{1/2}\succeq0,\qquad\operatorname{rank}T=2.
+\]
+Also $WT=WL-(WLW^*)WL=0$. Thus the range of $T$ is $\ker B$,
+$U^*TU$ is positive definite, and $\operatorname{tr}(U^*TU)=\operatorname{tr}T$.
+The exact entry formulas are
+\[
+ T_{ab}=\ell_a\ell_b\sqrt{p_ap_b}\,C_{ab}\quad(a\ne b),\qquad
+ T_{aa}=\ell_a(1-2q_a)>0.
+\]
+All factors in these comparisons are strictly positive, by
+Lemma~\ref{alg:bloch}. As $UKU^*=2T/\operatorname{tr}T$,
+\[
+ (Z^*KZ)_{ij}=\frac{T_{ab}}{\operatorname{tr}T\sqrt{p_ap_b}}
+       \quad(i\in a,\ j\in b).
+\]
+This proves the phase assertion even for distinct indices in the same
+block. The covariance and eigenvector identities follow from
+$J^*J=I$ and $BU=0$. Thus
+\[
+ \Gamma_K(Z)=\operatorname{tr}(S Z^*KZ)
+ =\operatorname{tr}(KZSZ^*)=N^2\lambda.
+\]
+In a neighborhood of $Z$ all weighted overlaps remain nonzero.
+If $C_K(Y)$ is their phase matrix, differentiation with the real
+Frobenius inner product gives $\nabla\Gamma_K(Y)=2KYC_K(Y)$.
+At $Z$ this is $2KZS=2N\lambda KZ$, exactly the gradient of the
+constraint term in \eqref{alg:Lagrangian}.
+\end{proof}
+
+\begin{proposition}[Exact balancing]\label{alg:balancing}
+Among admissible integer four-weight profiles with total $N$,
+$\lambda_p$ is largest and $\mu_p$ is smallest precisely when the four
+counts differ by at most one. For every $N\geq10$ the balanced
+profile is admissible. If $N\equiv2\pmod4$, then
+\begin{equation}\label{alg:residue-two}
+ \lambda_{\rm bal}=\frac{1+\sqrt{3-8/N^2}}4,\qquad
+ \mu_{\rm bal}=\frac4{N+\sqrt{3N^2-8}-4}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+For fixed $\lambda>2/3$, the function
+$x\mapsto(\lambda-2x)^{-1}$ is strictly convex. If two counts differ
+by at least two, transfer one from the larger to the smaller.
+All counts stay positive and below $N/3$, and the sum of reciprocal
+denominators strictly decreases. The coefficient $\lambda(3\lambda-2)$
+in \eqref{alg:Phi} is positive, so at the old root the new $\Phi$ is
+negative. Its unique root is strictly larger. Iteration terminates
+at balanced counts, proving also the equality characterization.
+For $N\geq10$, $\lceil N/4\rceil<N/3$.
+For residue two the weights are $(a,a,b,b)$ with
+$a+b=1/2$, $ab=1/16-1/(4N^2)$, and
+\[
+ \sum_a\frac1{\lambda-2p_a}
+       =\frac{4\lambda-2}{\lambda^2-\lambda+4ab}.
+\]
+The root equation reduces to $2\lambda^2-\lambda-4ab=0$;
+its relevant root is $(1+\sqrt{1+32ab})/4$.
+\end{proof}
+
+
+\subsection{The candidate domain needed at the endpoint}\label{app:candidate:domain}
+Write $p_a=1/4+\varepsilon_a$, $e=\max|\varepsilon_a|$ and
+$\sigma^2=\sum\varepsilon_a^2$. Throughout this subsection $e\le1/120$.
+This includes every count profile in Proposition~\ref{prop:localization}
+for $N\ge180$. All estimates concern the same alignment of the candidate
+and a reference tetrahedron.
+
+The exact scalar identities are
+\[
+ \Phi_p(\alpha)=4\sum_a\frac{\varepsilon_a^2}{\alpha-1/2-2\varepsilon_a},
+ \qquad \Phi'_p(t)=4\left[2+\sum_a\frac{p_a(1-3p_a)}{(t-2p_a)^2}\right].
+\]
+For $f_t(p)=p(1-3p)/(t-2p)^2$,
+\[
+ f_t''(p)=\frac{2[t(4-3t)+4p(1-3t)]}{(t-2p)^4}>0
+\]
+on $2/3\le t\le\alpha<41/60$, $29/120\le p\le31/120$:
+the numerator bracket is at least $43/200$. Jensen gives
+$\Phi'_p(t)>4568/121>37$, whereas
+$4/(\alpha-1/2-2e)<1200/49<74/3$. Therefore
+\begin{equation}\label{app:candidate:deficit}
+ 0\le\alpha-\lambda_p\le\frac23\sigma^2,\qquad
+ \frac{109}{100}<b:=3(2\lambda_p-1)<\frac{11}{10},\qquad
+ u_0:=\frac34-\lambda_p>\frac1{15}.
+\end{equation}
+For balanced counts, $N^2\sigma^2=r(4-r)/4$. The odd budget is thus
+$1/2$. For residue two the exact formula gives
+$N^2(\alpha-\lambda_{\rm bal})=2/(\sqrt3+\sqrt{3-8/N^2})<11/19$
+at $N\ge180$. These are the budgets in \eqref{eq:budget}.
+
+\subsection{Exact projector and simultaneous polar estimates}
+Let $\Pi=UU^*$ project onto $\ker B$. The two positive eigenvalues of $B$
+have sum $4\lambda-1$ and product $D=3\lambda(2\lambda-1)$, whence
+\[
+ \Pi=I-\frac{(4\lambda-1)B-B^2}{D},\qquad
+ \Pi_{aa}=\frac{3\lambda-2+2p_a}{b}.
+\]
+For complementary pairs $\{a,b\},\{c,d\}$, completion of $U$ to a
+unitary matrix and equality of complementary minors give
+\[
+ \det\Pi[\{a,b\}]=\det(I-\Pi)[\{c,d\}]
+ =\frac{\det B[\{c,d\}]}{D}=\frac{\lambda-1+p_a+p_b}{b}.
+\]
+These identities determine both the lengths $r_a=\|z_a\|$ and the
+Bloch Gram matrix $Y_p$ of the normalized candidate spinors, relative
+to the tetrahedral Bloch Gram matrix
+$Y_0=\frac43I_4-\frac13\mathbf1\mathbf1^T$:
+\begin{align}
+ r_a^2&=\frac{1+4\varepsilon_a/b}{1+4\varepsilon_a},\label{app:candidate:projector}\\
+ (Y_p-Y_0)_{ab}
+ &=\frac{-\frac8{3b}(\varepsilon_a+\varepsilon_b)
+                +\frac{64}{3b^2}\varepsilon_a\varepsilon_b}
+ {(1+4\varepsilon_a/b)(1+4\varepsilon_b/b)}\quad(a\ne b).\label{app:candidate:Ygram}
+\end{align}
+The diagonal of $Y_p-Y_0$ is zero. The zero-sum identities imply
+\[
+ G:=\|Y_p-Y_0\|_F\le
+ \frac{16/(3b)+112e/(3b^2)}{(1-4e/b)^2}\,\sigma
+ \le\frac{11}{2}\sigma\le\frac{11}{120}.
+\]
+The coefficient at $b=109/100,e=1/120$ is $551200/100489<11/2$.
+
+Here is a polar comparison used also for the actual group means.
+For a real $3\times4$ unit-column matrix $X$ and a tetrahedron $V$ with
+$V\mathbf1=0$, $VV^T=4I/3$, set $C_0=3XV^T/4$, $c=X\mathbf1/4$.
+Then $X=C_0V+c\mathbf1^T$ and, if $G=\|X^TX-V^TV\|_F$,
+\begin{equation}\label{app:candidate:polaridentity}
+ G^2=\frac{16}{9}\|C_0^TC_0-I\|_F^2
+       +\frac{32}{3}\|C_0^Tc\|^2+16\|c\|^4.
+\end{equation}
+This follows by expanding and using $V\mathbf1=0$. Also
+$s_{\min}(C_0)^2\ge1-3G/4$. For the orthogonal polar factor $R$,
+\begin{equation}\label{app:candidate:polar}
+ \|X-RV\|_F^2\le P_G G^2,\qquad
+ P_G=\max\left\{\frac{3/4}{(1+\sqrt{1-3G/4})^2},
+                      \frac{3/8}{1-3G/4}\right\}.
+\end{equation}
+Indeed compare the two nonnegative terms
+$\frac43\|C_0-R\|_F^2+4\|c\|^2$ with the first two terms of
+\eqref{app:candidate:polaridentity}. At $G\le11/120$,
+$s_{\min}(C_0)^2\ge149/160$, so $P_G<41/100$.
+An orientation reversal is handled by conjugating the reference spinors.
+
+For unit spinors $v,f$ and their Bloch vectors $x,y$,
+\begin{equation}\label{app:candidate:spinor}
+ d_{\rm ph}(v,f)^2=2(1-|v^*f|)
+ =\frac{\|x-y\|^2}{2(1+|v^*f|)}.
+\end{equation}
+The total bound $(41/100)(11/120)^2<4[1-(999/1000)^2]$ allows one
+common polar alignment and phases with $|v_a^*f_a|>999/1000$.
+Moreover
+\begin{gather*}
+ |r_a^2-1|\le\frac{4e}{11(1-4e)}\le\frac1{319},\qquad
+ \frac{499}{500}<r_a<\frac{501}{500},\\
+ |r_a-1|\le c_r|\varepsilon_a|,
+ \qquad c_r=\frac{4/11}{(1-4e)(1+499/500)}.
+\end{gather*}
+All these assertions use the larger $1/120$ domain; no smaller-domain
+polar floor is extrapolated.
+
+For the actual four count profiles, the following explicit formulas
+sharpen the simultaneous errors. Put $\varepsilon_a=\delta_a/N$,
+$\sigma=\sqrt C/N$, $b_0=109/100$, $k_0=8/(3b_0)$ and
+$q_0=1-4e/b_0$. Write $\Delta_{\mathrm B}=Y_p-Y_0=D_0+F$, where
+$(D_0)_{ab}=-8(\varepsilon_a+\varepsilon_b)/(3b)$ off the diagonal.
+Exact subtraction in \eqref{app:candidate:Ygram} gives
+\[
+ F_{ab}=\frac{32}{3b^2}
+ \frac{\varepsilon_a^2+4\varepsilon_a\varepsilon_b+\varepsilon_b^2
+ +(4/b)(\varepsilon_a+\varepsilon_b)\varepsilon_a\varepsilon_b}
+ {(1+4\varepsilon_a/b)(1+4\varepsilon_b/b)}.
+\]
+Thus $|F_{ab}|\le U_{ab}$, where
+\[
+ U_{ab}=\frac{32}{3b_0^2N^2q_0^2}
+ \left(|\delta_a^2+4\delta_a\delta_b+\delta_b^2|
+       +\frac4{b_0N}|(\delta_a+\delta_b)\delta_a\delta_b|\right).
+\]
+Let $f=(\sum_{a\ne b}U_{ab}^2)^{1/2}/\sigma$.
+To see explicitly how this supplies a common polar bound, put
+$E=9V\Delta_{\mathrm B}V^T/16$, $z=3V\Delta_{\mathrm B}\mathbf1/16$ and $P_0=(I+E)^{1/2}$.
+The aligned Bloch error is
+$H=(P_0-I)V+P_0^{-1}z\mathbf1^T$. Its linear parts satisfy
+\[
+ E_0=\frac{9k}{8}V\diag(\varepsilon_a)V^T,\quad
+ z_0=-\frac{3k}{8}V\varepsilon,\quad k=8/(3b),
+\]
+\[
+ \|E_0\|_F=\frac{3\sqrt2 k}{4}\sigma,
+ \quad |z_0|=\frac{\sqrt3 k}{4}\sigma.
+\]
+These follow from $V^TV=\frac43I-\frac13\mathbf1\mathbf1^T$ and
+$\sum\varepsilon_a=0$. Set
+\[
+ K_E=\frac{3\sqrt2}{4}k_0+\frac34f,\quad
+ K_z=\frac{\sqrt3}{4}(k_0+f),\quad p_0=\sqrt{1-K_E\sigma},
+\]
+\[
+ R_P=\frac{K_E^2\sigma}{2(1+p_0)^2},\qquad
+ R_I=\frac{K_EK_z\sigma}{p_0(1+p_0)}.
+\]
+The scalar square-root identity and $P_0^{-1}-I$ give these full
+nonlinear remainders. The tetrahedral Gram identities, applied separately
+to each column, then give
+\begin{align*}
+ |H_a|/\sigma&\le\frac{\sqrt{3-4\delta_a^2/C}}{b_0}
+                          +\frac{13}{16}f+R_P+R_I,\\
+ \|H\|_F/\sigma&\le\frac{\sqrt8}{b_0}
+                       +\frac{\sqrt{15}}4f+\frac2{\sqrt3}R_P+2R_I.
+\end{align*}
+For clarity, the linear point norm equals
+$\sqrt{3\sigma^2-4\varepsilon_a^2}/b$; its aggregate norm is
+$\sqrt8\,\sigma/b$. The nonlinear $F$ contribution is bounded by
+$13\|F\|_F/16$ per column and $\sqrt{15}\|F\|_F/4$ in aggregate,
+using $E_F=9VFV^T/16$, $z_F=3VF\mathbf1/16$ and
+$\|E_F\|_F\le3\|F\|_F/4$, $|z_F|\le\sqrt3\|F\|_F/4$.
+The two arrays $E_FV/2$ and $z_F\mathbf1^T$ are orthogonal, giving
+the aggregate squared coefficient $15/16$; the point coefficient is
+$3/8+\sqrt3/4<13/16$. This explains the paired, rather than independently
+maximized, column dependence.
+
+With $\phi=(501/500)/[2(1+999/1000)]$ and
+$R_*=(13/16)f+R_P+R_I$, define
+\begin{align*}
+ C_{\mathrm{pt},a}&=c_r^2\delta_a^2/C+
+      \phi[\sqrt{3-4\delta_a^2/C}/b_0+R_*]^2,\\
+ C_{\mathrm{pt}}&=\max_a C_{\mathrm{pt},a},\\
+ B_p&=(1/4+e)\left\{c_r^2+
+ \phi[\sqrt8/b_0+(\sqrt{15}/4)f+(2/\sqrt3)R_P+2R_I]^2\right\}.
+\end{align*}
+In this same alignment they prove
+\begin{equation}\label{app:candidate:PB}
+ \max_a\|z_a-f_a\|^2\le C_{\mathrm{pt}}C/N^2,
+ \qquad \sum_a p_a\|z_a-f_a\|^2\le B_p C/N^2.
+\end{equation}
+All divisions are guarded by $p_0>0$. On the full domain the generic
+bound $f<61/100$ implies $K_E<33/8$, $K_z<77/32$, hence positivity;
+actual profile bounds are sharper. Both signs and every permutation
+are included in the absolute polynomials $U_{ab}$.
+
+Finally the stress norm has a basis-free estimate. Let $j_a=1/\ell_a$
+and $H=U^*\diag(j_a)U$. The identity $TL^{-1}\Pi=\Pi$ gives
+$U^*TU=H^{-1}$ and $\|K-I\|=\operatorname{gap}(H)/\tr H$.
+Writing $j_c=j(1/4,\lambda)$, exact division gives
+\[
+ j_a/j_c=1+C_0\varepsilon_a+
+             C_0\varepsilon_a^2/(u_0-\varepsilon_a),\quad
+ C_0=\frac{3\lambda-2}{(\lambda-1/2)u_0},\quad0\le C_0\le4.
+\]
+For $E=U^*\diag(\varepsilon_a)U$, the projector minors give
+\[
+ \tr E=2\sigma^2/b,\qquad
+ \operatorname{gap}(E)^2=\sigma^2/3+
+             4\sum\varepsilon_a^3/b+4\sigma^4/b^2.
+\]
+The remaining compression is positive semidefinite and has spectral
+gap at most $4e^2/(u_0-e)$, whereas $\tr(H/j_c)\ge2$. Consequently
+\begin{equation}\label{app:candidate:kappa}
+ \kappa:=\|K-I\|\le
+ 2\sigma\sqrt{1/3+4e/b_0+4\sigma^2/b_0^2}
+                         +\frac{2e^2}{1/15-e}<\frac{11}4e.
+\end{equation}
+The last endpoint check is
+$4\sqrt{39013/106929}+2/7<11/4$. The radial and spinor estimates also give a generic bound $\eta$
+for the candidate point error $\max_a\|z_a-f_a\|$:
+$\eta^2\le[500/(319\cdot999)]^2+
+\phi(41/100)(11/120)^2<1/1024$.
+The profile-dependent choice of $\eta$ is specified in
+\eqref{app:local:polar-input}.
+Thus the candidate point error and $\kappa$ are below $1/32$.
+For a fixed count profile all
+analytic upper coefficients above improve as $N$ increases. Freezing
+valid endpoint enclosures therefore proves the whole subsequent range;
+no claim about monotonicity of rounded program outputs is needed.

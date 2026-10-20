@@ -1,0 +1,253 @@
+\section{From arbitrary matrices to the unique equality class}\label{sec:proof}
+The left kernel of a matrix in our rank-constrained class supplies the
+comparison functional. A positive stress gives a trace bound whose
+equality condition determines the matrix entries.
+
+\begin{lemma}[Left-kernel trace bound]\label{lem:trace}
+Let $A\in\mathbb C^{N\times N}$ have diagonal one, rank at most $N-2$,
+and coherence $\mu=\max_{i\ne j}|A_{ij}|$. Choose
+$Y\in\mathbb C^{2\times N}$ with rows in the left kernel of $A$ and
+normalization $YY^*=NI_2/2$, so that $YA=0$.
+For every $K\succ0$ with $\tr K=2$,
+\begin{equation}\label{eq:trace-bound}
+ N(1+1/\mu)\le\Gamma_K(Y).
+\end{equation}
+If equality holds and all off-diagonal entries of $H=Y^*KY$ are nonzero,
+then $A_{ij}=-\mu H_{ij}/|H_{ij}|$ for every $i\ne j$.
+\end{lemma}
+\begin{proof}
+Take two orthonormal columns $Q$ in $\ker A^*$ and put
+$Y=\sqrt{N/2}\,Q^*$. Then $HA=0$, $H\succeq0$, and $\tr H=N$.
+Also $\mu>0$, since the identity has rank $N$. Expanding
+$\tr(HA)=0$, separating the diagonal terms, and taking real parts gives
+\[
+ N=-\sum_{i\ne j}\Rea(H_{ij}A_{ji})
+ \le\mu\sum_{i\ne j}|H_{ij}|=\mu(\Gamma_K(Y)-N).
+\]
+If equality holds, every ordered term with $H_{ij}\ne0$ attains both
+its modulus and real-part bounds. Thus
+$A_{ji}=-\mu\overline{H_{ij}}/|H_{ij}|$, which is the stated formula
+after exchanging the indices.
+\end{proof}
+
+\subsection{The quantitative comparison used in the proof}
+For $Y$ as in Lemma~\ref{lem:trace}, write $y_i=r_i u_i$ and let $x_i\in S^2$
+be the Bloch vector of $u_i$. If $r_i=0$, choose $u_i$ arbitrarily at
+this stage. Put
+\[
+ a=\frac{2\sqrt3-1}{8},\quad k=\frac{6\sqrt3-9}{4},\quad L=\sum r_i,
+ \qquad g(t)=(1-\sqrt t)(3/4+k\sqrt t)(\sqrt t-1/\sqrt3)^2.
+\]
+The radial, moment and angular deficits are
+\begin{align}\label{eq:deficits}
+ u&=a(N^2-L^2),&
+ v&=\frac k4\left\|\sum_i r_i x_ix_i^T-\frac L3I\right\|_F^2,&
+ w&=\sum_{i,j}r_ir_jg((1+x_i\cdot x_j)/2).
+\end{align}
+They are nonnegative and satisfy
+$u+v+w\le\alpha N^2-\Gamma_I(Y)$, by the exact polynomial identity
+in Section~\ref{app:global}. Applying Lemma~\ref{lem:trace} with $K=I$
+to a competitor with $\mu\le U_N=(N\lambda_{\rm bal}-1)^{-1}$ gives
+\begin{equation}\label{eq:budget}
+ u+v+w\le M,
+ \qquad M=\begin{cases}1/2,&N\text{ odd},\\11/19,&N\equiv2\pmod4.
+ \end{cases}
+\end{equation}
+The scalar candidate estimates establishing these budgets are included
+in Section~\ref{app:candidate}.
+
+\begin{proposition}[Localization of every column]\label{prop:localization}
+Suppose $N\ge180$, $4\nmid N$, $YY^*=NI_2/2$, and
+$\Gamma_I(Y)\ge N^2\lambda_{\rm bal}$. There is a partition of all
+$N$ columns into four nonempty groups with positive counts $m_a$.
+Set $\delta_a=m_a-N/4$ and $C=\sum\delta_a^2$. Up to permutation and
+simultaneous sign reversal, its possible profiles are
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Residue & $C$ & $(\delta_1,\delta_2,\delta_3,\delta_4)$\\
+\midrule
+$N$ odd & $3/4$ & $(-1,-1,-1,3)/4$\\
+$N$ odd & $11/4$ & $(-5,-1,3,3)/4$\\
+$N\equiv2\pmod4$ & $1$ & $(-1,-1,1,1)/2$\\
+$N\equiv2\pmod4$ & $3$ & $(-3,1,1,1)/2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+On this same partition let $\bar x_a$ be the group means and
+$S=\sum_a\sum_{i\in a}\|x_i-\bar x_a\|^2$.
+Then $S\le31E/N$, where $E=\sum_{i,j}g((1+x_i\cdot x_j)/2)$.
+The simultaneous total and pointwise estimates
+\eqref{app:global:LU-LP}--\eqref{app:global:physical-inputs}
+hold in one common preliminary alignment to the repeated tetrahedral
+frame $F=(f_{a(i)})_i$, where $a(i)$ is the group containing column $i$
+and the $f_a$ are unit tetrahedral spinors.
+\end{proposition}
+\begin{proof}
+Section~\ref{app:global} keeps the shared budget $u+v+w\le M$
+through anchor selection and partitions every column. Its centered count
+estimate gives $C<5$ in residue two and $C<19/4$ in the odd residues,
+which imply exactly the listed profiles. The forward refinement on
+this same partition gives the scatter and simultaneous polar estimates.
+The finite inequalities used in these steps are specified in
+Section~\ref{app:certificates}.
+\end{proof}
+
+The scales explain the role of the local step. The shared deficit is
+$O(1)$, uniformly in $N$, and the count variance $C$ is bounded.
+Localization and the candidate estimates place both $Y$ and the
+candidate $Z$ with the same profile within $O(N^{-1/2})$ of $F$ in the
+Frobenius norm. The triangle inequality and minimization over the allowed
+alignments therefore give $d=\|Y-Z\|_F=O(N^{-1/2})$ in the closest gauge.
+The separate transport of pointwise bounds to that gauge is proved in
+Section~\ref{app:local:angular}. The relative normal component is at most
+$d/\sqrt{2N}=O(N^{-1})$. The horizontal reference
+curvature has a negative gap bounded away from zero; candidate
+perturbations and the higher-order loss tend to zero. This explains why
+the local comparison becomes strict for large $N$. To obtain the
+explicit threshold $180$, we bound both terms on the localized regions
+and certify the resulting inequalities by rational arithmetic.
+
+\begin{proposition}[Conditional local comparison]
+\label{prop:conditional-local}
+Fix one of the localized profiles, its candidate $Z$ and its positive
+stress $K$. Put a competitor $Y$ with $YY^*=NI_2/2$ in the
+closest unitary and individual-phase gauge to $Z$, allowing conjugation
+of the candidate, and set $d=\|Y-Z\|_F$. Suppose all validity conditions
+in Section~\ref{app:local}, including the denominator, positivity, phase,
+overlap and closest-gauge transport conditions, hold throughout a closed
+region containing this competitor. Let $c_m,c_r$ be valid lower bounds
+for the curvature gaps in the mean and residual directions, and $J,L$
+valid upper bounds for
+the mixed and pure normal terms, measured in the original Frobenius
+metric as in \eqref{eq:main-quadratic}. Let
+$A_{\rm rem},B_{\rm rem}\ge0$ supply one bound for the full Taylor
+remainder using the common tangent fraction defined below. Define
+$g_{\rm normal}$ as the negative of the maximum of the quadratic upper
+bound in \eqref{eq:main-quadratic} over the normalized components, with
+the normal fraction restricted by the bound for this region. If
+\[
+ g_{\rm normal}-\frac{A_{\rm rem}+
+          \sqrt{A_{\rm rem}^2+B_{\rm rem}^2}}2\ge\varepsilon>0,
+\]
+then
+\begin{equation}\label{eq:conditional-comparison}
+ \Gamma_K(Y)\le N^2\lambda_p-\varepsilon N\|Y-Z\|_F^2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The case $d=0$ is immediate. For $d>0$, define the Lagrangian
+$\mathcal L(Y)=\Gamma_K(Y)-N\lambda_p\tr(KYY^*)$ and its half-Hessian
+$Q(H)=\tfrac12D^2\mathcal L(Z)[H,H]$, with $K$ fixed and derivatives
+taken over the underlying real vector space. Put $\Delta=Y-Z$ and
+$R_n=(\Delta\Delta^*/N)Z$. The horizontal component
+$\Xi=\Delta+R_n$ splits orthogonally into cluster means $H_{\rm m}$ and
+zero-sum residuals $H_{\rm r}$. Set $h=\|H_{\rm m}\|_F/d$,
+$r=\|H_{\rm r}\|_F/d$, and $n=\|R_n\|_F/d$. Under the stated validity
+conditions, the half-Hessian estimate is
+\begin{equation}\label{eq:main-quadratic}
+ \frac{Q(\Delta)}{Nd^2}\le-c_mh^2-c_rr^2+2Jnh+Ln^2,
+ \quad h^2+r^2+n^2=1,\quad n\le d/\sqrt{2N}.
+\end{equation}
+The exact maximum of this quadratic upper bound over the allowed normal
+fraction, including both branches, is $-g_{\rm normal}$; see
+\eqref{app:local:normal-max}.
+
+The remainder uses the distinct physical decomposition
+$y_i=(1+t_i)z_i+\xi_i$, where $t_i\in\mathbb R$ and $z_i^*\xi_i=0$.
+For the common tangent fraction
+$\theta=(\sum_i\|\xi_i\|^2)^{1/2}/d\in[0,1]$, its complete upper bound is
+$Nd^2[A_{\rm rem}\theta^2+B_{\rm rem}\theta\sqrt{1-\theta^2}]$.
+Lemma~\ref{app:local:loss} bounds this by
+$Nd^2(A_{\rm rem}+\sqrt{A_{\rm rem}^2+B_{\rm rem}^2})/2$.
+The first variation of $\mathcal L$ vanishes at $Z$, and the constraint
+term $N\lambda_p\tr(KYY^*)$ has the same value at $Y$ and $Z$ because
+their covariances agree. Adding the quadratic and remainder bounds proves
+\eqref{eq:conditional-comparison}. Section~\ref{app:local} derives the
+bounds and their validity conditions; the next proposition certifies
+those conditions on the regions supplied by localization.
+\end{proof}
+
+\begin{proposition}[Finite verification and propagation]
+\label{prop:finite-acceptance}
+The exact verification statement in Section~\ref{app:certificates:acceptance}
+covers all closed budget cells of the four profiles. The local endpoints
+are $180$ for $C\in\{3/4,11/4,3\}$ and $182$ for $C=1$.
+Each cell is either excluded by a strict counting inequality or lies in a
+closed region where all validity conditions of
+Proposition~\ref{prop:conditional-local} hold and the quadratic gap exceeds
+the remainder bound by more than $1/10000$.
+For each fixed signed deviation vector $(\delta_a)$, these inequalities
+remain valid for every larger integer $N$ for which
+$m_a=N/4+\delta_a$ are integers.
+\end{proposition}
+\begin{proof}
+The rational records and the conditions checked by the verifier are given in
+Section~\ref{app:certificates:acceptance}.
+Lemma~\ref{app:local:propagation} extends the verified inequalities by
+fixing valid endpoint coefficients and bounding the reciprocal parameter
+over the full subsequent interval.
+\end{proof}
+
+\begin{corollary}[Localization and strict comparison]
+\label{prop:comparison}
+Under the hypotheses of Proposition~\ref{prop:localization}, use its
+partition and the closest gauge to the candidate with the same profile.
+Then
+\begin{equation}\label{eq:strict-comparison}
+ \Gamma_K(Y)\le N^2\lambda_p-
+                  \frac{N}{10000}\|Y-Z\|_F^2.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Combine Propositions~\ref{prop:localization},
+\ref{prop:conditional-local} and \ref{prop:finite-acceptance}.
+Odd integers in the range start at $181$; the first actual residue-two
+integer is $182$. Thus the two different local endpoints leave no
+integer gap for nondivisible $N\ge180$.
+\end{proof}
+
+\subsection{Completion of the proof and equality cases}
+We now prove Theorem~\ref{thm:main}. For $4\nmid N$, take any complex
+$N\times N$ matrix $A$ with diagonal entries one, rank at most $N-2$,
+and coherence $\mu\le U_N$. Choose $Y$ as in Lemma~\ref{lem:trace}. The closest
+gauge is legitimate for a general matrix: replacing $Y$ by $UYD$ is
+accompanied by $A\mapsto D^*AD$. It preserves $YA=0$, covariance,
+diagonal, rank and coherence. Select the stress $K$ for this profile \emph{after}
+this alignment. Lemma~\ref{lem:trace}, Corollary~\ref{prop:comparison}
+and strict balancing give
+\[
+\begin{aligned}
+ N(1+1/\mu)&\le\Gamma_K(Y)\\
+ &\le N^2\lambda_p-\frac N{10000}\|Y-Z\|_F^2\\
+ &\le N^2\lambda_{\rm bal}\le N(1+1/\mu).
+\end{aligned}
+\]
+Every inequality is an equality. Therefore $Y=Z$ in the chosen gauge,
+the counts are balanced, and $\mu=U_N$. All stress overlaps are nonzero,
+so the ordered equality condition in Lemma~\ref{lem:trace} forces
+\[
+ A=(1+\mu)I-\mu S_p=G_p.
+\]
+Undoing the allowed transformations gives exactly the equality class
+of the theorem.
+
+For $4\mid N$, the classical scalar bound is sharp. For completeness,
+the deficit identity at zero forces $r_i=1$, vanishing moment defect,
+and $g((1+x_i\cdot x_j)/2)=0$ for every pair. Thus distinct Bloch
+directions have inner product $-1/3$. At most four such directions exist.
+Since $r_i=1$, tightness gives $\sum x_i=0$; together with the zero
+moment defect this gives $\sum l_il_i^T=NI_4/4$, where
+$l_i=(1,\sqrt3 x_i)^T/2$. The lifted directions
+therefore span $\mathbb R^4$, so there are exactly four. They form an
+orthonormal basis of $\mathbb R^4$, and tightness forces equal counts
+$N/4$. Hence the kernel consists of equally repeated tetrahedral spinor
+lines. Equality in the ordered trace bound with $K=I$ again fixes
+$A=G_p$. This also proves the full matrix equality statement in the
+divisible case.
+
+Proposition~\ref{prop:construction} supplies an attaining rank-exactly
+$N-2$ Gram matrix. Since the rank-at-most problem is a relaxation of
+both other problems, all three optimal values coincide. Finally, two
+full-rank vector factors with the same Gram matrix differ by a common
+unitary on $\mathbb C^{N-2}$, completing the vector classification.

@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,linktoc=all]{hyperref}
+\usepackage{microtype}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\title{Exact complex coherence in codimension two}
+\author{Xuan Li}
+\hypersetup{pdftitle={Exact complex coherence in codimension two},pdfauthor={Xuan Li}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the minimum coherence of $N$ unit vectors in
+$\mathbb C^{N-2}$ for every integer $N\ge180$. The optimum is given by
+an explicit four-block construction with balanced integer multiplicities.
+The same optimum holds among all complex $N\times N$ matrices with
+diagonal entries one and rank at most $N-2$. Every extremizer is equivalent to the
+balanced four-block Gram matrix. The proof uses kernel duality to reduce
+the matrix problem to a geometric comparison in $\mathbb C^2$.
+Any competing matrix whose coherence is no larger than that of the
+construction admits a normalized two-dimensional left-kernel
+representation with every column near one of four directions.
+A strict local comparison then determines all equality cases.
+Rational arithmetic certificates establish the finite inequalities needed
+for the range $N\ge180$. For $4\nmid N$, the exact value improves the
+classical codimension-two bound by a positive term of order $N^{-3}$.
+\end{abstract}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/construction}
+\input{sections/proof}
+\input{sections/discussion}
+\input{appendices/candidate}
+\input{appendices/global}
+\input{appendices/local}
+\input{appendices/certificates}
+
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+OpenAI's Codex was used extensively in the research and preparation of this
+manuscript, including use of GPT-6 Astra with the Ultra reasoning setting.
+Its use included literature searches and
+comparisons with earlier results (Section~\ref{sec:related}); exploration
+and development of the four-block construction and its algebraic formulas
+(Sections~\ref{sec:construction} and~\ref{app:candidate}); and formulation,
+refinement, and critical examination of arguments concerning the matrix
+reduction, global localization, local comparison, and equality cases
+(Sections~\ref{sec:proof}, \ref{app:global}, and~\ref{app:local}).
+
+Codex was also used in developing the computational work associated
+with Section~\ref{app:certificates} and the accompanying reproduction
+package. This included implementing and revising code for numerical
+exploration, certificate generation, rational-arithmetic verification,
+and regression tests.
+
+AI-generated drafts of mathematical arguments and explanatory prose were
+used and revised during the preparation of the manuscript. Codex was also used to organize the presentation, revise notation and
+cross-references, and edit the English.
+
+The author assumes responsibility for all content, including the
+mathematical claims, references, code, and final text.
+
+{\raggedright
+\bibliographystyle{plain}
+\bibliography{references}
+}
+
+\bigskip
+\noindent\begin{minipage}{\textwidth}
+\small
+Chongqing University of Arts and Sciences\\
+Chongqing, China\\
+Email: \href{mailto:202302474094@stu.cqwu.edu.cn}{\texttt{202302474094@stu.cqwu.edu.cn}}
+\end{minipage}
+\end{document}

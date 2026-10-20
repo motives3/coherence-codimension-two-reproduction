@@ -1,0 +1,301 @@
+\section{Exact certificates and the computational proof}\label{app:certificates}
+The computer-assisted part of the proof consists of finite rational
+inequalities on closed domains. We specify the domain covers, the
+acceptance conditions and their propagation to infinitely many integers.
+The accompanying reproduction package contains the fixed certificates
+and an arithmetic verifier that checks them without repeating the search.
+
+\subsection{Arithmetic and acceptance rules}
+All arithmetic used for acceptance is rational. To enclose
+$\sqrt{a/b}$, for nonnegative integers $a$ and positive $b$, choose a
+positive integer scale $S$ and compute
+\[
+ q=\left\lfloor\sqrt{\left\lfloor aS^2/b\right\rfloor}\right\rfloor.
+\]
+The lower endpoint is $q/S$. If $bq^2=aS^2$, the upper endpoint is also
+$q/S$; otherwise it is $(q+1)/S$, strictly above $\sqrt{a/b}$.
+Interval addition, multiplication,
+reciprocal and square roots are rounded outward. Division is accepted
+only after its denominator interval excludes zero, and every phase,
+overlap and covariance guard is checked before use. Fixed decimal grids
+are rational denominator grids, not floating-point error tolerances.
+The stored scales and exact endpoints are part of the certificates.
+
+A scalar strict inequality is accepted only when the rational upper
+bound is strictly below the rational lower bound on the other side.
+We use $1/10000$ as a common certified lower bound for the local margin,
+independently of any auxiliary target used to refine an interval cover.
+In particular, the continuous residual records marked \texttt{FAIL\_TARGET}
+retain rigorous positive lower bounds. The local proof uses these bounds,
+regardless of whether they meet the auxiliary target.
+
+\subsection{Global and continuous-parameter certificates}
+The anchor potential \eqref{app:global:potential} uses $256$ closed
+intervals per budget. With $K_A=441/100$ and $\eta_A=8/25$, its saved
+upper maximum is
+\[
+ \frac{1701784823949001620590499470021431663618000000000000000}
+ {1703019875451378709607322015228880928794132391894118139}<1.
+\]
+The same records provide the strict coverage, disjointness and scatter
+inequalities, and the separate count checks for $M=1/2$ and $11/19$.
+The fine chain \eqref{app:global:chain} has $9$ recorded stages, each
+with $128$ closed budget bins. Its $38$ explicit guards include all
+positive denominators and forward implications. Regional fine records
+then retain their own $64$-bin bounds and phase choices.
+
+The candidate spectra and overlap floors cover
+$0\le x=1/N\le1/180$. The cover is the union of the saved
+$[0,1/200]$ domain and the closed strip $[1/200,1/180]$.
+The latter has $2048$ overlap boxes and $16245$ residual leaves, with
+all four profiles and both signs. The shared endpoint is present in
+both domains. A later endpoint $n$ uses whole saved cells meeting
+$[0,1/n]$, including the whole of a boundary-crossing cell. Its extra
+portion only weakens the bound.
+
+The root enclosures follow from the scalar equation. Put
+$h_0=\alpha-1/2$, $\tau=\alpha-\lambda$ and $h=h_0-\tau$.
+Exact division of the scalar root equation gives
+\begin{equation}\label{app:certificates:root}
+ \tau=\frac{x^2W(h)}{D(h)}
+       \sum_a\frac{\delta_a^2}{h-2\delta_ax},\qquad
+ W(h)=3+1/h-1/(4h^2),\quad D(h)=2+1/(4h_0h).
+\end{equation}
+Start with $0\le\tau\le(2/3)C x_{\rm hi}^2$ and intersect this interval
+with the interval evaluation of \eqref{app:certificates:root} three
+times. Existence and uniqueness of the root have already been
+proved analytically. Each intersection contains that root because it
+satisfies the displayed identity; no contraction factor or convergence
+assumption is needed. Every before, right-side and after interval is
+stored, and an empty intersection is a failure.
+
+For the balanced residue-two profile, the sharper formula
+$\lambda=(1+\sqrt{3-8x^2})/4$ is used for the six ordered projected
+fiber types in Section~\ref{app:local}. The exact rational expressions
+are enclosed on $512$ closed intervals in $[0,1/180]$. The stationary
+row certificate reads these intervals and bounds both possible center
+types on the same bins. Sign reversal interchanges the two mass types.
+The domain covers justify the physical $m,q$ and $P_{\rm row}$ bounds
+throughout the stated range, without a monotonicity assumption.
+
+\subsection{Closed budget covers and local comparisons}
+\label{app:certificates:acceptance}
+For each of the four count profiles divide the $u,w$ triangle into the
+closed cells
+\[
+ \frac{iM}{60}\le u\le\frac{(i+1)M}{60},\quad
+ \frac{jM}{60}\le w\le\frac{(j+1)M}{60},\quad
+ u+w\le M,\qquad i,j\ge0,\ i+j\le59.
+\]
+There are $60\cdot61/2=1830$ cells per profile. Boundary overlaps are
+intentional. On a cell, $v\le M-u_{\rm lo}-w_{\rm lo}$, and
+\eqref{app:global:count} with the valid seed $31$ supplies a rational
+upper bound for $\sqrt C$. A cell is excluded only if this is strictly
+below the profile's $\sqrt C$ lower enclosure.
+
+In each radial row, descend through angular indices until the highest
+nonexcluded cell is reached. Its local comparison is evaluated on the
+\emph{enlarged closed region}
+$0\le u\le u_{\rm hi}$, $0\le w\le w_{\rm hi}$, $u+v+w\le M$.
+Consequently one comparison covers all lower angular cells in that
+row. This does not assume that coefficients computed on different
+regions are monotone. Fully excluded rows retain all their exclusion
+inequalities. The complete accounting is
+\begin{center}
+\begin{tabular}{crrrr}
+\toprule
+$C$ & Local endpoint & Excluded & Covered by regions & Regions\\
+\midrule
+$3/4$ & $180$ & $42$ & $1788$ & $60$\\
+$11/4$ & $180$ & $1027$ & $803$ & $53$\\
+$3$ & $180$ & $908$ & $922$ & $55$\\
+$1$ & $182$ & $62$ & $1768$ & $60$\\
+\midrule
+Total && $2039$ & $5281$ & $228$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The odd-profile minimum margins are, respectively,
+\[
+ \frac{537329859213}{40000000000000}\quad\text{and}\quad
+ \frac{3713814057647}{10^{15}}.
+\]
+The $C=3$ exact margin is a longer rational
+stored in its certificate; exact cross multiplication proves it exceeds
+$1/10000$ (its decimal value is approximately $0.0001017243329754284$).
+For $C=1$ the final lower margin is
+\[
+ \frac{1420911820069}{500000000000000}>\frac1{10000}.
+\]
+Thus the uniform margin in \eqref{eq:strict-comparison} is valid.
+
+For $C=3$ we combine the stress-coordinate mean estimate and
+finite-normal maximization with the unsigned remainder. For $C=1$ we
+use the candidate, localization and normal bounds at endpoint $182$,
+the spectral row estimate and the partial-signed remainder bounds.
+The four sign weights are $1/4,1/2,3/4,1$. Each row retains all
+complete alternatives and selects a valid minimum, with positive
+quartic factors and checked cross/same coefficient ordering. There are
+$480$ stored scalar tail certificates, each covering $32$ closed
+intervals of the degree-six Bernstein polynomial. These bounds include
+the mixed terms and the physical radial-weight correction.
+
+The finite verification statement used in
+Proposition~\ref{prop:finite-acceptance} is as follows.
+For each of the $228$ enlarged regions, independently reconstruct the
+candidate bounds, localization interface, physical quadratic coefficients
+$c_m,c_r,J,L$, squared normal radius $r_n=\rho_n^2=d_c^2/(2n^2)$, and one complete pair
+$A_{\rm rem},B_{\rm rem}$. Acceptance requires all of the following:
+\begin{enumerate}
+\item The saved closed cells have precisely the declared endpoints,
+all signs, vertices and pair types are present, and the count exclusions
+and enlarged accepted regions cover all $7320$ budget cells.
+\item Every denominator, covariance, phase, rotation and overlap guard
+in Sections~\ref{app:global} and~\ref{app:local} holds. In particular
+$c_m,c_r>0$, $J,L\ge0$, $0\le r_n\le1/2$,
+$A_{\rm rem},B_{\rm rem}\ge0$; the radial floor is positive; and the
+required cross/same coefficient orderings hold.
+\item The intrinsic and overlap inputs are enclosed on the whole joined
+reciprocal domain. In the refined $C=1$ rows the spectral bound uses
+$\lambda_+\ge(1+\sqrt3)/4$, which covers $x=0$ as well as the finite
+endpoint. Every used signed scalar tail is bounded on its entire disk
+by the independently expanded degree-six Bernstein certificate.
+\item Select the applicable branch of
+\eqref{app:local:normal-max} using these conservative coefficients.
+With $g_{\rm normal}$ the negative of its upper enclosure and
+${\rm Loss}^+$ an upper enclosure of
+\eqref{app:local:loss-formula}, exact rational comparison gives
+\begin{equation}\label{app:certificates:accepted-margin}
+ g_{\rm normal}-{\rm Loss}^+>\frac1{10000}.
+\end{equation}
+\end{enumerate}
+The arithmetic verifier checks this statement on the fixed witnesses.
+Its analytic consequences and propagation are proved in
+Section~\ref{app:local:closure}.
+
+\subsection{The worst \texorpdfstring{$C=3$}{C=3} region}
+\label{app:certificates:worst}
+The minimum over all $55$ accepted $C=3$ regions occurs at row
+$(i,j)=(17,23)$. Its original cell has
+$u\in[187/1140,33/190]$ and $w\in[253/1140,22/95]$.
+The local inequality is certified on the larger set
+\begin{equation}\label{app:certificates:worst-domain}
+ 0\le u\le33/190,\quad 0\le w\le22/95,\quad
+ v\ge0,\quad u+v+w\le11/19,
+\end{equation}
+at the local endpoint $n=180$. Both signs of
+$\delta=(-3,1,1,1)/2$ are included in the candidate certificates.
+The stress-coordinate mean bound and the physical normal coefficients are
+combined with the entire unsigned remainder, including the same-cluster,
+radial, mixed and quartic terms. The active normal branch is the interior
+branch. The following table gives rational enclosures for this calculation;
+the distributed
+\path{validation/C3_WORST_ACCEPTANCE.json} gives the exact local inputs,
+intermediate coefficients, recorded regional guards and the unabridged
+rational margin. Its source-report binding supplies the independently
+checked upstream candidate and localization interfaces.
+\input{appendices/worst_region}
+
+\subsection{Propagation to all integers in the stated range}
+An accepted row fixes its entire region, count floors, fine coefficients,
+candidate domain, normal-gap bound, complete remainder alternative,
+sign weight and scalar Bernstein bounds. The term-by-term propagation
+argument in Section~\ref{app:local:closure}, concluding in
+Proposition~\ref{app:local:strict}, shows that the analytic error
+majorants retain their endpoint bounds and the permitted normal interval shrinks.
+The cross/same majorants remain fixed, so their ordering is preserved.
+A later comparison stays within the same accepted scalar disks and
+remainder bound. This argument applies throughout the subsequent range
+and does not depend on which branch a new evaluation would select.
+
+The two odd profiles apply to all odd $N\ge181$. The $C=3$ profile
+applies from $180$, and the $C=1$ profile from $182$; both are therefore
+valid for every residue-two integer in the theorem. The exact
+divisible case covers $180$ and all later multiples of four. These
+branches give every integer $N\ge180$. The local endpoints differ by
+profile; the resulting sufficient threshold need not be minimal.
+
+\subsection{Certificates and arithmetic verification}
+\label{app:certificates:reproducibility}
+The certificates and verifier are publicly available at
+\url{https://github.com/motives3/coherence-codimension-two-reproduction}.
+This paper refers to the fixed snapshot at
+\href{https://github.com/motives3/coherence-codimension-two-reproduction/tree/b7a51dbc324ba260a92c2fafd3642e686cefe91a}{commit \texttt{b7a51dbc324b}}.
+All \path{certificate/} and \path{validation/} paths in this paper are
+relative to the repository's \path{reproduction/} directory, which is the
+reproduction-package root.
+The archive \path{certificate/supplement.zip} contains the fourteen JSON
+records used by the arithmetic verifier. The machine-readable
+\path{certificate/INDEX.json} gives their archive-relative paths, byte
+sizes and SHA-256 digests, together with the archive digest. The guide
+\path{certificate/ARITHMETIC_README.txt} explains the verifier and its
+dependencies. The main adopted records are identified by the following
+short names:
+\begin{description}
+\item[Odd180] The complete subproofs for the two odd profiles in
+\texttt{PROFILE\_180.json}, both with certified positive margins.
+\item[Stress180] The complete $C=3$ subprofile of
+\texttt{STRESS\_SAVED\_NORMAL.json}.
+\item[Refined182] \texttt{REFINED\_182\_NORMAL.json}, bound to the immutable
+\texttt{FROZEN\_FULL\_182.json} input.
+\item[Continuous bounds] The joined root-residual and weighted-overlap
+records. The two additional sharp records are
+\texttt{SHARP\_FIBERS.json} and \texttt{SHARP\_STATIONARY.json}.
+\end{description}
+The index supplies the full paths. Some records have an overall failure
+label but contain a complete subproof with a certified positive margin.
+The verifier checks the adopted subproofs identified above, including
+their domains and hypotheses; it does not use the status labels as
+acceptance criteria.
+The enclosure $\kappa_*$ in Section~\ref{app:local:closure} is stored
+in the certificate field \texttt{kappa\_coefficient}; this field
+corresponds to the stress coefficient, not the Bloch-Gram coefficient $k_0$.
+
+\begin{samepage}
+The verifier consists of four files and uses only the Python standard
+library:
+\begin{quote}\small
+\path{certificate/verify_certificates.py}\\
+\path{validation/global_arithmetic.py}\\
+\path{validation/continuous_arithmetic.py}\\
+\path{validation/local_arithmetic.py}.
+\end{quote}
+\end{samepage}
+\begin{samepage}
+Run using Python 3.10 or later:
+\begin{quote}\ttfamily\small
+python -B certificate/verify\_certificates.py
+\end{quote}
+\end{samepage}
+Run this command from the reproduction-package root. The program locates
+its data relative to its own file, reads the ZIP without extraction and
+emits JSON to standard output. It creates no files. A failed
+guard or arithmetic mismatch exits nonzero. Diagnostic partial stages
+are expressly marked incomplete.
+
+The verifier recomputes the global and regional shared budgets,
+candidate polar bounds, fixed root intersections, intrinsic residual
+bounds, all overlap and projected-fiber intervals, stationary harmonic
+rows, and every Bernstein coefficient of the used scalar tails. It then
+reconstructs the physical mean/residual curvature, normal maximization,
+phase transport and complete local remainder on all $228$ adopted
+regions. It does not accept a saved margin as an input to strictness.
+The fixed covers and root boxes serve as witnesses, so verification
+requires no threshold search, adaptive subdivision or optimization.
+The accompanying regression sources exercise the
+arithmetic kernels and the rejection of corrupted witnesses.
+
+The historical all-stage report
+\path{validation/ARITHMETIC_ACCEPTANCE.json} records the hashes of its
+fourteen input records and four verifier files. Their correspondence
+with the public distribution is documented in
+\path{validation/PRIOR_ACCEPTANCE_BINDING.json};
+\path{PRIVACY_TRANSFORM.json} describes the metadata-only redactions.
+The current archive and input hashes are listed in \path{certificate/INDEX.json}.
+
+The verifier checks finite rational inequalities. The analytic
+identities, geometric implications, infinite-range propagation and
+equality classification are proved in the manuscript; they are outside
+the verifier's scope. This is a computer-assisted proof, rather than a
+proof-assistant formalization.

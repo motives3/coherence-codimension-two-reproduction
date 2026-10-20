@@ -1,0 +1,120 @@
+\section{The optimization problem and the main result}
+The coherence of a family of unit vectors is the largest modulus of an
+inner product between distinct vectors. Minimizing coherence is a
+packing problem for complex lines: it asks how well a prescribed number
+of lines can be separated in a given dimension.
+All inner products are conjugate-linear in the first variable:
+$\langle v,w\rangle=v^*w$. For integers $1\leq n<N$ define
+\[
+ \mu_{\mathbb C}(n,N)=
+ \min_{\substack{v_1,\ldots,v_N\in\mathbb C^n\\\|v_i\|=1}}
+ \max_{i\ne j}|v_i^*v_j|.
+\]
+The minimum exists: the product of $N$ unit spheres is compact and the
+maximum of the finitely many continuous inner-product moduli is continuous.
+
+We study the case $n=N-2$. The associated Gram matrices have a kernel
+of dimension at least two; a two-dimensional subspace of that kernel
+provides the geometric representation used below. When $4\mid N$, the
+classical attaining construction corresponds to equal replication of
+four equiangular lines in this representation~\cite{BC,Glazyrin}.
+For the remaining cardinalities, equal replication is impossible.
+We construct a candidate using balanced integer multiplicities and
+deform the four-line configuration accordingly. We prove that this
+candidate is globally optimal among all vector families for every
+$N\ge180$, and determine all equality cases.
+
+The kernel argument also applies to matrices that need not initially
+be Gram matrices. We therefore consider the two matrix problems
+\[
+ a_N=\min_{\substack{A\in\mathbb C^{N\times N}\\A_{ii}=1,\ \rank A\leq N-2}}
+       \max_{i\ne j}|A_{ij}|,\qquad
+ b_N=\inf_{\substack{A\in\mathbb C^{N\times N}\\A_{ii}=1,\ \rank A=N-2}}
+       \max_{i\ne j}|A_{ij}|.
+\]
+For $N\geq3$ the first minimum also exists. The all-ones matrix is feasible
+with objective one, so we can restrict to the compact set with all
+off-diagonal moduli at most one. Diagonal and rank-at-most conditions are
+closed. Moreover $a_N>0$, because a diagonal-one matrix with zero
+off-diagonal entries has rank $N$. No compactness of the exact-rank set is
+assumed; attainment of $b_N$ will follow from the construction.
+
+Set $\alpha=(1+\sqrt3)/4$. A four-tuple
+$\boldsymbol m=(m_1,m_2,m_3,m_4)$ of positive integers with sum $N$ is \emph{balanced} if its
+entries differ by at most one. Such a tuple is unique up to permutation.
+Put $p_a=m_a/N$ and denote by $\lambda_{\boldsymbol p}$ the root specified
+in the following theorem.
+
+\begin{theorem}\label{thm:main}
+For every integer $N\geq180$ and every balanced four-tuple
+$\boldsymbol m$ of positive integers with sum $N$, the equation
+\begin{equation}\label{eq:main-root}
+ 2\lambda=\sum_{a=1}^4\frac{p_a(1-3p_a)}{\lambda-2p_a}
+\end{equation}
+has a unique root in $(2/3,\alpha]$, and
+\begin{equation}\label{eq:main-value}
+ \mu_{\mathbb C}(N-2,N)=a_N=b_N=
+ \frac1{N\lambda_{\boldsymbol p}-1}.
+\end{equation}
+The exact-rank infimum is attained. Every minimizing matrix in the
+rank-at-most problem is, up to index permutation, diagonal unitary
+switching and entrywise conjugation, the balanced four-block Gram matrix
+in Proposition~\ref{prop:construction}. In particular it is positive semidefinite,
+has rank $N-2$, and all off-diagonal entries have the same modulus.
+Vector realizations differ additionally by a common unitary isometry.
+\end{theorem}
+
+For $4\mid N$ the value is $1/(\alpha N-1)$, the known divisible case.
+For $N\equiv2\pmod4$ the formula becomes
+\begin{equation}\label{eq:residue-two}
+ \mu_{\mathbb C}(N-2,N)=
+ \frac4{N+\sqrt{3N^2-8}-4}.
+\end{equation}
+
+\begin{corollary}\label{cor:asymptotic}
+For each fixed $r\in\{0,1,2,3\}$, as $N\longrightarrow\infty$ through
+$N\equiv r\pmod4$,
+\[
+ \mu_{\mathbb C}(N-2,N)=\frac1{\alpha N-1}
+ +\frac{r(4-r)}{4\sqrt3\,\alpha^2}\,N^{-3}+O(N^{-4}).
+\]
+For $r\ne0$ the correction is positive.
+\end{corollary}
+\begin{proof}
+Write $p_a=1/4+\epsilon_a$, $\sum_a\epsilon_a=0$ and
+$\sum_a\epsilon_a^2=r(4-r)/(4N^2)$. Define
+$\Phi_{\boldsymbol p}(\lambda)=4[2\lambda-
+\sum_ap_a(1-3p_a)/(\lambda-2p_a)]$ and put $h=\alpha-1/2$.
+Polynomial division gives
+\[
+ \Phi_{\boldsymbol p}(\alpha)
+ =4\sum_a\frac{\epsilon_a^2}{h-2\epsilon_a},\qquad
+ \Phi'_{(1/4,\ldots,1/4)}(\alpha)=\frac{4\sqrt3}{h}.
+\]
+The derivative is positive near uniform weights; Taylor's formula gives
+$\alpha-\lambda_{\boldsymbol p}
+=\sum_a\epsilon_a^2/\sqrt3+O(N^{-3})$.
+Substitution in \eqref{eq:main-value} proves the assertion.
+\end{proof}
+
+The correction in Corollary~\ref{cor:asymptotic} measures the cost of the
+integer multiplicities. It vanishes when equal replication is possible
+and is positive in each of the other residue classes.
+
+The proof begins with a trace inequality relating the coherence of a
+matrix to an energy associated with a two-dimensional subspace of its
+left kernel. A matrix that matches or improves on the construction must
+have kernel energy close to the classical upper bound. We use the
+resulting shared deficit bounds to place every kernel
+column in one of four clusters and to restrict their integer counts.
+A local comparison then controls both motion of the cluster centers and
+variation within each cluster, including the complex phases. Its strict
+inequality forces an extremizer to coincide with the corresponding
+four-block candidate. Integer balancing selects the optimal counts,
+and equality in the trace inequality recovers the full matrix.
+
+The explicit construction and matrix argument are given in
+Sections~\ref{sec:construction} and~\ref{sec:proof}. The quantitative
+localization and local comparison use rational inequalities on closed
+domains, whose certificates are described in Section~\ref{app:certificates}.
+The threshold $180$ is sufficient; its minimality remains open.
